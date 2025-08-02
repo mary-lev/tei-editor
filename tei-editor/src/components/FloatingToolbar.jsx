@@ -114,7 +114,7 @@ function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount
   return (
     <div
       data-toolbar="floating"
-      className="floating-toolbar"
+      className="bg-white rounded-lg shadow-lg p-2 flex flex-col gap-2 min-w-[320px]"
       style={{
         position: 'fixed',
         left: `${position.x}px`,
@@ -122,45 +122,38 @@ function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount
         zIndex: 1000
       }}
     >
-      <div className="toolbar-content">
-        {/* Close button */}
+      <div className="flex justify-between items-center">
+        <span className="text-xs text-slate-500 px-2">
+          {selection && selection.text ? (
+            `Selected: "${selection.text.length > 30 
+              ? selection.text.substring(0, 30) + '...' 
+              : selection.text}"`
+          ) : selectedStanzasCount > 0 ? (
+            `${selectedStanzasCount} stanza${selectedStanzasCount > 1 ? 's' : ''} selected`
+          ) : (
+            'No selection'
+          )}
+        </span>
         <button
-          className="toolbar-close"
+          className="w-6 h-6 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-600 flex items-center justify-center"
           onClick={onClose}
           title="Close toolbar"
         >
           ×
         </button>
-
-        {/* Toolbar buttons */}
-        <div className="toolbar-buttons">
-          {toolbarButtons.map((button) => (
-            <button
-              key={button.id}
-              className="toolbar-button"
-              onClick={() => handleOperation(button.id)}
-              title={button.description}
-            >
-              <span className="button-icon">{button.icon}</span>
-              <span className="button-label">{button.label}</span>
-            </button>
-          ))}
-        </div>
-
-        {/* Selection info */}
-        <div className="selection-info">
-          <small>
-            {selection && selection.text ? (
-              `Selected: "${selection.text.length > 30 
-                ? selection.text.substring(0, 30) + '...' 
-                : selection.text}"`
-            ) : selectedStanzasCount > 0 ? (
-              `${selectedStanzasCount} stanza${selectedStanzasCount > 1 ? 's' : ''} selected`
-            ) : (
-              'No selection'
-            )}
-          </small>
-        </div>
+      </div>
+      <div className="grid grid-cols-3 gap-1">
+        {toolbarButtons.map((button) => (
+          <button
+            key={button.id}
+            className="flex flex-col items-center p-2 rounded-md hover:bg-slate-100 transition-colors"
+            onClick={() => handleOperation(button.id)}
+            title={button.description}
+          >
+            <span className="text-lg font-bold text-slate-700">{button.icon}</span>
+            <span className="text-xs text-slate-600">{button.label}</span>
+          </button>
+        ))}
       </div>
     </div>
   )

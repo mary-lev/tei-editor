@@ -151,14 +151,14 @@ function App() {
   }
 
   return (
-    <div className="h-screen flex flex-col bg-gray-50">
+    <div className="h-screen flex flex-col bg-slate-50 font-sans">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 px-4 py-3 flex justify-between items-center">
-        <h1 className="text-xl font-semibold text-gray-900">TEI Poetry Editor</h1>
+      <header className="bg-white border-b border-slate-200 px-4 py-3 flex justify-between items-center">
+        <h1 className="text-xl font-semibold text-slate-900">TEI Poetry Editor</h1>
         <div className="flex gap-2">
           <button
             onClick={() => setShowTeiCode(!showTeiCode)}
-            className="px-3 py-1 text-sm bg-gray-100 hover:bg-gray-200 rounded border"
+            className="px-3 py-1 text-sm bg-slate-100 hover:bg-slate-200 rounded border border-slate-300"
             data-testid="tei-code-toggle"
           >
             {showTeiCode ? 'Hide' : 'Show'} TEI Code

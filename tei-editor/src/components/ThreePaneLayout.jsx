@@ -122,9 +122,9 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
   }
 
   return (
-    <div className="h-full flex relative" data-testid="three-pane-layout">
+    <div className="h-full flex relative font-sans" data-testid="three-pane-layout">
       {/* Images Pane */}
-      <div className={`${paneWidth} border-r border-gray-200 bg-white`} data-testid="image-pane">
+      <div className={`${paneWidth} border-r border-slate-200 bg-white`} data-testid="image-pane">
         <ImagePane 
           ref={imageRef}
           documentImages={documentImages}
@@ -135,7 +135,7 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
       </div>
 
       {/* Rendered Text Pane */}
-      <div className={`${paneWidth} border-r border-gray-200 bg-white`} data-testid="rendered-text-pane">
+      <div className={`${paneWidth} border-r border-slate-200 bg-white`} data-testid="rendered-text-pane">
         <RenderedTextPane 
           ref={renderedTextRef}
           teiDocument={teiDocument}
@@ -148,7 +148,7 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
 
       {/* TEI Code Pane (toggleable) */}
       {showTeiCode && (
-        <div className="w-1/3 bg-gray-50" data-testid="tei-code-pane">
+        <div className="w-1/3 bg-slate-50" data-testid="tei-code-pane">
           <TEICodePane 
             ref={teiCodeRef} 
             teiDocument={teiDocument}

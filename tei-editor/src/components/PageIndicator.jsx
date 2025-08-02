@@ -79,7 +79,7 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
   const otherSamples = canShowDropdown ? availableSamples.filter(sample => sample.id !== currentDocument?.sampleInfo?.id) : []
 
   return (
-    <div className="bg-white border-b border-gray-200 px-4 py-3 w-full" data-testid="page-indicator">
+    <div className="bg-white border-b border-slate-200 px-4 py-3 w-full" data-testid="page-indicator">
       <div className="flex items-center justify-between max-w-6xl mx-auto">
         {/* Document Information - Left Side */}
         <div className="flex-1 min-w-0 relative">
@@ -89,26 +89,26 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
               <div className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => setShowDocumentDropdown(!showDocumentDropdown)}
-                  className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors group"
+                  className="flex items-center gap-2 text-sm font-medium text-slate-700 hover:text-slate-900 transition-colors group"
                   title="Click to switch document"
                 >
                   <span className="truncate max-w-sm">{documentInfo}</span>
-                  <span className={`text-xs text-gray-400 transition-transform ${showDocumentDropdown ? 'rotate-180' : ''}`}>▼</span>
+                  <span className={`text-xs text-slate-400 transition-transform ${showDocumentDropdown ? 'rotate-180' : ''}`}>▼</span>
                 </button>
                 
                 {/* Dropdown menu */}
                 {showDocumentDropdown && (
-                  <div className="absolute top-full left-0 mt-1 bg-white border border-gray-200 rounded-md shadow-lg z-50" style={{width: '100%', maxWidth: '320px', minWidth: '200px'}}>
+                  <div className="absolute top-full left-0 mt-1 bg-white border border-slate-200 rounded-md shadow-lg z-50" style={{width: '100%', maxWidth: '320px', minWidth: '200px'}}>
                     <div className="py-1">
                       {otherSamples.map((sample) => (
                         <button
                           key={sample.id}
                           onClick={() => handleDocumentSelect(sample.id)}
-                          className="w-full text-left text-sm hover:bg-gray-50 transition-colors"
+                          className="w-full text-left text-sm hover:bg-slate-50 transition-colors"
                           style={{padding: '4px 8px', display: 'block'}}
                           title={sample.description}
                         >
-                          <div className="font-medium text-gray-900" style={{textAlign: 'left', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'}}>
+                          <div className="font-medium text-slate-900" style={{textAlign: 'left', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'}}>
                             {formatDocumentInfo(sample.title, sample.author)}
                           </div>
                         </button>
@@ -119,7 +119,7 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
               </div>
             ) : (
               // Static text for uploaded documents or single sample
-              <h2 className="text-sm font-medium text-gray-700 truncate" title={documentInfo}>
+              <h2 className="text-sm font-medium text-slate-700 truncate" title={documentInfo}>
                 {documentInfo}
               </h2>
             )
@@ -136,8 +136,8 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
           disabled={!canGoPrev || isTransitioning}
           className={`flex items-center gap-1 px-3 py-1 rounded-md text-sm transition-all duration-200 ${
             canGoPrev && !isTransitioning
-              ? 'text-gray-600 hover:text-blue-600 hover:bg-blue-50 border border-gray-200 hover:border-blue-300'
-              : 'text-gray-400 cursor-not-allowed border border-gray-100 bg-gray-50'
+              ? 'text-slate-600 hover:text-blue-600 hover:bg-blue-50 border border-slate-200 hover:border-blue-300'
+              : 'text-slate-400 cursor-not-allowed border border-slate-100 bg-slate-50'
           }`}
           title="Previous page"
         >
@@ -158,8 +158,8 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
               currentPage === firstPage
                 ? 'bg-blue-600 text-white'
                 : !isTransitioning
-                ? 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
-                : 'text-gray-300 cursor-not-allowed'
+                ? 'text-slate-600 hover:text-blue-600 hover:bg-blue-50'
+                : 'text-slate-300 cursor-not-allowed'
             }`}
           >
             [{firstPage}]
@@ -167,7 +167,7 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
 
           {/* Separator if there's a gap */}
           {currentPage > firstPage + 1 && (
-            <span className="text-gray-400 text-sm">...</span>
+            <span className="text-slate-400 text-sm">...</span>
           )}
 
           {/* Current Page (if not first or last) */}
@@ -204,7 +204,7 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
 
           {/* Separator if there's a gap */}
           {currentPage < lastPage - 1 && (
-            <span className="text-gray-400 text-sm">...</span>
+            <span className="text-slate-400 text-sm">...</span>
           )}
 
           {/* Last Page (if different from first) */}
@@ -216,8 +216,8 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
                 currentPage === lastPage
                   ? 'bg-blue-600 text-white'
                   : !isTransitioning
-                  ? 'text-gray-600 hover:text-blue-600 hover:bg-blue-50'
-                  : 'text-gray-300 cursor-not-allowed'
+                  ? 'text-slate-600 hover:text-blue-600 hover:bg-blue-50'
+                  : 'text-slate-300 cursor-not-allowed'
               }`}
             >
               [{lastPage}]
@@ -234,8 +234,8 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
           disabled={!canGoNext || isTransitioning}
           className={`flex items-center gap-1 px-3 py-1 rounded-md text-sm transition-all duration-200 ${
             canGoNext && !isTransitioning
-              ? 'text-gray-600 hover:text-blue-600 hover:bg-blue-50 border border-gray-200 hover:border-blue-300'
-              : 'text-gray-400 cursor-not-allowed border border-gray-100 bg-gray-50'
+              ? 'text-slate-600 hover:text-blue-600 hover:bg-blue-50 border border-slate-200 hover:border-blue-300'
+              : 'text-slate-400 cursor-not-allowed border border-slate-100 bg-slate-50'
           }`}
           title="Next page"
         >
@@ -245,7 +245,7 @@ function PageIndicator({ currentPage, totalPages, onPageNavigation, isTransition
 
         {/* Status Indicator */}
         {isTransitioning && (
-          <div className="flex items-center text-sm text-gray-500 ml-4">
+          <div className="flex items-center text-sm text-slate-500 ml-4">
             <div className="w-4 h-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin mr-2" />
             <span>Loading...</span>
           </div>

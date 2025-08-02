@@ -3,13 +3,13 @@ import SamplesCard from './SamplesCard'
 
 function FileLoader({ onFileLoad }) {
   return (
-    <div className="h-full w-full bg-white flex flex-col justify-center items-center px-6">
+    <div className="h-full w-full bg-white flex flex-col justify-center items-center px-6 font-sans">
       {/* Header */}
       <div className="text-center mb-12">
-        <h1 className="text-3xl font-light text-gray-900 mb-3 tracking-tight">
+        <h1 className="text-3xl font-light text-slate-900 mb-3 tracking-tight">
           TEI Poetry Editor
         </h1>
-        <p className="text-gray-500 font-light">
+        <p className="text-slate-500 font-light">
           Load your TEI document or select a sample to get started
         </p>
         {/* Force refresh marker */}
@@ -27,7 +27,7 @@ function FileLoader({ onFileLoad }) {
 
         {/* Optional: Add some bottom spacing or footer info */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center space-x-6 text-sm text-gray-500">
+          <div className="inline-flex items-center space-x-6 text-sm text-slate-500">
             <div className="flex justify-center space-x-2">
               <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
               <span>Secure file processing</span>
