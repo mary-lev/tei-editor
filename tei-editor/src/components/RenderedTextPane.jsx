@@ -17,7 +17,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           return (
             <div 
               key={Math.random()} 
-              className="page-break border-t-2 border-blue-200 py-2 my-4"
+              className="border-t-2 border-blue-200 py-2 my-4"
               data-page-break="true"
               data-page-number={pageNum}
             >
@@ -34,7 +34,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           
           if (type === 'poem') {
             return (
-              <div key={xmlId || Math.random()} className="poem mb-8 p-4 bg-gray-50 rounded-lg">
+              <div key={xmlId || Math.random()} className="mb-8 p-4 bg-gray-50 rounded-lg">
                 {Array.from(element.children).map(child => renderElement(child))}
               </div>
             )
@@ -42,14 +42,14 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           
           if (type === 'part') {
             return (
-              <div key={Math.random()} className="poem-part mb-6 p-3 bg-white rounded border">
+              <div key={Math.random()} className="mb-6 p-3 bg-white rounded border">
                 {Array.from(element.children).map(child => renderElement(child))}
               </div>
             )
           }
           
           return (
-            <div key={Math.random()} className="div-element mb-4">
+            <div key={Math.random()} className="mb-4">
               {Array.from(element.children).map(child => renderElement(child))}
             </div>
           )
@@ -63,9 +63,9 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           
           if (type === 'sub') {
             return (
-              <div 
-                key={headId} 
-                className={`subtitle flex items-start py-1 mb-2 p-2 rounded border ${isSelected ? 'bg-blue-50 border-blue-300' : 'border-transparent hover:border-gray-200'}`}
+              <div
+                key={headId}
+                className={`flex items-start py-1 mb-2 p-2 rounded border transition-colors ${isSelected ? 'bg-blue-50 border-blue-300' : 'border-transparent hover:border-gray-200 hover:bg-gray-50'}`}
                 data-head-id={headId}
               >
                 <div className="flex items-center justify-between mb-1 w-full">
@@ -86,7 +86,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
                           console.log('📦 Subtitle checkbox clicked:', headId, e.target.checked)
                           onStanzaSelectionChange(headId, e.target.checked)
                         }}
-                        className="mr-1 text-blue-600"
+                        className="mr-1 accent-blue-600"
                       />
                       <span className="text-xs text-gray-600">Select</span>
                     </label>
@@ -96,9 +96,9 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
             )
           }
           return (
-            <div 
-              key={headId} 
-              className={`heading flex items-start py-1 mb-3 p-2 rounded border ${isSelected ? 'bg-blue-50 border-blue-300' : 'border-transparent hover:border-gray-200'}`}
+            <div
+              key={headId}
+              className={`flex items-start py-1 mb-3 p-2 rounded border transition-colors ${isSelected ? 'bg-blue-50 border-blue-300' : 'border-transparent hover:border-gray-200 hover:bg-gray-50'}`}
               data-head-id={headId}
             >
               <div className="flex items-center justify-between mb-1 w-full">
@@ -119,7 +119,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
                         console.log('📦 Header checkbox clicked:', headId, e.target.checked)
                         onStanzaSelectionChange(headId, e.target.checked)
                       }}
-                      className="mr-1 text-blue-600"
+                    className="mr-1 accent-blue-600"
                     />
                     <span className="text-xs text-gray-600">Select</span>
                   </label>
@@ -133,7 +133,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           return (
             <div 
               key={Math.random()} 
-              className="dedication italic text-gray-700 mb-3"
+              className="italic text-gray-700 mb-3"
               style={{ userSelect: 'text', cursor: 'text' }}
             >
               {Array.from(element.children).map(child => renderElement(child))}
@@ -144,7 +144,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           return (
             <div 
               key={Math.random()} 
-              className="epigraph text-gray-600 mb-3 pl-4 border-l-2 border-gray-300"
+              className="text-gray-600 mb-3 pl-4 border-l-2 border-gray-300"
               style={{ userSelect: 'text', cursor: 'text' }}
             >
               {Array.from(element.children).map(child => renderElement(child))}
@@ -157,7 +157,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           
           if (type === 'poem') {
             return (
-              <div key={Math.random()} className="poem-lg">
+              <div key={Math.random()}>
                 {Array.from(element.children).map(child => renderElement(child))}
               </div>
             )
@@ -171,7 +171,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
             return (
               <div 
                 key={stanzaNum || Math.random()} 
-                className={`stanza mb-4 p-2 rounded border ${isSelected ? 'bg-blue-50 border-blue-300' : 'border-transparent hover:border-gray-200'}`}
+                className={`mb-4 p-2 rounded border transition-colors ${isSelected ? 'bg-blue-50 border-blue-300' : 'border-transparent hover:border-gray-200 hover:bg-gray-50'}`}
                 data-stanza-id={stanzaId}
               >
                 <div className="flex items-center justify-between mb-1">
@@ -185,7 +185,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
                           console.log('📦 Checkbox clicked:', stanzaId, e.target.checked)
                           onStanzaSelectionChange(stanzaId, e.target.checked)
                         }}
-                        className="mr-1 text-blue-600"
+                        className="mr-1 accent-blue-600"
                       />
                       <span className="text-xs text-gray-600">Select</span>
                     </label>
@@ -201,7 +201,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           }
           
           return (
-            <div key={Math.random()} className="lg-element mb-3">
+            <div key={Math.random()} className="mb-3">
               {Array.from(element.children).map(child => renderElement(child))}
             </div>
           )
@@ -212,7 +212,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           const xmlId = element.getAttribute('xml:id')
           
           return (
-            <div key={xmlId || Math.random()} className="line flex items-start py-1">
+            <div key={xmlId || Math.random()} className="flex items-start py-1">
               <span className="text-xs text-gray-400 w-8 flex-shrink-0 mt-1">
                 {lineNum}
               </span>
@@ -225,7 +225,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
 
         case 'p':
           return (
-            <p key={Math.random()} className="paragraph mb-2">
+            <p key={Math.random()} className="mb-2">
               {element.textContent}
             </p>
           )
@@ -273,7 +273,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
         <h2 className="text-lg font-semibold mb-4 text-gray-800">Rendered Text</h2>
         
         <div 
-          className="prose prose-sm max-w-none"
+          className="max-w-none text-sm leading-relaxed"
           data-pane="rendered-text"
           style={{ userSelect: 'text' }}
         >

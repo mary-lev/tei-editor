@@ -114,7 +114,7 @@ function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount
   return (
     <div
       data-toolbar="floating"
-      className="floating-toolbar"
+      className="bg-white border border-gray-300 rounded-lg shadow-xl p-2 min-w-[320px] text-xs select-none"
       style={{
         position: 'fixed',
         left: `${position.x}px`,
@@ -122,10 +122,10 @@ function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount
         zIndex: 1000
       }}
     >
-      <div className="toolbar-content">
+      <div className="flex flex-col gap-2">
         {/* Close button */}
         <button
-          className="toolbar-close"
+          className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-red-500 hover:bg-red-600 text-white text-xs flex items-center justify-center"
           onClick={onClose}
           title="Close toolbar"
         >
@@ -133,26 +133,26 @@ function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount
         </button>
 
         {/* Toolbar buttons */}
-        <div className="toolbar-buttons">
+        <div className="flex flex-wrap gap-1">
           {toolbarButtons.map((button) => (
             <button
               key={button.id}
-              className="toolbar-button"
+              className="flex flex-col items-center px-2 py-1 border border-gray-200 rounded bg-gray-50 cursor-pointer transition-all min-w-[48px] text-[11px] hover:bg-gray-100 hover:border-gray-300 hover:-translate-y-0.5"
               onClick={() => handleOperation(button.id)}
               title={button.description}
             >
-              <span className="button-icon">{button.icon}</span>
-              <span className="button-label">{button.label}</span>
+              <span className="text-sm font-bold mb-0.5 text-gray-700">{button.icon}</span>
+              <span className="text-[10px] leading-none text-gray-500">{button.label}</span>
             </button>
           ))}
         </div>
 
         {/* Selection info */}
-        <div className="selection-info">
-          <small>
+        <div className="border-t border-gray-300 pt-1.5 text-gray-500 text-[11px]">
+          <small className="block text-center">
             {selection && selection.text ? (
-              `Selected: "${selection.text.length > 30 
-                ? selection.text.substring(0, 30) + '...' 
+              `Selected: "${selection.text.length > 30
+                ? selection.text.substring(0, 30) + '...'
                 : selection.text}"`
             ) : selectedStanzasCount > 0 ? (
               `${selectedStanzasCount} stanza${selectedStanzasCount > 1 ? 's' : ''} selected`
