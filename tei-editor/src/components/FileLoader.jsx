@@ -15,12 +15,10 @@ function FileLoader({ onFileLoad }) {
           {/* Force refresh marker */}
         </div>
 
-      {/* Cards Container - Single Row */}
-      <div className="flex justify-center items-center gap-8">
-        <div className="w-80">
+      {/* Cards Container */}
+      <div className="flex-1 flex items-center justify-center">
+        <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-0">
           <UploadCard onFileLoad={onFileLoad} />
-        </div>
-        <div className="w-80">
           <SamplesCard onFileLoad={onFileLoad} />
         </div>
       </div>
