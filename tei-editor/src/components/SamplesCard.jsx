@@ -1,8 +1,10 @@
 import { useState, useEffect, useCallback } from 'react'
+import { useNotifications } from '../hooks/useNotifications'
 
 function SamplesCard({ onFileLoad }) {
   const [samples, setSamples] = useState([])
   const [loading, setLoading] = useState(true)
+  const notify = useNotifications()
 
   // Load available samples on component mount
   useEffect(() => {
@@ -47,9 +49,9 @@ function SamplesCard({ onFileLoad }) {
       
       onFileLoad(teiDocument, images)
     } catch (error) {
-      alert(`Error loading sample document: ${error.message}`)
+      notify(`Error loading sample document: ${error.message}`, 'error')
     }
-  }, [onFileLoad])
+  }, [onFileLoad, notify])
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">

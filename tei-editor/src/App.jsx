@@ -1,10 +1,11 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import FileLoader from './components/FileLoader'
 import ThreePaneLayout from './components/ThreePaneLayout'
 import ExportButton from './components/ExportButton'
 import PageIndicator from './components/PageIndicator'
 import { TEIOperations } from './utils/teiOperations'
 import { extractTeiMetadata } from './utils/teiMetadata'
+import { useNotifications } from './hooks/useNotifications'
 
 function App() {
   const [teiDocument, setTeiDocument] = useState(null)
@@ -13,6 +14,7 @@ function App() {
   const [pageIndicatorProps, setPageIndicatorProps] = useState(null)
   const [documentMetadata, setDocumentMetadata] = useState(null)
   const [availableSamples, setAvailableSamples] = useState([])
+  const notify = useNotifications()
 
   // Load available samples on component mount
   useEffect(() => {
@@ -70,7 +72,7 @@ function App() {
       
       handleFileLoad(teiDocument, images)
     } catch (error) {
-      alert(`Error switching to document: ${error.message}`)
+      notify(`Error switching to document: ${error.message}`, 'error')
       console.error('Document switch failed:', error)
     }
   }
@@ -108,7 +110,7 @@ function App() {
 
   const handleTeiOperation = (operation, selectionData) => {
     if (!teiDocument) {
-      alert('No TEI document loaded')
+      notify('No TEI document loaded', 'error')
       return
     }
 
@@ -124,11 +126,11 @@ function App() {
       })
       
       // Show success message
-      alert(`✅ ${result.operation} completed successfully!`)
+      notify(`✅ ${result.operation} completed successfully!`, 'success')
       
       console.log('TEI Operation result:', result)
     } catch (error) {
-      alert(`❌ Error: ${error.message}`)
+      notify(`❌ Error: ${error.message}`, 'error')
       console.error('TEI Operation failed:', error)
     }
   }

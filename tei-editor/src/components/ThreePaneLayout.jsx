@@ -5,12 +5,14 @@ import TEICodePane from './TEICodePane'
 import FloatingToolbar from './FloatingToolbar'
 import { useTextSelection } from '../hooks/useTextSelection'
 import { usePageBlockScrolling } from '../hooks/usePageBlockScrolling'
+import { useNotifications } from '../hooks/useNotifications'
 
 function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperation, onTeiChange, onPageIndicatorUpdate }) {
   const paneWidth = showTeiCode ? 'w-1/3' : 'w-1/2'
   const { selection, isSelecting, clearSelection } = useTextSelection()
   const [selectedStanzas, setSelectedStanzas] = useState([])
   const [isModifyingTei, setIsModifyingTei] = useState(false)
+  const notify = useNotifications()
   
   // Page-block synchronized scrolling
   const {
@@ -57,7 +59,7 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
       // For merge operations, use checkbox selection instead of text selection
       if (operation === 'merge-stanzas') {
         if (selectedStanzas.length < 2) {
-          alert('Please select at least 2 stanzas using the checkboxes to merge them.')
+          notify('Please select at least 2 stanzas using the checkboxes to merge them.', 'info')
           return
         }
         

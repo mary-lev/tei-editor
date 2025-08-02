@@ -1,6 +1,8 @@
 import { useCallback } from 'react'
+import { useNotifications } from '../hooks/useNotifications'
 
 function UploadCard({ onFileLoad }) {
+  const notify = useNotifications()
   const handleFileSelect = useCallback(async (event) => {
     const file = event.target.files[0]
     if (!file) return
@@ -33,9 +35,9 @@ function UploadCard({ onFileLoad }) {
       
       onFileLoad(teiDocument, images)
     } catch (error) {
-      alert(`Error loading TEI file: ${error.message}`)
+      notify(`Error loading TEI file: ${error.message}`, 'error')
     }
-  }, [onFileLoad])
+  }, [onFileLoad, notify])
 
   const handleDrop = useCallback((event) => {
     event.preventDefault()
