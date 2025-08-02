@@ -1,0 +1,34 @@
+{
+  "samples": [
+    {
+      "id": "doc_2e0b9b6c9a1d",
+      "title": "Russian Poetry Sample",
+      "author": "Электронный Архив",
+      "description": "Small sample document with 8 pages (pages 9-16)",
+      "xmlPath": "samples/doc_2e0b9b6c9a1d/doc_2e0b9b6c9a1d.xml",
+      "imageDir": "samples/doc_2e0b9b6c9a1d/images",
+      "pageRange": "9-16",
+      "totalPages": 8
+    },
+    {
+      "id": "doc_b361451528a9",
+      "title": "Стихи и поэмы (Гронский, 1935)",
+      "author": "Гронский, Николай Павлович",
+      "description": "Berlin: Parabola, 1935 (107 pages, 10-116)",
+      "xmlPath": "samples/doc_b361451528a9/doc_b361451528a9.xml",
+      "imageDir": "samples/doc_b361451528a9/images",
+      "pageRange": "10-116",
+      "totalPages": 107
+    },
+    {
+      "id": "doc_e91c5ae89f21",
+      "title": "Charskaya 1915",
+      "author": "Электронный Архив",
+      "description": "1915 (12 pages, 9-20)",
+      "xmlPath": "samples/doc_e91c5ae89f21/doc_e91c5ae89f21.xml",
+      "imageDir": "samples/doc_e91c5ae89f21/images",
+      "pageRange": "9-20",
+      "totalPages": 12
+    }
+  ]
+}
