@@ -13,7 +13,6 @@ function FileLoader({ onFileLoad }) {
           Load your TEI document or select a sample to get started
         </p>
       </section>
-
       {/* Cards Container */}
       <div className="flex-1 flex items-center justify-center">
         <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-0">
@@ -21,7 +20,6 @@ function FileLoader({ onFileLoad }) {
           <SamplesCard onFileLoad={onFileLoad} />
         </div>
       </div>
-
       {/* Optional: Add some bottom spacing or footer info */}
       <div className="mt-16 text-center">
         <div className="inline-flex items-center space-x-6 text-sm text-gray-500">

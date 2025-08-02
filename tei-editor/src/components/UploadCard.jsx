@@ -55,17 +55,17 @@ function UploadCard({ onFileLoad }) {
       {/* Card Header */}
       <div className="text-center p-8 pb-6">
         <div className="inline-flex items-center justify-center w-10 h-10 mb-6">
-          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1}>
+          <svg className="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
           </svg>
         </div>
-        <h3 className="text-lg font-light text-gray-900 mb-3 tracking-wide">Upload File</h3>
-        <p className="text-sm text-gray-500 font-light">Upload your own TEI document</p>
+        <h3 className="text-lg font-semibold text-primary mb-3 tracking-wide">Upload File</h3>
+        <p className="text-sm text-muted font-normal">Upload your own TEI document</p>
       </div>
 
       {/* Upload Button */}
       <div className="px-8 pb-8 flex-1 flex items-center justify-center">
-        <label className="inline-flex items-center px-8 py-3 bg-teal-700 hover:bg-teal-800 text-white text-sm font-light cursor-pointer transition-colors">
+        <label className="inline-flex items-center px-8 py-3 bg-primary hover:bg-primary-dark text-white text-sm font-medium cursor-pointer transition-colors">
           <input
             type="file"
             className="hidden"
@@ -78,9 +78,9 @@ function UploadCard({ onFileLoad }) {
 
       {/* Card Footer */}
       <div className="px-8 pb-8">
-        <div className="pt-6 border-t border-gray-100">
-          <div className="flex items-center justify-center text-xs text-gray-400 font-light">
-            <div className="w-1 h-1 bg-teal-700 rounded-full mr-2"></div>
+        <div className="pt-6 border-t border-neutral-100">
+          <div className="flex items-center justify-center text-xs text-neutral-400 font-normal">
+            <div className="w-1 h-1 bg-primary rounded-full mr-2"></div>
             Supports TEI P5 XML files
           </div>
         </div>
