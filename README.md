@@ -115,6 +115,36 @@ tei-editor/
 
 ## 🎨 Design System
 
+### Palette
+
+| Token | Value |
+|-------|-------|
+| `--color-primary` | `#0f766e` |
+| `--color-primary-dark` | `#0d9488` |
+| `--color-secondary` | `#3b82f6` |
+| `--color-secondary-dark` | `#2563eb` |
+| `--color-neutral-50` | `#f9fafb` |
+| `--color-neutral-100` | `#f3f4f6` |
+| `--color-neutral-200` | `#e5e7eb` |
+| `--color-neutral-300` | `#d1d5db` |
+| `--color-neutral-400` | `#9ca3af` |
+| `--color-neutral-500` | `#6b7280` |
+| `--color-neutral-600` | `#4b5563` |
+| `--color-neutral-700` | `#374151` |
+| `--color-neutral-800` | `#1f2937` |
+| `--color-neutral-900` | `#111827` |
+
+### Type Scale
+
+| Token | Size |
+|-------|------|
+| `--font-size-sm` | `0.875rem` |
+| `--font-size-base` | `1rem` |
+| `--font-size-lg` | `1.125rem` |
+| `--font-size-xl` | `1.25rem` |
+| `--font-size-2xl` | `1.5rem` |
+| `--font-size-3xl` | `1.875rem` |
+
 ### Modern Minimalist Aesthetic
 
 - **Color Palette**: Monochromatic grays with deep teal accent (#0f766e)
