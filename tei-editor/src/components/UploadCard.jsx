@@ -51,7 +51,7 @@ function UploadCard({ onFileLoad }) {
   }, [])
 
   return (
-    <div className="bg-white border border-gray-200 hover:border-teal-700 transition-all duration-200 h-full">
+    <div className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg hover:border-teal-700 transition-shadow duration-300 h-full">
       {/* Card Header */}
       <div className="text-center p-8 pb-6">
         <div className="inline-flex items-center justify-center w-10 h-10 mb-6">
