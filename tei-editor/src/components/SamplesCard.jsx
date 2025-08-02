@@ -52,7 +52,7 @@ function SamplesCard({ onFileLoad }) {
   }, [onFileLoad])
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+    <div className="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
       {/* Card Header */}
       <div className="text-center p-6 pb-4">
         <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-xl mb-4">
