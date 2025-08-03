@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount }) {
+function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount, preserveSelection }) {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
 
@@ -72,44 +72,124 @@ function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount
     onOperation(operation, selection)
   }
 
-  const toolbarButtons = [
-    {
-      id: 'merge-stanzas',
-      label: 'Merge',
+  // Helper function to count selected line-like elements in text selection
+  const countSelectedLines = (selection) => {
+    if (!selection?.range) return 0
+    
+    // Find all line-like elements within the selection range
+    const range = selection.range
+    const container = range.commonAncestorContainer
+    
+    // Get the parent element that contains the selection
+    const parentElement = container.nodeType === Node.TEXT_NODE ? container.parentElement : container
+    
+    // Look for line-like elements by checking closest ancestors
+    const lineElements = []
+    
+    // Check if we're inside a line-like element (including nested spans)
+    const closestLineElement = parentElement?.closest('.line, .heading, .subtitle, .dedication, .epigraph')
+    
+    if (closestLineElement) {
+      lineElements.push(closestLineElement)
+    } else {
+      // Search for line-like elements within the selection
+      const lines = parentElement?.querySelectorAll?.('.line, .heading, .subtitle, .dedication, .epigraph') || []
+      for (const line of lines) {
+        if (range.intersectsNode(line)) {
+          lineElements.push(line)
+        }
+      }
+    }
+    return lineElements.length
+  }
+
+  // Define all available buttons
+  const allButtons = {
+    'merge-stanzas': {
       icon: '⫸',
+      label: 'Merge',
       description: 'Merge selected stanzas into one'
     },
-    {
-      id: 'tag-dedication',
-      label: 'Dedication',
-      icon: '♦',
-      description: 'Convert line to dedication'
+    'delete-element': {
+      icon: '×',
+      label: 'Delete',
+      description: 'Delete selected element'
     },
-    {
-      id: 'tag-subtitle',
-      label: 'Subtitle',
-      icon: 'Sub',
-      description: 'Convert line to subtitle'
-    },
-    {
-      id: 'tag-epigraph',
-      label: 'Epigraph',
-      icon: '❝',
-      description: 'Convert line to epigraph'
-    },
-    {
-      id: 'split-stanza',
-      label: 'Split',
+    'split-stanza': {
       icon: '⫷',
+      label: 'Split',
       description: 'Split stanza at selection'
     },
-    {
-      id: 'delete-element',
-      label: 'Delete',
-      icon: '×',
-      description: 'Delete selected element'
+    'create-stanza': {
+      icon: '📋',
+      label: 'Stanza',
+      description: 'Create stanza from selected lines'
+    },
+    'create-line': {
+      icon: '📝',
+      label: 'Line',
+      description: 'Create line from selected text'
+    },
+    'create-heading': {
+      icon: 'H',
+      label: 'Heading',
+      description: 'Create heading from selected text'
+    },
+    'line-to-title': {
+      icon: 'T',
+      label: 'Title',
+      description: 'Convert line to title'
+    },
+    'line-to-subtitle': {
+      icon: 'Sub',
+      label: 'Subtitle',
+      description: 'Convert line to subtitle'
+    },
+    'line-to-epigraph': {
+      icon: '❝',
+      label: 'Epigraph',
+      description: 'Convert line to epigraph'
+    },
+    'line-to-dedication': {
+      icon: '♦',
+      label: 'Dedication',
+      description: 'Convert line to dedication'
     }
-  ]
+  }
+
+  // Context-aware button selection
+  const getContextualButtons = () => {
+    // 1. Text selections get priority for single line-like elements
+    if (selection?.text) {
+      const selectedLines = countSelectedLines(selection)
+      
+      if (selectedLines === 1) {
+        // Single line-like element (including headings) - treat as line conversion
+        return ['line-to-title', 'line-to-subtitle', 'line-to-epigraph', 'line-to-dedication', 'delete-element']
+      }
+      if (selectedLines > 1) {
+        return ['create-stanza', 'delete-element']
+      }
+      
+      // Free text selection (no line elements detected)
+      return ['create-line', 'create-heading']
+    }
+    
+    // 2. Checkbox selections (when no text selection)
+    if (selectedStanzasCount > 1) {
+      return ['merge-stanzas', 'delete-element']
+    }
+    if (selectedStanzasCount === 1) {
+      return ['delete-element', 'split-stanza']
+    }
+    
+    // No selection
+    return []
+  }
+
+  // Get buttons for current context
+  const activeButtonIds = getContextualButtons()
+  const toolbarButtons = activeButtonIds.map(id => ({ id, ...allButtons[id] }))
 
   return (
     <div
@@ -119,8 +199,11 @@ function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount
         position: 'fixed',
         left: `${position.x}px`,
         top: `${position.y}px`,
-        zIndex: 1000
+        zIndex: 1000,
+        userSelect: 'none'
       }}
+      onMouseEnter={() => preserveSelection && preserveSelection()}
+      onMouseLeave={() => {}}
     >
       <div className="flex justify-between items-center">
         <span className="text-xs text-slate-500 px-2">
@@ -142,19 +225,25 @@ function FloatingToolbar({ selection, onOperation, onClose, selectedStanzasCount
           ×
         </button>
       </div>
-      <div className="grid grid-cols-3 gap-1">
-        {toolbarButtons.map((button) => (
-          <button
-            key={button.id}
-            className="flex flex-col items-center p-2 rounded-md hover:bg-slate-100 transition-colors"
-            onClick={() => handleOperation(button.id)}
-            title={button.description}
-          >
-            <span className="text-lg font-bold text-slate-700">{button.icon}</span>
-            <span className="text-xs text-slate-600">{button.label}</span>
-          </button>
-        ))}
-      </div>
+      {toolbarButtons.length > 0 ? (
+        <div className={`grid gap-1 ${toolbarButtons.length <= 2 ? 'grid-cols-2' : toolbarButtons.length <= 3 ? 'grid-cols-3' : toolbarButtons.length <= 4 ? 'grid-cols-4' : 'grid-cols-5'}`}>
+          {toolbarButtons.map((button) => (
+            <button
+              key={button.id}
+              className="flex flex-col items-center p-2 rounded-md hover:bg-slate-100 transition-colors"
+              onClick={() => handleOperation(button.id)}
+              title={button.description}
+            >
+              <span className="text-lg font-bold text-slate-700">{button.icon}</span>
+              <span className="text-xs text-slate-600">{button.label}</span>
+            </button>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center text-xs text-slate-500 py-2">
+          No actions available for this selection
+        </div>
+      )}
     </div>
   )
 }

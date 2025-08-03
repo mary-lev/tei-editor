@@ -70,7 +70,10 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
               >
                 <div className="flex items-center justify-between mb-1 w-full">
                   <div className="flex items-start">
-                    <span className="text-xs text-gray-400 w-8 flex-shrink-0 mt-1">
+                    <span 
+                      className="text-xs text-gray-400 w-8 flex-shrink-0 mt-1"
+                      style={{ userSelect: 'none' }}
+                    >
                       Sub
                     </span>
                     <span className="flex-1 text-base font-semibold text-gray-800 italic leading-relaxed">
@@ -103,7 +106,10 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
             >
               <div className="flex items-center justify-between mb-1 w-full">
                 <div className="flex items-start">
-                  <span className="text-xs text-gray-400 w-8 flex-shrink-0 mt-1">
+                  <span 
+                    className="text-xs text-gray-400 w-8 flex-shrink-0 mt-1"
+                    style={{ userSelect: 'none' }}
+                  >
                     H
                   </span>
                   <span className="flex-1 text-lg font-bold text-gray-900 leading-relaxed">
@@ -157,7 +163,11 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           
           if (type === 'poem') {
             return (
-              <div key={Math.random()} className="poem-lg">
+              <div 
+                key={Math.random()} 
+                className="poem-lg"
+                style={{ userSelect: 'text', cursor: 'text' }}
+              >
                 {Array.from(element.children).map(child => renderElement(child))}
               </div>
             )
@@ -174,10 +184,15 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
                 className={`stanza mb-4 p-2 rounded border ${isSelected ? 'bg-blue-50 border-blue-300' : 'border-transparent hover:border-gray-200'}`}
                 data-stanza-id={stanzaId}
               >
-                <div className="flex items-center justify-between mb-1">
-                  <div className="text-xs text-gray-500">Stanza {stanzaNum}</div>
+                <div 
+                  className="flex items-center justify-between mb-1"
+                  style={{ userSelect: 'none' }}
+                >
+                  <div className="text-xs text-gray-500" style={{ userSelect: 'none' }}>
+                    Stanza {stanzaNum}
+                  </div>
                   {onStanzaSelectionChange ? (
-                    <label className="flex items-center cursor-pointer">
+                    <label className="flex items-center cursor-pointer" style={{ userSelect: 'none' }}>
                       <input
                         type="checkbox"
                         checked={isSelected || false}
@@ -186,11 +201,16 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
                           onStanzaSelectionChange(stanzaId, e.target.checked)
                         }}
                         className="mr-1 text-blue-600"
+                        style={{ userSelect: 'none' }}
                       />
-                      <span className="text-xs text-gray-600">Select</span>
+                      <span className="text-xs text-gray-600" style={{ userSelect: 'none' }}>
+                        Select
+                      </span>
                     </label>
                   ) : (
-                    <span className="text-xs text-red-500">No handler</span>
+                    <span className="text-xs text-red-500" style={{ userSelect: 'none' }}>
+                      No handler
+                    </span>
                   )}
                 </div>
                 <div className="pl-4">
@@ -212,8 +232,15 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           const xmlId = element.getAttribute('xml:id')
           
           return (
-            <div key={xmlId || Math.random()} className="line flex items-start py-1">
-              <span className="text-xs text-gray-400 w-8 flex-shrink-0 mt-1">
+            <div 
+              key={xmlId || Math.random()} 
+              className="line flex items-start py-1"
+              style={{ userSelect: 'text', cursor: 'text' }}
+            >
+              <span 
+                className="text-xs text-gray-400 w-8 flex-shrink-0 mt-1"
+                style={{ userSelect: 'none' }}
+              >
                 {lineNum}
               </span>
               <span className="flex-1 leading-relaxed">
@@ -225,7 +252,11 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
 
         case 'p':
           return (
-            <p key={Math.random()} className="paragraph mb-2">
+            <p 
+              key={Math.random()} 
+              className="paragraph mb-2"
+              style={{ userSelect: 'text', cursor: 'text' }}
+            >
               {element.textContent}
             </p>
           )

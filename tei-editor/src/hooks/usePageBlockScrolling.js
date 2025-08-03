@@ -16,7 +16,6 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
   // Helper function to get TEI header offset - now returns 0 since we exclude header
   const getTeiHeaderOffset = useCallback(() => {
     // Since we now start TEI display from first page break, no header offset needed
-    console.log(`🔍 TEI header offset: 0px (header excluded from display)`)
     return 0
   }, [])
 
@@ -25,7 +24,6 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
     if (!teiText) return 0
     
     const pageNum = element.getAttribute('n')
-    console.log(`🔍 Starting position calc for page ${pageNum}`)
     
     // Get CodeMirror editor instance to access full document content
     if (teiCodeRef.current) {
@@ -33,12 +31,6 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
       const codeMirrorEditor = teiCodeRef.current.querySelector('.cm-editor')
       const codeMirrorContent = teiCodeRef.current.querySelector('.cm-content')
       
-      console.log(`🔍 CodeMirror access:`, {
-        teiCodeRef: teiCodeRef.current,
-        codeMirrorEditor,
-        codeMirrorContent,
-        className: teiCodeRef.current.className
-      })
       
       if (codeMirrorContent) {
         // Get the full document text from CodeMirror's state, not just visible DOM
@@ -65,21 +57,14 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
         if (codeMirrorView && codeMirrorView.state && codeMirrorView.state.doc) {
           // Access CodeMirror's full document state (header-less content)
           fullDocumentText = codeMirrorView.state.doc.toString()
-          console.log('📄 Got full CodeMirror document (header-less):', fullDocumentText.length, 'chars')
         } else {
           // Fallback: extract visible text and hope it contains our page
           fullDocumentText = codeMirrorContent.textContent || codeMirrorContent.innerText
-          console.log('📝 Using visible text fallback (header-less):', fullDocumentText.length, 'chars')
         }
         
         // If we have the full document text, search through it
         if (fullDocumentText) {
           const lines = fullDocumentText.split('\n')
-          console.log(`🔍 Full document analysis:`, {
-            totalLines: lines.length,
-            hasPageBreaks: fullDocumentText.includes('<pb n='),
-            searchPattern: `<pb n="${pageNum}"`
-          })
           
           // Get accurate line height from CodeMirror
           let lineHeight = 16.8 // CodeMirror default for 12px font
@@ -94,7 +79,6 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
               }
             }
           } catch (e) {
-            console.warn('Could not detect CodeMirror line height:', e)
           }
           
           // Search for the page break in the full document
@@ -102,11 +86,9 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
             const line = lines[i]
             if (line.includes(`<pb n="${pageNum}"`) || line.includes(`pb n="${pageNum}"`)) {
               const position = i * lineHeight
-              console.log(`🎯 Found page ${pageNum} at line ${i}/${lines.length}, position ${position}px`)
               return position
             }
           }
-          console.warn(`❌ Page ${pageNum} not found in full document (${lines.length} lines)`)
         }
       }
       
@@ -137,17 +119,14 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
     }
     
     // Final fallback: use the raw TEI text passed to the function
-    console.log('🔄 Using raw TEI text fallback')
     const lines = teiText.split('\n')
     for (let i = 0; i < lines.length; i++) {
       if (lines[i].includes(`<pb n="${pageNum}"`) || lines[i].includes(`pb n="${pageNum}"`)) {
         const position = i * 16.8 // Use CodeMirror line height
-        console.log(`🎯 Found page ${pageNum} in raw text at line ${i}, position ${position}px`)
         return position
       }
     }
     
-    console.warn(`❌ Page ${pageNum} not found anywhere`)
     return 0
   }, [teiCodeRef])
 
@@ -214,11 +193,6 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
     const teiPageMarkers = getTeiPageMarkers()
 
 
-    console.log('🗺️ Building page mappings:', {
-      teiPageMarkers: teiPageMarkers.map(m => `Page ${m.pageNumber}`),
-      textPageElements: Array.from(textPageElements).map(el => `Page ${el.dataset.pageNumber}`),
-      imagePageElements: Array.from(imagePageElements).map(el => `Page ${el.dataset.pageNumber}`)
-    })
 
     const mappings = teiPageMarkers.map((teiMarker) => {
       // Find corresponding elements in text and image panes
@@ -241,11 +215,6 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
         hasImageContent: !!imageEl
       }
 
-      console.log(`📍 Page ${mapping.pageNumber} mapping:`, {
-        tei: `${mapping.teiPosition}px`,
-        text: mapping.hasTextContent ? `${mapping.textPosition}px` : 'missing',
-        image: mapping.hasImageContent ? `${mapping.imagePosition}px` : 'missing'
-      })
 
       return mapping
     })
@@ -306,21 +275,14 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
     pageMappingsCache.current = null
     
     const pageMappings = getPageMappings()
-    console.log(`🎯 Looking for Page ${targetPage} in mappings:`, pageMappings.map(p => p.pageNumber))
     
     const targetMapping = pageMappings.find(p => p.pageNumber === targetPage)
 
     if (!targetMapping) {
-      console.warn(`❌ No mapping found for Page ${targetPage}`)
       setIsTransitioning(false)
       return
     }
     
-    console.log(`✅ Found mapping for Page ${targetPage}:`, {
-      teiPosition: targetMapping.teiPosition,
-      textPosition: targetMapping.textPosition,
-      imagePosition: targetMapping.imagePosition
-    })
 
     // Comfortable scroll timing (slower, more pleasant)
     const scrollDuration = 800 // 800ms for comfortable transition
@@ -355,22 +317,14 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
       const teiPosition = targetMapping.teiPosition
       
       const scrollContainer = teiCodeRef.current
-      console.log(`📱 PANE SYNC → Page ${targetPage}:`, {
-        'Image Pane': imageRef.current ? `${targetMapping.imagePosition}px` : 'N/A',
-        'Text Pane': renderedTextRef.current ? `${targetMapping.textPosition - 50}px` : 'N/A', 
-        'TEI Pane': scrollContainer ? `${teiPosition}px (header-less display)` : 'N/A'
-      })
       
       if (scrollContainer && typeof scrollContainer.scrollTop !== 'undefined') {
-        console.log('📜 Scrolling TEI pane to:', teiPosition)
         scrollPromises.push(smoothScrollTo(
           scrollContainer,
           teiPosition,
           scrollDuration,
           easing
         ))
-      } else {
-        console.warn('❌ TEI scroll container not valid:', scrollContainer)
       }
     }
 
@@ -385,13 +339,11 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
     // Wait for all scrolling to complete
     Promise.all(scrollPromises).then(() => {
       setCurrentPage(targetPage)
-      console.log(`✅ SYNC COMPLETE → All panes now showing Page ${targetPage}`)
       setTimeout(() => {
         setIsTransitioning(false)
         scrollInitiator.current = null
       }, 50)
     }).catch(error => {
-      console.error('❌ Scroll sync failed:', error)
       setIsTransitioning(false)
       scrollInitiator.current = null
     })
@@ -427,12 +379,6 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
   // Debounced scroll detection for performance with large documents
   const detectPageFromScroll = useCallback((scrollTop, containerHeight, initiatingPane) => {
     if (isTransitioning || scrollInitiator.current === initiatingPane || isModifyingTei) {
-      console.log('🚫 Skipping page detection:', {
-        isTransitioning,
-        scrollInitiator: scrollInitiator.current,
-        isModifyingTei,
-        reason: isModifyingTei ? 'TEI operation in progress' : 'transition/scroll conflict'
-      })
       return
     }
 
@@ -514,7 +460,6 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
 
   // Debug function to test TEI position calculation
   const debugTeiPosition = useCallback((pageNum) => {
-    console.log(`🔍 DEBUG: Testing TEI position for page ${pageNum}`)
     if (teiDocument?.dom) {
       const pageBreaks = teiDocument.dom.querySelectorAll('pb')
       const targetPb = Array.from(pageBreaks).find(pb => 
@@ -522,13 +467,8 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
       )
       if (targetPb) {
         const teiPos = getElementLinePosition(targetPb, teiDocument.text)
-        console.log(`🔍 DEBUG: TEI position result: ${teiPos}px`)
         return teiPos
-      } else {
-        console.log(`🔍 DEBUG: Page break ${pageNum} not found`)
       }
-    } else {
-      console.log(`🔍 DEBUG: No TEI document DOM`)
     }
     return 0
   }, [teiDocument, getElementLinePosition])

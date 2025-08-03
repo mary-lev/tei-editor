@@ -3,6 +3,8 @@ import { useState, useEffect, useCallback } from 'react'
 function SamplesCard({ onFileLoad }) {
   const [samples, setSamples] = useState([])
   const [loading, setLoading] = useState(true)
+  const [selectedSample, setSelectedSample] = useState('')
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
   // Load available samples on component mount
   useEffect(() => {
@@ -20,7 +22,10 @@ function SamplesCard({ onFileLoad }) {
     loadSamples()
   }, [])
 
-  const handleSampleClick = useCallback(async (sample) => {
+  const handleSampleSelect = useCallback(async (sample) => {
+    setSelectedSample(sample.title)
+    setIsDropdownOpen(false)
+    
     try {
       const response = await fetch(`/${sample.xmlPath}`)
       const text = await response.text()
@@ -52,87 +57,71 @@ function SamplesCard({ onFileLoad }) {
   }, [onFileLoad])
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+    <div className="bg-white border border-gray-200 hover:border-teal-700 transition-all duration-200 h-full">
       {/* Card Header */}
-      <div className="text-center p-6 pb-4">
-        <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-xl mb-4">
-          <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253" />
+      <div className="text-center p-8 pb-6">
+        <div className="inline-flex items-center justify-center w-10 h-10 mb-6">
+          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253" />
           </svg>
         </div>
-        <h3 className="text-xl font-semibold text-gray-900 mb-2">Sample Documents</h3>
-        <p className="text-sm text-gray-600">Try the editor with example files</p>
+        <h3 className="text-lg font-light text-gray-900 mb-3 tracking-wide">Sample Documents</h3>
+        <p className="text-sm text-gray-500 font-light">Try the editor with example files</p>
       </div>
 
-      {/* Samples List */}
-      <div className="px-6 pb-6 flex-1">
-        <div className="space-y-3">
-          {loading ? (
-            <div className="text-center py-8">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600 mx-auto mb-3"></div>
-              <p className="text-sm text-gray-500">Loading samples...</p>
-            </div>
-          ) : samples.length > 0 ? (
-            <>
-              <div className="text-xs font-medium text-gray-700 uppercase tracking-wide mb-4">
-                Available Samples
-              </div>
+      {/* Dropdown */}
+      <div className="px-8 pb-8 flex-1 flex items-center justify-center">
+        <div className="relative w-full">
+          <button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            disabled={loading || samples.length === 0}
+            className="w-full px-8 py-3 bg-teal-700 hover:bg-teal-800 disabled:bg-gray-400 text-white text-sm font-light cursor-pointer transition-colors text-left flex items-center justify-between"
+          >
+            {loading ? (
+              'Loading samples...'
+            ) : samples.length === 0 ? (
+              'No samples available'
+            ) : selectedSample ? (
+              selectedSample
+            ) : (
+              'Select a sample book'
+            )}
+            <svg 
+              className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          {isDropdownOpen && samples.length > 0 && (
+            <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 shadow-lg z-10 max-h-64 overflow-y-auto">
               {samples.map((sample) => (
-                <div
+                <button
                   key={sample.id}
-                  onClick={() => handleSampleClick(sample)}
-                  className="block p-3 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 cursor-pointer transition-all duration-200 group"
+                  onClick={() => handleSampleSelect(sample)}
+                  className="w-full px-4 py-3 text-left hover:bg-teal-50 hover:text-teal-700 transition-colors border-b border-gray-100 last:border-b-0"
                 >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1 min-w-0">
-                      <h4 className="text-sm font-medium text-gray-900 truncate group-hover:text-green-700">
-                        {sample.title}
-                      </h4>
-                      <p className="text-xs text-gray-600 mt-1">
-                        {sample.author} • {sample.totalPages} pages
-                      </p>
-                      {sample.description && (
-                        <p className="text-xs text-gray-500 mt-1 overflow-hidden">
-                          {sample.description.length > 70 
-                            ? `${sample.description.substring(0, 70)}...` 
-                            : sample.description}
-                        </p>
-                      )}
-                    </div>
-                    <div className="ml-3 flex-shrink-0">
-                      <svg className="w-4 h-4 text-gray-400 group-hover:text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
+                  <div className="text-sm font-medium text-gray-900">
+                    {sample.title}
                   </div>
-                </div>
+                  <div className="text-xs text-gray-600 mt-1">
+                    {sample.author} • {sample.totalPages} pages
+                  </div>
+                </button>
               ))}
-            </>
-          ) : (
-            <div className="text-center py-8 text-gray-500">
-              <svg className="mx-auto h-8 w-8 text-gray-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <p className="text-sm">No sample documents available</p>
             </div>
           )}
         </div>
       </div>
 
       {/* Card Footer */}
-      <div className="px-6 pb-6">
-        <div className="pt-4 border-t border-gray-100">
-          <div className="flex items-center justify-center text-xs text-gray-500">
-            <svg 
-              className="mr-2" 
-              width="16" 
-              height="16" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+      <div className="px-8 pb-8">
+        <div className="pt-6 border-t border-gray-100">
+          <div className="flex items-center justify-center text-xs text-gray-400 font-light">
+            <div className="w-1 h-1 bg-teal-700 rounded-full mr-2"></div>
             Perfect for testing features
           </div>
         </div>

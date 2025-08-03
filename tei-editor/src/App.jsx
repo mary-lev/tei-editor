@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import FileLoader from './components/FileLoader'
 import ThreePaneLayout from './components/ThreePaneLayout'
 import ExportButton from './components/ExportButton'
@@ -155,16 +155,18 @@ function App() {
       {/* Header */}
       <header className="bg-white border-b border-slate-200 px-4 py-3 flex justify-between items-center">
         <h1 className="text-xl font-semibold text-slate-900">TEI Poetry Editor</h1>
-        <div className="flex gap-2">
-          <button
-            onClick={() => setShowTeiCode(!showTeiCode)}
-            className="px-3 py-1 text-sm bg-slate-100 hover:bg-slate-200 rounded border border-slate-300"
-            data-testid="tei-code-toggle"
-          >
-            {showTeiCode ? 'Hide' : 'Show'} TEI Code
-          </button>
-          <ExportButton onExport={handleExport} disabled={!teiDocument} />
-        </div>
+        {teiDocument && (
+          <div className="flex gap-2">
+            <button
+              onClick={() => setShowTeiCode(!showTeiCode)}
+              className="px-3 py-1 text-sm bg-slate-100 hover:bg-slate-200 rounded border border-slate-300"
+              data-testid="tei-code-toggle"
+            >
+              {showTeiCode ? 'Hide' : 'Show'} TEI Code
+            </button>
+            <ExportButton onExport={handleExport} disabled={!teiDocument} />
+          </div>
+        )}
       </header>
 
       {/* Page Indicator - only show when document is loaded */}

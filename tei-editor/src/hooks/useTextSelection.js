@@ -3,13 +3,25 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 export function useTextSelection() {
   const [selection, setSelection] = useState(null)
   const [isSelecting, setIsSelecting] = useState(false)
+  const preserveSelection = useRef(false)
 
   const handleSelectionChange = useCallback(() => {
     const sel = window.getSelection()
     
-    if (!sel || sel.rangeCount === 0) {
-      setSelection(null)
-      setIsSelecting(false)
+    if (!sel || sel.rangeCount === 0 || sel.isCollapsed) {
+      // If we're preserving selection (during toolbar interaction), don't clear
+      if (preserveSelection.current) {
+        return
+      }
+      
+      // Don't clear immediately - give time for toolbar interaction
+      setTimeout(() => {
+        const currentSel = window.getSelection()
+        if (!preserveSelection.current && (!currentSel || currentSel.rangeCount === 0 || currentSel.isCollapsed)) {
+          setSelection(null)
+          setIsSelecting(false)
+        }
+      }, 300) // Reduced timeout for better responsiveness
       return
     }
 
@@ -18,14 +30,6 @@ export function useTextSelection() {
 
     // Only track selections with actual text content
     if (!selectedText) {
-      // Don't clear immediately - keep selection for toolbar interaction
-      setTimeout(() => {
-        const currentSel = window.getSelection()
-        if (!currentSel || !currentSel.toString().trim()) {
-          setSelection(null)
-          setIsSelecting(false)
-        }
-      }, 1000) // 1 second delay
       return
     }
 
@@ -63,9 +67,19 @@ export function useTextSelection() {
   }, [])
 
   const clearSelection = useCallback(() => {
+    preserveSelection.current = false
     window.getSelection()?.removeAllRanges()
     setSelection(null)
     setIsSelecting(false)
+  }, [])
+
+  const preserveCurrentSelection = useCallback(() => {
+    preserveSelection.current = true
+    
+    // Auto-release preservation after a delay
+    setTimeout(() => {
+      preserveSelection.current = false
+    }, 2000)
   }, [])
 
   useEffect(() => {
@@ -79,6 +93,7 @@ export function useTextSelection() {
   return {
     selection,
     isSelecting,
-    clearSelection
+    clearSelection,
+    preserveCurrentSelection
   }
 }

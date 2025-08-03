@@ -8,11 +8,11 @@ import { usePageBlockScrolling } from '../hooks/usePageBlockScrolling'
 
 function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperation, onTeiChange, onPageIndicatorUpdate }) {
   const paneWidth = showTeiCode ? 'w-1/3' : 'w-1/2'
-  const { selection, isSelecting, clearSelection } = useTextSelection()
+  const { selection, isSelecting, clearSelection, preserveCurrentSelection } = useTextSelection()
   const [selectedStanzas, setSelectedStanzas] = useState([])
   const [isModifyingTei, setIsModifyingTei] = useState(false)
   
-  // Page-block synchronized scrolling
+  // Page-block synchronized scrolling (disable during text selection to prevent unwanted scrolling)
   const {
     renderedTextRef,
     imageRef,
@@ -22,7 +22,7 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
     isTransitioning,
     handlePageNavigation,
     detectPageFromScroll
-  } = usePageBlockScrolling(teiDocument, isModifyingTei)
+  } = usePageBlockScrolling(teiDocument, isModifyingTei || isSelecting)
 
   // Pass page indicator props to parent
   useEffect(() => {
@@ -54,6 +54,19 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
     setIsModifyingTei(true)
     
     try {
+      // Map new button IDs to existing operations for backwards compatibility
+      let mappedOperation = operation
+      
+      // Map line conversion operations to existing tag operations
+      if (operation === 'line-to-title') mappedOperation = 'tag-heading'
+      if (operation === 'line-to-subtitle') mappedOperation = 'tag-subtitle'  
+      if (operation === 'line-to-epigraph') mappedOperation = 'tag-epigraph'
+      if (operation === 'line-to-dedication') mappedOperation = 'tag-dedication'
+      
+      // Map create operations to existing operations
+      if (operation === 'create-heading') mappedOperation = 'tag-heading'
+      // Note: create-line, create-stanza are new operations that may need backend implementation
+      
       // For merge operations, use checkbox selection instead of text selection
       if (operation === 'merge-stanzas') {
         if (selectedStanzas.length < 2) {
@@ -75,7 +88,7 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
         }
         
         if (onTeiOperation) {
-          onTeiOperation(operation, mergeData)
+          onTeiOperation(mappedOperation, mergeData)
         }
         
         // Clear stanza selection after merge
@@ -104,7 +117,7 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
       } else {
         // For other operations, use text selection
         if (onTeiOperation) {
-          onTeiOperation(operation, selectionData)
+          onTeiOperation(mappedOperation, selectionData)
         }
       }
       
@@ -159,7 +172,7 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
       )}
 
       {/* Floating Toolbar */}
-      {(isSelecting || selectedStanzas.length > 0) && (
+      {(selection?.text || selectedStanzas.length > 0) && (
         <FloatingToolbar
           selection={selection}
           onOperation={handleTeiOperation}
@@ -168,6 +181,7 @@ function ThreePaneLayout({ teiDocument, documentImages, showTeiCode, onTeiOperat
             setSelectedStanzas([])
           }}
           selectedStanzasCount={selectedStanzas.length}
+          preserveSelection={preserveCurrentSelection}
         />
       )}
 

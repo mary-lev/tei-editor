@@ -75,6 +75,44 @@ export class TEIOperations {
     return line
   }
 
+  // Helper: Find any line-like element (l, head, dedication, epigraph) that contains the selection
+  findSelectedLineElement(selection) {
+    console.log('🔍 Finding selected line-like element, selection:', selection)
+    
+    // Try to find different types of line-like elements
+    const elementTypes = ['l', 'head', 'dedication', 'epigraph']
+    let element = null
+    
+    for (const tagName of elementTypes) {
+      element = this.findTEIElement(selection.startContainer, tagName)
+      if (element) {
+        console.log(`🎯 Found ${tagName} element via findTEIElement`)
+        break
+      }
+    }
+    
+    if (!element) {
+      // Alternative approach: find by content matching
+      const selectedText = selection.text?.trim()
+      console.log('🔍 Selected text for matching:', selectedText)
+      
+      if (selectedText) {
+        // Find all line-like elements in TEI DOM and match by content
+        const allElements = this.dom.querySelectorAll('l, head, dedication, epigraph')
+        element = Array.from(allElements).find(el => {
+          const elementText = el.textContent?.trim()
+          return elementText && (
+            elementText.includes(selectedText) || 
+            selectedText.includes(elementText.substring(0, 20))
+          )
+        })
+        console.log('🔍 Found element via content matching:', !!element, element?.tagName, element?.textContent?.substring(0, 30))
+      }
+    }
+    
+    return element
+  }
+
   // Helper: Renumber lines within a stanza
   renumberStanzaLines(stanza) {
     const lines = stanza.querySelectorAll('l')
@@ -269,101 +307,137 @@ export class TEIOperations {
 
   // Operation 2: Convert Line to Dedication
   convertLineToDedication(selection) {
-    console.log('🏷️ Converting line to dedication, selection:', selection)
-    const line = this.findSelectedLine(selection)
-    console.log('📍 Found line element:', !!line, line?.textContent?.substring(0, 30))
+    console.log('🏷️ Converting line-like element to dedication, selection:', selection)
+    const element = this.findSelectedLineElement(selection)
+    console.log('📍 Found element:', !!element, element?.tagName, element?.textContent?.substring(0, 30))
     
-    if (!line) {
-      throw new Error('Please select a poem line to convert to dedication')
+    if (!element) {
+      throw new Error('Please select a poem line or heading to convert to dedication')
     }
 
-    const lineText = line.textContent.trim()
-    const parentElement = line.parentElement
-    console.log('📝 Line text:', lineText)
+    const elementText = element.textContent.trim()
+    const parentElement = element.parentElement
+    console.log('📝 Element text:', elementText)
     console.log('🏠 Parent element:', parentElement?.tagName)
     
     // Create dedication element with proper TEI namespace
     const dedication = this.dom.createElementNS('http://www.tei-c.org/ns/1.0', 'dedication')
     const paragraph = this.dom.createElementNS('http://www.tei-c.org/ns/1.0', 'p')
-    paragraph.textContent = lineText
+    paragraph.textContent = elementText
     dedication.appendChild(paragraph)
     console.log('✨ Created dedication element')
     
-    // Replace the line with dedication
-    parentElement.replaceChild(dedication, line)
-    console.log('🔄 Replaced line with dedication')
+    // Replace the element with dedication
+    parentElement.replaceChild(dedication, element)
+    console.log('🔄 Replaced element with dedication')
     
-    // Renumber remaining lines in the stanza
-    this.renumberStanzaLines(parentElement)
-    console.log('🔢 Renumbered remaining lines')
+    // Only renumber lines if we converted an actual line element
+    if (element.tagName.toLowerCase() === 'l') {
+      this.renumberStanzaLines(parentElement)
+      console.log('🔢 Renumbered remaining lines')
+    }
     
     return {
       operation: 'tag-dedication',
-      originalText: lineText,
+      originalText: elementText,
       result: dedication
     }
   }
 
-  // Operation 3: Convert Line to Subtitle
+  // Operation 3: Convert Line-like Element to Subtitle
   convertLineToSubtitle(selection) {
-    const line = this.findSelectedLine(selection)
+    const element = this.findSelectedLineElement(selection)
     
-    if (!line) {
-      throw new Error('Please select a poem line to convert to subtitle')
+    if (!element) {
+      throw new Error('Please select a poem line or heading to convert to subtitle')
     }
 
-    const lineText = line.textContent.trim()
-    const parentElement = line.parentElement
+    const elementText = element.textContent.trim()
+    const parentElement = element.parentElement
     
     // Create subtitle heading element with proper TEI namespace
     const subtitle = this.dom.createElementNS('http://www.tei-c.org/ns/1.0', 'head')
     subtitle.setAttribute('type', 'sub')
-    subtitle.textContent = lineText
+    subtitle.textContent = elementText
     
-    // Replace the line with subtitle
-    parentElement.replaceChild(subtitle, line)
+    // Replace the element with subtitle
+    parentElement.replaceChild(subtitle, element)
     
-    // Renumber remaining lines in the stanza
-    this.renumberStanzaLines(parentElement)
+    // Only renumber lines if we converted an actual line element
+    if (element.tagName.toLowerCase() === 'l') {
+      this.renumberStanzaLines(parentElement)
+    }
     
     return {
       operation: 'tag-subtitle',
-      originalText: lineText,
+      originalText: elementText,
       result: subtitle
     }
   }
 
-  // Operation 4: Convert Line to Epigraph
+  // Operation 4: Convert Line-like Element to Epigraph
   convertLineToEpigraph(selection) {
-    const line = this.findSelectedLine(selection)
+    const element = this.findSelectedLineElement(selection)
     
-    if (!line) {
-      throw new Error('Please select a poem line to convert to epigraph')
+    if (!element) {
+      throw new Error('Please select a poem line or heading to convert to epigraph')
     }
 
-    const lineText = line.textContent.trim()
-    const parentElement = line.parentElement
+    const elementText = element.textContent.trim()
+    const parentElement = element.parentElement
     
     // Create epigraph element with proper TEI namespace
     const epigraph = this.dom.createElementNS('http://www.tei-c.org/ns/1.0', 'epigraph')
     const paragraph = this.dom.createElementNS('http://www.tei-c.org/ns/1.0', 'p')
-    paragraph.textContent = lineText
+    paragraph.textContent = elementText
     epigraph.appendChild(paragraph)
     
-    // Replace the line with epigraph
-    parentElement.replaceChild(epigraph, line)
+    // Replace the element with epigraph
+    parentElement.replaceChild(epigraph, element)
     
-    // Renumber remaining lines in the stanza
-    this.renumberStanzaLines(parentElement)
+    // Only renumber lines if we converted an actual line element
+    if (element.tagName.toLowerCase() === 'l') {
+      this.renumberStanzaLines(parentElement)
+    }
     
     return {
       operation: 'tag-epigraph',
-      originalText: lineText,
+      originalText: elementText,
       result: epigraph
     }
   }
 
-  // Operation 5: Delete Element
+  // Operation 5: Convert Line-like Element to Heading
+  convertLineToHeading(selection) {
+    const element = this.findSelectedLineElement(selection)
+    
+    if (!element) {
+      throw new Error('Please select a poem line or element to convert to heading')
+    }
+
+    const elementText = element.textContent.trim()
+    const parentElement = element.parentElement
+    
+    // Create heading element with proper TEI namespace
+    const heading = this.dom.createElementNS('http://www.tei-c.org/ns/1.0', 'head')
+    heading.textContent = elementText
+    
+    // Replace the element with heading
+    parentElement.replaceChild(heading, element)
+    
+    // Only renumber lines if we converted an actual line element
+    if (element.tagName.toLowerCase() === 'l') {
+      this.renumberStanzaLines(parentElement)
+    }
+    
+    return {
+      operation: 'tag-heading',
+      originalText: elementText,
+      result: heading
+    }
+  }
+
+  // Operation 6: Delete Element
   deleteElement(selection) {
     console.log('🗑️ Starting element deletion, selection:', selection)
     
@@ -487,6 +561,8 @@ export class TEIOperations {
         return this.convertLineToSubtitle(selection)
       case 'tag-epigraph':
         return this.convertLineToEpigraph(selection)
+      case 'tag-heading':
+        return this.convertLineToHeading(selection)
       case 'delete-element':
         return this.deleteElement(selection)
       default:

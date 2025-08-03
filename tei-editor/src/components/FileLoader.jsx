@@ -7,7 +7,7 @@ function FileLoader({ onFileLoad }) {
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-3xl font-light text-slate-900 mb-3 tracking-tight">
-          TEI Poetry Editor
+          TEI Poetry Book Editor
         </h1>
         <p className="text-slate-500 font-light">
           Load your TEI document or select a sample to get started
