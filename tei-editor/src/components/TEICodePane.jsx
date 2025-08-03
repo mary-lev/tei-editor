@@ -12,41 +12,11 @@ const TEICodePane = forwardRef(({ teiDocument, onScroll, onTeiChange }, ref) => 
     const serializer = new XMLSerializer()
     const xmlString = serializer.serializeToString(teiDocument.dom)
     
-    // Find the start of actual content (first page break) and exclude TEI header
+    // Format the complete TEI document (including header and front matter)
     const lines = xmlString.replace(/></g, '>\n<').split('\n')
-    let startIndex = 0
-    let inBody = false
     
-    // Find where <text><body> starts and look for first <pb> tag
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i].trim()
-      
-      // Look for <body> tag
-      if (line.includes('<body>') || line.includes('<body ')) {
-        inBody = true
-        continue
-      }
-      
-      // Once in body, look for first page break
-      if (inBody && (line.includes('<pb n=') || line.includes('<pb '))) {
-        startIndex = i
-        console.log(`📄 TEI display starting from line ${i}: ${line}`)
-        break
-      }
-    }
-    
-    // If no page break found, start from <body>
-    if (startIndex === 0) {
-      for (let i = 0; i < lines.length; i++) {
-        if (lines[i].trim().includes('<body>')) {
-          startIndex = i
-          break
-        }
-      }
-    }
-    
-    // Format only the content part (excluding header)
-    const contentLines = lines.slice(startIndex)
+    // Show the entire document - no filtering needed now that sync works properly
+    const contentLines = lines
     let indentLevel = 0
     
     const formatted = contentLines

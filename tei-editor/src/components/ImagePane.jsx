@@ -10,9 +10,23 @@ const ImagePane = forwardRef(({ documentImages, documentHash, teiDocument, onScr
     const loadImages = async () => {
       setLoadingImages(true)
       try {
-        // Extract actual page numbers from TEI document
+        // Extract page numbers from both <pb> elements and facs attributes
         const pageBreaks = teiDocument.dom.querySelectorAll('pb')
-        const pageNumbers = Array.from(pageBreaks).map(pb => parseInt(pb.getAttribute('n')))
+        const pbPageNumbers = Array.from(pageBreaks).map(pb => parseInt(pb.getAttribute('n')))
+        
+        // Also extract page numbers from facs attributes (e.g., facs="#page_5")
+        const facsElements = teiDocument.dom.querySelectorAll('[facs]')
+        const facsPageNumbers = Array.from(facsElements)
+          .map(el => {
+            const facs = el.getAttribute('facs')
+            const match = facs?.match(/#page_?(\d+)/)
+            return match ? parseInt(match[1]) : null
+          })
+          .filter(num => num !== null)
+        
+        // Combine and deduplicate page numbers
+        const allPageNumbers = [...pbPageNumbers, ...facsPageNumbers]
+        const pageNumbers = [...new Set(allPageNumbers)].sort((a, b) => a - b)
         
         console.log('📖 Found pages in TEI:', pageNumbers)
         

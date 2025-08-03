@@ -5,8 +5,46 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
   const renderedContent = useMemo(() => {
     if (!teiDocument?.dom) return null
 
-    const textBody = teiDocument.dom.querySelector('text body')
-    if (!textBody) return null
+    // Get both front matter and body content
+    const textElement = teiDocument.dom.querySelector('text')
+    if (!textElement) return null
+    
+    // Process all children of <text> including <front> and <body>
+    const allTextContent = Array.from(textElement.children)
+
+    // Helper function to generate page markers for elements with facs attributes
+    // Only generates markers if there's no <pb> element for the same page
+    const generatePageMarker = (element) => {
+      const facs = element.getAttribute('facs')
+      const pageMatch = facs?.match(/#page_?(\d+)/)
+      const pageNum = pageMatch ? pageMatch[1] : null
+      
+      if (!pageNum) return null
+      
+      // Check if there's already a <pb> element for this page number in the document
+      // by looking for siblings or preceding elements
+      const textElement = teiDocument.dom.querySelector('text')
+      if (textElement) {
+        const existingPb = textElement.querySelector(`pb[n="${pageNum}"]`)
+        if (existingPb) {
+          // There's already a <pb> element for this page, don't create duplicate marker
+          return null
+        }
+      }
+      
+      return (
+        <div 
+          key={`page-marker-${pageNum}`}
+          className="page-break border-t-2 border-blue-200 py-2 my-4"
+          data-page-break="true"
+          data-page-number={pageNum}
+        >
+          <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+            Page {pageNum}
+          </span>
+        </div>
+      )
+    }
 
     const renderElement = (element) => {
       const tagName = element.tagName?.toLowerCase()
@@ -14,6 +52,9 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
       switch (tagName) {
         case 'pb': {
           const pageNum = element.getAttribute('n')
+          
+          // For now, don't try to detect empty pages at render time
+          // The page synchronization system will handle empty page spacing
           return (
             <div 
               key={Math.random()} 
@@ -28,29 +69,99 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
           )
         }
 
+        case 'front':
+          return (
+            <div key={Math.random()} className="front-matter mb-8 p-4 bg-slate-50 rounded-lg">
+              <div className="text-sm font-semibold text-slate-600 mb-4">Front Matter</div>
+              {Array.from(element.children).map(child => renderElement(child))}
+            </div>
+          )
+
+        case 'body':
+          return (
+            <div key={Math.random()} className="body-content">
+              {Array.from(element.children).map(child => renderElement(child))}
+            </div>
+          )
+
+        case 'titlepage':
+          const facs = element.getAttribute('facs')
+          const pageMarker = generatePageMarker(element)
+          
+          return (
+            <div key={Math.random()}>
+              {/* Add page marker for elements with facs attributes */}
+              {pageMarker}
+              <div className="title-page mb-6 p-4 bg-white rounded border-2 border-amber-200">
+                <div className="text-xs text-amber-700 mb-2">Title Page {facs}</div>
+                <div className="text-center space-y-2">
+                  {Array.from(element.children).map(child => renderElement(child))}
+                </div>
+              </div>
+            </div>
+          )
+
+        case 'doctitle':
+          return (
+            <div key={Math.random()} className="doc-title mb-4">
+              {Array.from(element.children).map(child => renderElement(child))}
+            </div>
+          )
+
+        case 'titlepart':
+          return (
+            <div key={Math.random()} className="title-part text-xl font-bold text-gray-900 mb-2 text-center">
+              {element.textContent}
+            </div>
+          )
+
+        case 'docimprint':
+          return (
+            <div key={Math.random()} className="doc-imprint text-sm text-gray-600 mt-4">
+              {Array.from(element.children).map(child => renderElement(child))}
+            </div>
+          )
+
+        case 'publisher':
+          return (
+            <div key={Math.random()} className="publisher italic text-gray-700">
+              {element.textContent}
+            </div>
+          )
+
         case 'div': {
           const type = element.getAttribute('type')
           const xmlId = element.getAttribute('xml:id')
+          const pageMarker = generatePageMarker(element)
           
           if (type === 'poem') {
             return (
-              <div key={xmlId || Math.random()} className="poem mb-8 p-4 bg-gray-50 rounded-lg">
-                {Array.from(element.children).map(child => renderElement(child))}
+              <div key={xmlId || Math.random()}>
+                {pageMarker}
+                <div className="poem mb-8 p-4 bg-gray-50 rounded-lg">
+                  {Array.from(element.children).map(child => renderElement(child))}
+                </div>
               </div>
             )
           }
           
           if (type === 'part') {
             return (
-              <div key={Math.random()} className="poem-part mb-6 p-3 bg-white rounded border">
-                {Array.from(element.children).map(child => renderElement(child))}
+              <div key={Math.random()}>
+                {pageMarker}
+                <div className="poem-part mb-6 p-3 bg-white rounded border">
+                  {Array.from(element.children).map(child => renderElement(child))}
+                </div>
               </div>
             )
           }
           
           return (
-            <div key={Math.random()} className="div-element mb-4">
-              {Array.from(element.children).map(child => renderElement(child))}
+            <div key={Math.random()}>
+              {pageMarker}
+              <div className="div-element mb-4">
+                {Array.from(element.children).map(child => renderElement(child))}
+              </div>
             </div>
           )
         }
@@ -277,7 +388,7 @@ const RenderedTextPane = forwardRef(({ teiDocument, onTextSelection, selectedSta
       }
     }
 
-    return Array.from(textBody.children).map(child => renderElement(child))
+    return allTextContent.map(child => renderElement(child))
   }, [teiDocument, selectedStanzas, onStanzaSelectionChange, onTeiOperation])
 
   // Handle scroll events for page detection

@@ -7,23 +7,41 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
   const pageMappingsCache = useRef(null)
   const lastTeiVersion = useRef(null)
   const scrollDetectionTimeout = useRef(null)
+  const lastScrollTop = useRef({})  // Track last scroll position per pane
+  const rapidScrollCount = useRef(0) // Track rapid scroll events
 
   // Refs for the three panes
   const renderedTextRef = useRef(null)
   const imageRef = useRef(null)
   const teiCodeRef = useRef(null)
 
-  // Helper function to get TEI header offset - now returns 0 since we exclude header
+  // Helper function to get TEI header offset - includes full header now
   const getTeiHeaderOffset = useCallback(() => {
-    // Since we now start TEI display from first page break, no header offset needed
+    // Now we include the full TEI header in the display, so calculate its height
+    if (!teiCodeRef.current) return 0
+    
+    // Try to find where the first <pb> or content starts in the display
+    const codeMirrorContent = teiCodeRef.current.querySelector('.cm-content')
+    if (codeMirrorContent) {
+      // The header is now included, so we need to account for it in positioning
+      // For now return 0 since we'll handle positioning through line calculations
+      return 0
+    }
+    
     return 0
-  }, [])
+  }, [teiCodeRef])
 
   // Helper function to get element position in TEI code with CodeMirror document access
   const getElementLinePosition = useCallback((element, teiText) => {
     if (!teiText) return 0
     
-    const pageNum = element.getAttribute('n')
+    // Get page number from either 'n' attribute or 'facs' attribute
+    let pageNum = element.getAttribute('n')
+    if (!pageNum) {
+      const facs = element.getAttribute('facs')
+      const match = facs?.match(/#page_?(\d+)/)
+      pageNum = match ? match[1] : null
+    }
     
     // Get CodeMirror editor instance to access full document content
     if (teiCodeRef.current) {
@@ -55,7 +73,7 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
         }
         
         if (codeMirrorView && codeMirrorView.state && codeMirrorView.state.doc) {
-          // Access CodeMirror's full document state (header-less content)
+          // Access CodeMirror's full document state (now includes full TEI document)
           fullDocumentText = codeMirrorView.state.doc.toString()
         } else {
           // Fallback: extract visible text and hope it contains our page
@@ -81,10 +99,16 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
           } catch (e) {
           }
           
-          // Search for the page break in the full document
+          // Search for the page marker in the full document
           for (let i = 0; i < lines.length; i++) {
             const line = lines[i]
+            // Look for pb elements with n attribute
             if (line.includes(`<pb n="${pageNum}"`) || line.includes(`pb n="${pageNum}"`)) {
+              const position = i * lineHeight
+              return position
+            }
+            // Look for elements with facs attributes (like titlePage)
+            if (line.includes(`facs="#page_${pageNum}"`) || line.includes(`facs="#page${pageNum}"`)) {
               const position = i * lineHeight
               return position
             }
@@ -111,7 +135,12 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
         
         for (let i = 0; i < lines.length; i++) {
           const line = lines[i]
+          // Look for pb elements with n attribute  
           if (line.includes(`<pb n="${pageNum}"`) || line.includes(`pb n="${pageNum}"`)) {
+            return i * lineHeight
+          }
+          // Look for elements with facs attributes (like titlePage)
+          if (line.includes(`facs="#page_${pageNum}"`) || line.includes(`facs="#page${pageNum}"`)) {
             return i * lineHeight
           }
         }
@@ -130,23 +159,53 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
     return 0
   }, [teiCodeRef])
 
-  // Extract TEI page markers with robust <pb> detection
+  // Extract TEI page markers from both <pb> elements and facs attributes
   const getTeiPageMarkers = useCallback(() => {
     if (!teiDocument?.dom) return []
     
+    // Get <pb> elements
     const pageBreaks = teiDocument.dom.querySelectorAll('pb')
-    
-    const markers = Array.from(pageBreaks).map((pb, index) => {
+    const pbMarkers = Array.from(pageBreaks).map((pb, index) => {
       const pageNum = pb.getAttribute('n') || pb.getAttribute('facs')?.match(/page_(\d+)/)?.[1] || (index + 1)
       return {
         pageNumber: parseInt(pageNum),
         element: pb,
         position: getElementLinePosition(pb, teiDocument.text || ''),
-        facsimile: pb.getAttribute('facs') || `page_${String(pageNum).padStart(4, '0')}.png`
+        facsimile: pb.getAttribute('facs') || `#page_${pageNum}`,
+        type: 'pb'
       }
     })
     
-    return markers
+    // Get elements with facs attributes (like titlePage)
+    const facsElements = teiDocument.dom.querySelectorAll('[facs]')
+    const facsMarkers = Array.from(facsElements)
+      .filter(el => el.tagName.toLowerCase() !== 'pb') // Don't duplicate pb elements
+      .map(el => {
+        const facs = el.getAttribute('facs')
+        const match = facs?.match(/#page_?(\d+)/)
+        if (!match) return null
+        
+        return {
+          pageNumber: parseInt(match[1]),
+          element: el,
+          position: getElementLinePosition(el, teiDocument.text || ''),
+          facsimile: facs,
+          type: el.tagName.toLowerCase()
+        }
+      })
+      .filter(marker => marker !== null)
+    
+    // Combine and deduplicate by page number, keeping the most specific marker
+    const allMarkers = [...pbMarkers, ...facsMarkers]
+    const uniqueMarkers = allMarkers.reduce((acc, marker) => {
+      const existing = acc.find(m => m.pageNumber === marker.pageNumber)
+      if (!existing) {
+        acc.push(marker)
+      }
+      return acc
+    }, [])
+    
+    return uniqueMarkers.sort((a, b) => a.pageNumber - b.pageNumber)
   }, [teiDocument?.dom, teiDocument?.text, getElementLinePosition])
 
   // Helper function to get page content height
@@ -194,7 +253,8 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
 
 
 
-    const mappings = teiPageMarkers.map((teiMarker) => {
+    // First pass: create basic mappings
+    const basicMappings = teiPageMarkers.map((teiMarker) => {
       // Find corresponding elements in text and image panes
       const textEl = Array.from(textPageElements).find(el => 
         parseInt(el.dataset.pageNumber) === teiMarker.pageNumber
@@ -203,21 +263,23 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
         parseInt(el.dataset.pageNumber) === teiMarker.pageNumber
       )
 
-      const mapping = {
+      return {
         pageNumber: teiMarker.pageNumber,
         textPosition: textEl?.offsetTop || 0,
         imagePosition: imageEl?.offsetTop || 0,
         teiPosition: teiMarker.position,
-        textHeight: textEl ? getPageContentHeight(textEl) : 0,
+        textHeight: textEl ? getPageContentHeight(textEl) : 200,
         imageHeight: imageEl?.offsetHeight || 0,
         facsimile: teiMarker.facsimile,
         hasTextContent: !!textEl,
-        hasImageContent: !!imageEl
+        hasImageContent: !!imageEl,
+        isEmpty: !textEl,
+        textElement: textEl
       }
-
-
-      return mapping
     })
+
+    // Use basic mappings without complex empty page positioning
+    const mappings = basicMappings
 
     // Cache the result
     pageMappingsCache.current = mappings
@@ -391,7 +453,10 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
       // Force fresh mapping calculation by clearing cache
       pageMappingsCache.current = null
       const pageMappings = getPageMappings()
-      if (!pageMappings.length) return
+      if (!pageMappings.length) {
+        // If no mappings available, don't change current page
+        return
+      }
 
       // Find which page is most prominently displayed
       let detectedPage = currentPage
@@ -420,7 +485,9 @@ export function usePageBlockScrolling(teiDocument, isModifyingTei = false) {
       })
 
       // If detected page is different and occupies majority of view, switch
-      if (detectedPage !== currentPage && maxVisibleArea > containerHeight * 0.6) {
+      // Reduced threshold from 0.6 to 0.4 to make page detection more responsive
+      // but prevent jumping by ensuring there's substantial visible content
+      if (detectedPage !== currentPage && maxVisibleArea > containerHeight * 0.4 && maxVisibleArea > 100) {
         setCurrentPage(detectedPage)
         scrollToPageBlock(detectedPage, initiatingPane)
       }
