@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback } from 'react'
+import contributedSamples from '../utils/contributedSamples'
 
 function SamplesCard({ onFileLoad }) {
   const [samples, setSamples] = useState([])
+  const [contributedSamplesList, setContributedSamplesList] = useState([])
   const [loading, setLoading] = useState(true)
   const [selectedSample, setSelectedSample] = useState('')
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
@@ -10,9 +12,19 @@ function SamplesCard({ onFileLoad }) {
   useEffect(() => {
     async function loadSamples() {
       try {
+        // Load public samples
         const response = await fetch('/samples/index.json')
         const data = await response.json()
-        setSamples(data.samples)
+        setSamples(data.samples || [])
+        
+        // Load contributed samples
+        const contributed = contributedSamples.getIndex()
+        setContributedSamplesList(contributed)
+        
+        console.log('📚 Loaded samples:', {
+          public: data.samples?.length || 0,
+          contributed: contributed.length
+        })
       } catch (error) {
         console.warn('Could not load sample documents index:', error)
       } finally {
@@ -27,28 +39,53 @@ function SamplesCard({ onFileLoad }) {
     setIsDropdownOpen(false)
     
     try {
-      const response = await fetch(`/${sample.xmlPath}`)
-      const text = await response.text()
-      const parser = new DOMParser()
-      const dom = parser.parseFromString(text, 'application/xml')
+      let teiDocument, images
       
-      // Check for parsing errors
-      const parserError = dom.querySelector('parsererror')
-      if (parserError) {
-        throw new Error(`XML parsing failed: ${parserError.textContent}`)
+      // Check if this is a contributed sample (by checking if it has contributed metadata)
+      const isContributed = contributedSamplesList.find(contrib => contrib.id === sample.id)
+      
+      if (isContributed) {
+        console.log('📖 Loading contributed sample:', sample.title)
+        
+        // Extract document hash from ID
+        const hashMatch = sample.id.match(/doc_([a-f0-9a-z]+)/)
+        const documentHash = hashMatch ? hashMatch[1] : null
+        
+        if (!documentHash) {
+          throw new Error('Invalid contributed sample ID format')
+        }
+        
+        // Load from contributed samples storage
+        const result = await contributedSamples.loadSample(documentHash)
+        teiDocument = result.teiDocument
+        images = result.images
+        
+      } else {
+        console.log('📖 Loading public sample:', sample.title)
+        
+        // Load public sample
+        const response = await fetch(`/${sample.xmlPath}`)
+        const text = await response.text()
+        const parser = new DOMParser()
+        const dom = parser.parseFromString(text, 'application/xml')
+        
+        // Check for parsing errors
+        const parserError = dom.querySelector('parsererror')
+        if (parserError) {
+          throw new Error(`XML parsing failed: ${parserError.textContent}`)
+        }
+        
+        teiDocument = {
+          dom,
+          filename: sample.id,
+          documentHash: sample.id.replace('doc_', ''),
+          text,
+          isLoadedFromSample: true,
+          sampleInfo: sample
+        }
+        
+        images = []
       }
-
-      const teiDocument = {
-        dom,
-        filename: sample.id,
-        documentHash: sample.id.replace('doc_', ''),
-        text,
-        isLoadedFromSample: true,
-        sampleInfo: sample
-      }
-
-      // For now, we'll pass empty images array - will implement image loading next
-      const images = []
       
       onFileLoad(teiDocument, images)
     } catch (error) {
@@ -66,7 +103,14 @@ function SamplesCard({ onFileLoad }) {
           </svg>
         </div>
         <h3 className="text-lg font-light text-gray-900 mb-3 tracking-wide">Sample Documents</h3>
-        <p className="text-sm text-gray-500 font-light">Try the editor with example files</p>
+        <p className="text-sm text-gray-500 font-light">
+          Try the editor with example files
+          {contributedSamplesList.length > 0 && (
+            <span className="block text-blue-600 text-xs mt-1">
+              + {contributedSamplesList.length} contributed sample{contributedSamplesList.length !== 1 ? 's' : ''}
+            </span>
+          )}
+        </p>
       </div>
 
       {/* Dropdown */}
@@ -96,22 +140,54 @@ function SamplesCard({ onFileLoad }) {
             </svg>
           </button>
           
-          {isDropdownOpen && samples.length > 0 && (
+          {isDropdownOpen && (samples.length > 0 || contributedSamplesList.length > 0) && (
             <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 shadow-lg z-10 max-h-64 overflow-y-auto">
-              {samples.map((sample) => (
-                <button
-                  key={sample.id}
-                  onClick={() => handleSampleSelect(sample)}
-                  className="w-full px-4 py-3 text-left hover:bg-teal-50 hover:text-teal-700 transition-colors border-b border-gray-100 last:border-b-0"
-                >
-                  <div className="text-sm font-medium text-gray-900">
-                    {sample.title}
+              {/* Public Samples */}
+              {samples.length > 0 && (
+                <>
+                  <div className="px-4 py-2 bg-gray-50 text-xs font-medium text-gray-700 border-b border-gray-200">
+                    📚 Public Samples
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">
-                    {sample.author} • {sample.totalPages} pages
+                  {samples.map((sample) => (
+                    <button
+                      key={sample.id}
+                      onClick={() => handleSampleSelect(sample)}
+                      className="w-full px-4 py-3 text-left hover:bg-teal-50 hover:text-teal-700 transition-colors border-b border-gray-100"
+                    >
+                      <div className="text-sm font-medium text-gray-900">
+                        {sample.title}
+                      </div>
+                      <div className="text-xs text-gray-600 mt-1">
+                        {sample.author} • {sample.totalPages} pages
+                      </div>
+                    </button>
+                  ))}
+                </>
+              )}
+              
+              {/* Contributed Samples */}
+              {contributedSamplesList.length > 0 && (
+                <>
+                  <div className="px-4 py-2 bg-blue-50 text-xs font-medium text-blue-700 border-b border-gray-200">
+                    💝 Your Contributions ({contributedSamplesList.length})
                   </div>
-                </button>
-              ))}
+                  {contributedSamplesList.map((sample) => (
+                    <button
+                      key={sample.id}
+                      onClick={() => handleSampleSelect(sample)}
+                      className="w-full px-4 py-3 text-left hover:bg-blue-50 hover:text-blue-700 transition-colors border-b border-gray-100 last:border-b-0"
+                    >
+                      <div className="text-sm font-medium text-gray-900">
+                        {sample.title}
+                      </div>
+                      <div className="text-xs text-gray-600 mt-1">
+                        {sample.author} • {sample.totalPages} pages
+                        <span className="ml-2 text-blue-600">✨ Contributed</span>
+                      </div>
+                    </button>
+                  ))}
+                </>
+              )}
             </div>
           )}
         </div>
