@@ -29,6 +29,46 @@
       "imageDir": "samples/doc_e91c5ae89f21/images",
       "pageRange": "9-20",
       "totalPages": 12
+    },
+    {
+      "id": "doc_0460a91a1013",
+      "title": "Ограда (Вл. Пясть, 1909)",
+      "author": "Пясть, Владимир Алексеевич",
+      "description": "Книга стихов, издание Т-ва М. О. Вольф (114 pages, 62 poems)",
+      "xmlPath": "samples/doc_0460a91a1013/doc_0460a91a1013.xml",
+      "imageDir": "samples/doc_0460a91a1013/images",
+      "pageRange": "1-114",
+      "totalPages": 114
+    },
+    {
+      "id": "doc_2a13b4a11ae6",
+      "title": "Розы Пиерии (Парнок, 1922)",
+      "author": "Парнок, София Яковлевна",
+      "description": "Антологические стихи, М.—Петроград, 1922 (33 pages, 16 poems)",
+      "xmlPath": "samples/doc_2a13b4a11ae6/doc_2a13b4a11ae6.xml",
+      "imageDir": "samples/doc_2a13b4a11ae6/images",
+      "pageRange": "1-33",
+      "totalPages": 33
+    },
+    {
+      "id": "doc_be69cadb2eab",
+      "title": "Стихи (Нарбут, 1910)",
+      "author": "Нарбут, Владимир Иванович",
+      "description": "Книга I, И-во «Дракон» СПб, 1910 (152 pages, 64 poems)",
+      "xmlPath": "samples/doc_be69cadb2eab/doc_be69cadb2eab.xml",
+      "imageDir": "samples/doc_be69cadb2eab/images",
+      "pageRange": "1-152",
+      "totalPages": 152
+    },
+    {
+      "id": "doc_e6d477a498ca",
+      "title": "Контрапункт (Одоевцева, 1951)",
+      "author": "Одоевцева, Ирина",
+      "description": "Стихи, Париж: Рифма, 1951 (47 pages, 30 poems)",
+      "xmlPath": "samples/doc_e6d477a498ca/doc_e6d477a498ca.xml",
+      "imageDir": "samples/doc_e6d477a498ca/images",
+      "pageRange": "1-47",
+      "totalPages": 47
     }
   ]
 }

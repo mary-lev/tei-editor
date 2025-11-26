@@ -1,0 +1,2482 @@
+<?xml version="1.0" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main"/>
+        <author>
+          <persName>Электронный Архив</persName>
+        </author>
+        <respStmt>
+          <resp>Digital transcription and encoding</resp>
+          <name>Russian Poetry Corpus Pipeline</name>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition>Digital scholarly edition</edition>
+      </editionStmt>
+      <publicationStmt>
+        <p>Digital edition created by automated pipeline</p>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <author>Электронный Архив</author>
+          <title/>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Digital corpus of Russian poetry with scholarly apparatus</p>
+      </projectDesc>
+      <editorialDecl>
+        <normalization>
+          <p>Original orthography and typography preserved</p>
+        </normalization>
+        <hyphenation eol="hard">
+          <p>Line breaks preserved as in original</p>
+        </hyphenation>
+        <segmentation>
+          <p>Poems and stanzas marked; line structure preserved</p>
+        </segmentation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <textClass>
+        <keywords scheme="#genre">
+          <term>poetry</term>
+        </keywords>
+      </textClass>
+      <langUsage>
+        <language ident="ru">Russian</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2025-08-05">Created digital edition from 114 pages containing 62 poems</change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <titlePage facs="#page_1">
+        <docTitle>
+          <titlePart xml:id="page_1_line_1">ОГРАДА</titlePart>
+          <titlePart xml:id="page_1_line_2">Ш 55/308</titlePart>
+        </docTitle>
+      </titlePage>
+      <pb n="2" facs="#page_2"/>
+      <titlePage facs="#page_3">
+        <docTitle>
+          <titlePart xml:id="page_3_line_1">ВЛ.</titlePart>
+          <titlePart xml:id="page_3_line_2">ПЯСТЬ</titlePart>
+          <titlePart xml:id="page_3_line_3">ОГРАДА</titlePart>
+          <titlePart xml:id="page_3_line_4">КНИГА СТИХОВЪ</titlePart>
+          <titlePart xml:id="page_3_line_6">Т-ВА</titlePart>
+          <titlePart xml:id="page_3_line_7">М. О. ВОЛЬФЪ</titlePart>
+          <titlePart xml:id="page_3_line_9">Г. НАРБУТЪ</titlePart>
+        </docTitle>
+        <docImprint>
+          <publisher xml:id="page_3_line_5">ИЗДАНІЕ</publisher>
+          <docDate when="1909" xml:id="page_3_line_8">1909</docDate>
+        </docImprint>
+      </titlePage>
+      <pb n="4" facs="#page_4"/>
+      <pb n="5" facs="#page_5"/>
+      <pb n="6" facs="#page_6"/>
+      <titlePage facs="#page_7">
+        <docTitle>
+          <titlePart xml:id="page_7_line_1">В. Л.</titlePart>
+          <titlePart xml:id="page_7_line_2">ПѢСТЪ</titlePart>
+          <titlePart xml:id="page_7_line_3">ОГРАДА</titlePart>
+          <titlePart xml:id="page_7_line_4">КНИГА СТИХОВЪ</titlePart>
+          <titlePart xml:id="page_7_line_6">Т-ВА</titlePart>
+          <titlePart xml:id="page_7_line_7">М. О. ВОЛЬФЪ</titlePart>
+          <titlePart xml:id="page_7_line_9">Г. НАРБУТЪ</titlePart>
+        </docTitle>
+        <docImprint>
+          <publisher xml:id="page_7_line_5">ИЗДАНІЕ</publisher>
+          <docDate when="1909" xml:id="page_7_line_8">1909</docDate>
+        </docImprint>
+      </titlePage>
+      <titlePage facs="#page_8">
+        <docImprint>
+          <publisher xml:id="page_8_line_1">ПЕЧАТЬ ТИПОГРАФІЯ</publisher>
+        </docImprint>
+        <docTitle>
+          <titlePart xml:id="page_8_line_2">ФЕД. А. О. КОНЪ</titlePart>
+        </docTitle>
+        <p xml:id="page_8_line_3">С.-Петербургъ, Загородный пр., д. 41.</p>
+      </titlePage>
+      <titlePage facs="#page_9">
+        <docTitle>
+          <titlePart xml:id="page_9_line_1">Въ книгу «Ограда» включены стихи, ча-</titlePart>
+        </docTitle>
+        <p xml:id="page_9_line_2">стью напечатанные въ «Вѣсахъ», «Во-</p>
+        <p xml:id="page_9_line_3">просахъ Жизни», «Золотомъ Рунѣ» и другихъ</p>
+        <p xml:id="page_9_line_4">журналахъ, а также въ сборникахъ «Цвѣт-</p>
+        <p xml:id="page_9_line_5">никъ Оръ», «Бѣлыя Ночи» и др., — частью же</p>
+        <p xml:id="page_9_line_6">появляющіеся въ печати въ первый разъ.</p>
+      </titlePage>
+      <pb n="10" facs="#page_10"/>
+      <pb n="11" facs="#page_11"/>
+      <pb n="12" facs="#page_12"/>
+    </front>
+    <body>
+      <pb n="13" facs="#page_13"/>
+      <div type="poem" xml:id="poem_13_1" facs="#page_13">
+        <epigraph>
+          <quote>
+            <l>Here once through an alley titanic</l>
+            <l>Of cypress, I roamed with my Soul, —</l>
+            <l>Of cypress, with Psyche, my Soul.</l>
+            <l>E. Poe.</l>
+          </quote>
+        </epigraph>
+      </div>
+      <pb n="14" facs="#page_14"/>
+      <pb n="15" facs="#page_15"/>
+      <pb n="16" facs="#page_16"/>
+      <pb n="17" facs="#page_17"/>
+      <div type="poem" xml:id="poem_17_1" facs="#page_17 #page_18">
+        <lg type="stanza" n="1" xml:id="poem_17_1_stanza_1">
+          <l xml:id="poem_17_1_line_1" n="1">ОДЪТАЯ солнцемъ опушка,</l>
+          <l xml:id="poem_17_1_line_2" n="2">И утра стыдливый покой,</l>
+          <l xml:id="poem_17_1_line_3" n="3">И клонится ивы верхушка</l>
+          <l xml:id="poem_17_1_line_4" n="4">Надъ радостно зыбкой рѣкой.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_17_1_stanza_2">
+          <l xml:id="poem_17_1_line_6" n="1">Надъ зоркой открытой поляной</l>
+          <l xml:id="poem_17_1_line_7" n="2">Древесный всклокоченъ навѣсъ;</l>
+          <l xml:id="poem_17_1_line_8" n="3">Лазурными тайнами пьяный,</l>
+          <l xml:id="poem_17_1_line_9" n="4">Весь въ таинствѣ шелеста лѣсъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_17_1_stanza_3">
+          <l xml:id="poem_17_1_line_11" n="1">Чуть тронуты розовой краской</l>
+          <l xml:id="poem_17_1_line_12" n="2">Изгибы зеленой каймы,</l>
+          <l xml:id="poem_17_1_line_13" n="3">И—трепетной скрытые маской—</l>
+          <l xml:id="poem_17_1_line_14" n="4">Капризно призывны холмы.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_17_1_stanza_4">
+          <l xml:id="poem_17_1_line_16" n="1">Всегда неразлучные — мы —</l>
+          <l xml:id="poem_17_1_line_17" n="2">—Пускай это кажется сказкой—</l>
+          <l xml:id="poem_17_1_line_18" n="3">И въ сонности мягкой зимы,</l>
+          <l xml:id="poem_17_1_line_19" n="4">И въ поступи осени вязкой,</l>
+        </lg>
+        <pb n="18" facs="#page_18"/>
+        <lg type="stanza" n="5" xml:id="poem_17_1_stanza_5">
+          <l xml:id="poem_17_1_line_2" n="1">Завязаны нитью чудесъ,</l>
+          <l xml:id="poem_17_1_line_3" n="2">Блуждаемъ съ улыбкой румяной</l>
+          <l xml:id="poem_17_1_line_4" n="3">Все тамъ, гдѣ нахмуренный лѣсъ</l>
+          <l xml:id="poem_17_1_line_5" n="4">Граничитъ съ безпечной поляной.</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_17_1_stanza_6">
+          <l xml:id="poem_17_1_line_7" n="1">Разгадана яви людской</l>
+          <l xml:id="poem_17_1_line_8" n="2">Нелѣпая, злая ловушка —</l>
+          <l xml:id="poem_17_1_line_9" n="3">И радуженъ утра покой,</l>
+          <l xml:id="poem_17_1_line_10" n="4">И рядится въ солнце опушка.</l>
+        </lg>
+      </div>
+      <pb n="19" facs="#page_19"/>
+      <div type="poem" xml:id="poem_19_1" facs="#page_19">
+        <head corresp="#poem_19_1_line_1">ЗАВЯЗКА.</head>
+        <lg type="stanza" n="1" xml:id="poem_19_1_stanza_1">
+          <l xml:id="poem_19_1_line_2" n="1">Я НЕ ЗНАЛА тебя, я не знала;</l>
+          <l xml:id="poem_19_1_line_3" n="2">Ты былъ чуждъ мнѣ, смѣшонъ,</l>
+          <l xml:id="poem_19_1_line_4" n="3">незнакомъ;</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_19_1_stanza_2">
+          <l xml:id="poem_19_1_line_6" n="1">Я бездумно, безцѣльно бросала</l>
+          <l xml:id="poem_19_1_line_7" n="2">За ограду цвѣтокъ за цвѣткомъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_19_1_stanza_3">
+          <l xml:id="poem_19_1_line_9" n="1">Трое васъ было въ садѣ сосѣднемъ, —</l>
+          <l xml:id="poem_19_1_line_10" n="2">Я седьмой уронила цвѣтокъ;</l>
+          <l xml:id="poem_19_1_line_11" n="3">Съ этимъ лишнимъ, ненужнымъ,</l>
+          <l xml:id="poem_19_1_line_12" n="4">послѣднимъ,</l>
+          <l xml:id="poem_19_1_line_13" n="5">Къ вамъ упалъ мой ажурный платокъ.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_19_1_stanza_4">
+          <l xml:id="poem_19_1_line_15" n="1">Ты, съ какой-то забавной опасной,</l>
+          <l xml:id="poem_19_1_line_16" n="2">Подбѣжавъ, поднялъ оба съ земли;</l>
+          <l xml:id="poem_19_1_line_17" n="3">Залились неестественной краской</l>
+          <l xml:id="poem_19_1_line_18" n="4">Опушенныя щеки твои.</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_19_1_stanza_5">
+          <l xml:id="poem_19_1_line_20" n="1">Осторожно ты подалъ сосѣдкѣ</l>
+          <l xml:id="poem_19_1_line_21" n="2">Чуть душистый платокъ кружевной.</l>
+          <l xml:id="poem_19_1_line_22" n="3">Наклонясь на перила бесѣдки,</l>
+          <l xml:id="poem_19_1_line_23" n="4">Я смотрѣла, какой ты смѣшной.</l>
+        </lg>
+      </div>
+      <pb n="20" facs="#page_20"/>
+      <div type="poem" xml:id="poem_20_1" facs="#page_20">
+        <lg type="stanza" n="1" xml:id="poem_20_1_stanza_1">
+          <l xml:id="poem_20_1_line_1" n="1">А теперь... я весь день въ лихорадкѣ,</l>
+          <l xml:id="poem_20_1_line_2" n="2">Не услышу ль неловкую рѣчь;</l>
+          <l xml:id="poem_20_1_line_3" n="3">Не удастся ль — за шторой, украдкой,</l>
+          <l xml:id="poem_20_1_line_4" n="4">Какъ проходишь ты въ садъ, подстеречь.</l>
+        </lg>
+      </div>
+      <pb n="21" facs="#page_21"/>
+      <div type="poem" xml:id="poem_21_1" facs="#page_21 #page_22">
+        <head corresp="#poem_21_1_line_1">UND ER.</head>
+        <head type="sub" corresp="#poem_21_1_line_2">Und Er...
+Stephan George.</head>
+        <lg type="stanza" n="1" xml:id="poem_21_1_stanza_1">
+          <l xml:id="poem_21_1_line_3" n="1">ВОКРУГЪ все было такъ неизъяснимо</l>
+          <l xml:id="poem_21_1_line_4" n="2">дивно,</l>
+          <l xml:id="poem_21_1_line_5" n="3">Какъ будто низошли на землю небеса.</l>
+          <l xml:id="poem_21_1_line_6" n="4">Привѣтомъ красочнымъ манили въ глубь</l>
+          <l xml:id="poem_21_1_line_7" n="5">лѣса,</l>
+          <l xml:id="poem_21_1_line_8" n="6">И птицъ невѣдомыхъ звучали голоса</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_21_1_stanza_2">
+          <l xml:id="poem_21_1_line_10" n="1">Такъ обольстительно, такъ ропотно —</l>
+          <l xml:id="poem_21_1_line_11" n="2">призывно,</l>
+          <l xml:id="poem_21_1_line_12" n="3">Что мнилось: шагъ еще, и въ чащѣ чудеса</l>
+          <l xml:id="poem_21_1_line_13" n="4">На берегу рѣки, струящейся извивно...</l>
+          <l xml:id="poem_21_1_line_14" n="5">И только ты одна... ты мнѣ была противна.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_21_1_stanza_3">
+          <l xml:id="poem_21_1_line_16" n="1">Ты глушь вплетала въ новь непочатой поры</l>
+          <l xml:id="poem_21_1_line_17" n="2">Своей фигурою, и шутками, и смѣхомъ.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_21_1_stanza_4">
+          <l xml:id="poem_21_1_line_19" n="1">Я не хотѣлъ служить безсмысленнымъ</l>
+          <l xml:id="poem_21_1_line_20" n="2">утѣхамъ.</l>
+          <l xml:id="poem_21_1_line_21" n="3">Я не хотѣлъ твоей безчувственной игры.</l>
+        </lg>
+        <pb n="22" facs="#page_22"/>
+        <lg type="stanza" n="5" xml:id="poem_21_1_stanza_5">
+          <l xml:id="poem_21_1_line_2" n="1">Но отчего теперь — цѣлую прахъ горы,</l>
+          <l xml:id="poem_21_1_line_3" n="2">Гдѣ крѣпнулъ голосъ твой, отброшенъ</l>
+          <l xml:id="poem_21_1_line_4" n="3">зычнымъ эхо?</l>
+        </lg>
+      </div>
+      <pb n="23" facs="#page_23"/>
+      <div type="poem" xml:id="poem_23_1" facs="#page_23">
+        <lg type="stanza" n="1" xml:id="poem_23_1_stanza_1">
+          <l xml:id="poem_23_1_line_1" n="1">НА памяти моей горятъ, какъ пламень,</l>
+          <l xml:id="poem_23_1_line_2" n="2">ярко</l>
+          <l xml:id="poem_23_1_line_3" n="3">Тѣ дни блаженные, — о, какъ немного дней!—</l>
+          <l xml:id="poem_23_1_line_4" n="4">Когда по вечерамъ бродилъ я рядомъ съ ней</l>
+          <l xml:id="poem_23_1_line_5" n="5">Въ аллеяхъ древняго задумчиваго парка.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_23_1_stanza_2">
+          <l xml:id="poem_23_1_line_7" n="1">Грозила осень. Было подъ-вечеръ не жарко,</l>
+          <l xml:id="poem_23_1_line_8" n="2">И по ночамъ сіялъ Юпитеръ все властнѣй,</l>
+          <l xml:id="poem_23_1_line_9" n="3">И каждый вечеръ клалъ все болѣе тѣней</l>
+          <l xml:id="poem_23_1_line_10" n="4">На длинный рядъ аллей таинственнаго парка.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_23_1_stanza_3">
+          <l xml:id="poem_23_1_line_12" n="1">Мы шли. Я наблюдалъ — молясь и не дыша,</l>
+          <l xml:id="poem_23_1_line_13" n="2">Какъ оставляла слѣдъ на всемъ ея душа,</l>
+          <l xml:id="poem_23_1_line_14" n="3">И я молилъ ее послѣдняго подарка:</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_23_1_stanza_4">
+          <l xml:id="poem_23_1_line_16" n="1">«Будь въ осень иногда душой со мною</l>
+          <l xml:id="poem_23_1_line_17" n="2">здѣсь,—</l>
+          <l xml:id="poem_23_1_line_18" n="3">«И буду я какъ парк— тобой исполненъ</l>
+          <l xml:id="poem_23_1_line_19" n="4">весь,</l>
+          <l xml:id="poem_23_1_line_20" n="5">«Бродя въ безмолвіи поблекнувшаго парка».</l>
+        </lg>
+        <dateline>
+          <date corresp="#poem_23_1_line_21" when="1903">1903.</date>
+        </dateline>
+      </div>
+      <pb n="24" facs="#page_24"/>
+      <div type="poem" xml:id="poem_24_1" facs="#page_24">
+        <head corresp="#poem_24_1_line_1">ЗА РѢЧЬЮ.</head>
+        <lg type="stanza" n="1" xml:id="poem_24_1_stanza_1">
+          <l xml:id="poem_24_1_line_2" n="1">ПОДСТУПАЕТЪ предслезная дрожь,</l>
+          <l xml:id="poem_24_1_line_3" n="2">Срывъ звенящаго голоса...</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_24_1_stanza_2">
+          <l xml:id="poem_24_1_line_5" n="1">Чуть колышется свѣтлая рожь,</l>
+          <l xml:id="poem_24_1_line_6" n="2">Отдѣляется колосъ отъ колоса.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_24_1_stanza_3">
+          <l xml:id="poem_24_1_line_8" n="1">Манитъ въ тѣнь удлиненную стогъ</l>
+          <l xml:id="poem_24_1_line_9" n="2">Сѣна слабо душистаго.</l>
+          <l xml:id="poem_24_1_line_10" n="3">Изнемогъ. Подошелъ и прилегъ.</l>
+          <l xml:id="poem_24_1_line_11" n="4">Барабанитъ кузнечикъ неистово.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_24_1_stanza_4">
+          <l xml:id="poem_24_1_line_13" n="1">Подошла. И присѣла. И взоръ</l>
+          <l xml:id="poem_24_1_line_14" n="2">Затѣнила рѣсницами,</l>
+          <l xml:id="poem_24_1_line_15" n="3">Оглядѣвъ Желтоватый узоръ,</l>
+          <l xml:id="poem_24_1_line_16" n="4">Испещренный согбенными жницами.</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_24_1_stanza_5">
+          <l xml:id="poem_24_1_line_18" n="1">Вновь затворы опущенныхъ вѣждъ</l>
+          <l xml:id="poem_24_1_line_19" n="2">Свѣтозарно раздвинула.</l>
+          <l xml:id="poem_24_1_line_20" n="3">Взоромъ, полнымъ безплотныхъ надеждъ,</l>
+          <l xml:id="poem_24_1_line_21" n="4">Отуманеннымъ взоромъ окинула.</l>
+        </lg>
+      </div>
+      <pb n="25" facs="#page_25"/>
+      <div type="poem" xml:id="poem_25_1" facs="#page_25">
+        <lg type="stanza" n="1" xml:id="poem_25_1_stanza_1">
+          <l xml:id="poem_25_1_line_1" n="1">Не колыхнется спѣлая рожь.</l>
+          <l xml:id="poem_25_1_line_2" n="2">Колосъ ластится къ колосу.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_25_1_stanza_2">
+          <l xml:id="poem_25_1_line_4" n="1">Подступила предслезная дрожь.</l>
+          <l xml:id="poem_25_1_line_5" n="2">Близокъ срывъ напряженнаго голоса.</l>
+        </lg>
+      </div>
+      <pb n="26" facs="#page_26"/>
+      <div type="poem" xml:id="poem_26_1" facs="#page_26 #page_27">
+        <head corresp="#poem_26_1_line_1">СТАНСЫ.</head>
+        <div type="part">
+          <head corresp="#poem_26_1_line_2">1</head>
+          <lg type="stanza" n="1" xml:id="poem_26_1_stanza_1">
+            <l xml:id="poem_26_1_line_3" n="1">ВНОВЬ увидавъ ее, къ которой, такъ</l>
+            <l xml:id="poem_26_1_line_4" n="2">мятежно</l>
+            <l xml:id="poem_26_1_line_5" n="3">Волнуяся, рвалось все существо мое;</l>
+            <l xml:id="poem_26_1_line_6" n="4">Которую познавъ, постигъ я бытіе,</l>
+            <l xml:id="poem_26_1_line_7" n="5">Въ одной узрѣвъ весь міръ раскрывшимся</l>
+            <l xml:id="poem_26_1_line_8" n="6">безбрежно;</l>
+            <l xml:id="poem_26_1_line_9" n="7">Въ которой видѣлъ я мерцаніе свое</l>
+            <l xml:id="poem_26_1_line_10" n="8">Преобразившимся такъ трепетно и нѣжно,—</l>
+            <l xml:id="poem_26_1_line_11" n="9">Вновь увидавъ, вновь увидавъ ее,</l>
+            <l xml:id="poem_26_1_line_12" n="10">Я долженъ былъ сюда явиться неизбѣжно,</l>
+            <l xml:id="poem_26_1_line_13" n="11">Вновь увидавъ ее.</l>
+          </lg>
+        </div>
+        <div type="part">
+          <head corresp="#poem_26_1_line_14">2</head>
+          <lg type="stanza" n="2" xml:id="poem_26_1_stanza_2">
+            <l xml:id="poem_26_1_line_15" n="1">Явиться въ тѣ мѣста, гдѣ оба наши сада</l>
+            <l xml:id="poem_26_1_line_16" n="2">Одинъ съ другимъ слились, какъ съ нею</l>
+            <l xml:id="poem_26_1_line_17" n="3">красота,</l>
+            <l xml:id="poem_26_1_line_18" n="4">И между ними ввысь воздушно поднята</l>
+            <l xml:id="poem_26_1_line_19" n="5">Была волнистая досчатая ограда;</l>
+            <l xml:id="poem_26_1_line_20" n="6">И гдѣ была она прозрачна и чиста,</l>
+          </lg>
+        </div>
+        <pb n="27" facs="#page_27"/>
+        <div type="part">
+          <head corresp="#poem_26_1_line_1">2</head>
+          <lg type="stanza" n="3" xml:id="poem_26_1_stanza_3">
+            <l xml:id="poem_26_1_line_3" n="1">Гдѣ былью облеклась волшебная баллада, —</l>
+            <l xml:id="poem_26_1_line_4" n="2">Явиться въ тѣ мѣста,</l>
+            <l xml:id="poem_26_1_line_5" n="3">Гдѣ въ каждый мигъ влилась небесная</l>
+            <l xml:id="poem_26_1_line_6" n="4">услада.</l>
+          </lg>
+        </div>
+        <div type="part">
+          <head corresp="#poem_26_1_line_7">3</head>
+          <lg type="stanza" n="4" xml:id="poem_26_1_stanza_4">
+            <l xml:id="poem_26_1_line_9" n="1">Теперь уже весна. Съ березъ, дубовъ и елокъ</l>
+            <l xml:id="poem_26_1_line_10" n="2">Давно фата зимы на землю сметена;</l>
+            <l xml:id="poem_26_1_line_11" n="3">Пусть на землѣ слѣпитъ покрова бѣлизна —</l>
+            <l xml:id="poem_26_1_line_12" n="4">Подъ нимъ, источеннымъ, отчетливо слышна</l>
+            <l xml:id="poem_26_1_line_13" n="5">Гульливая струя, она буравитъ пологъ,</l>
+            <l xml:id="poem_26_1_line_14" n="6">А солнце сверху жжетъ, а день такъ дивно</l>
+            <l xml:id="poem_26_1_line_15" n="7">дологъ...</l>
+          </lg>
+          <lg type="stanza" n="5" xml:id="poem_26_1_stanza_5">
+            <l xml:id="poem_26_1_line_17" n="1">Теперь уже весна,</l>
+            <l xml:id="poem_26_1_line_18" n="2">Сосна и кипарисъ льютъ ароматъ съ иголокъ</l>
+          </lg>
+        </div>
+        <div type="part">
+          <head corresp="#poem_26_1_line_19">4</head>
+          <lg type="stanza" n="6" xml:id="poem_26_1_stanza_6">
+            <l xml:id="poem_26_1_line_21" n="1">НедвиЖимо стою я долго предъ рѣшеткой,</l>
+            <l xml:id="poem_26_1_line_22" n="2">Воспоминаній рой творитъ мечту мою;</l>
+            <l xml:id="poem_26_1_line_23" n="3">То въ вѣтрѣ ароматъ ея волосъ я пью,</l>
+            <l xml:id="poem_26_1_line_24" n="4">То въ вѣткахъ ликъ ея рисуется мнѣ четкій.</l>
+            <l xml:id="poem_26_1_line_25" n="5">То слухомъ уловивъ журчащую струю,</l>
+            <l xml:id="poem_26_1_line_26" n="6">Я грежу, что ручей звучитъ ея походкой.</l>
+          </lg>
+          <lg type="stanza" n="7" xml:id="poem_26_1_stanza_7">
+            <l xml:id="poem_26_1_line_28" n="1">НедвиЖимо стою,</l>
+            <l xml:id="poem_26_1_line_29" n="2">Не чуя времени, сіяющій и кроткій.</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="28" facs="#page_28"/>
+      <div type="poem" xml:id="poem_28_1" facs="#page_28">
+        <div type="part">
+          <head corresp="#poem_28_1_line_1">5</head>
+          <lg type="stanza" n="1" xml:id="poem_28_1_stanza_1">
+            <l xml:id="poem_28_1_line_2" n="1">Вернутся ли они,—дни Августа, не Мая,—</l>
+            <l xml:id="poem_28_1_line_3" n="2">Когда—она и я—бродили мы одни,</l>
+            <l xml:id="poem_28_1_line_4" n="3">То молча, то въ рѣчахъ всю душу изливая;</l>
+            <l xml:id="poem_28_1_line_5" n="4">Когда зажглися намъ безсмертные огни,</l>
+            <l xml:id="poem_28_1_line_6" n="5">И воплотилась въ насъ вся Тайна міровая? —</l>
+            <l xml:id="poem_28_1_line_7" n="6">О, эти вечера! О, сказочные дни!</l>
+            <l xml:id="poem_28_1_line_8" n="7">Вернутся ли, вернутся ли они,</l>
+            <l xml:id="poem_28_1_line_9" n="8">Дни, несказаннаго исполненные рая,—</l>
+            <l xml:id="poem_28_1_line_10" n="9">Вернутся ли они?..</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="29" facs="#page_29"/>
+      <div type="poem" xml:id="poem_29_1" facs="#page_29 #page_30 #page_31 #page_32">
+        <head corresp="#poem_29_1_line_1">ДВА ОТРЫВКА.</head>
+        <div type="part">
+          <head corresp="#poem_29_1_line_2">I.</head>
+          <lg type="stanza" n="1" xml:id="poem_29_1_stanza_1">
+            <l xml:id="poem_29_1_line_3" n="1">ЧЕТЫРЕ мѣсяца назадъ</l>
+            <l xml:id="poem_29_1_line_4" n="2">Здѣсь были ты и я,</l>
+            <l xml:id="poem_29_1_line_5" n="3">Исполнивъ каждый шагъ и взглядъ</l>
+            <l xml:id="poem_29_1_line_6" n="4">Блаженствомъ бытія;</l>
+            <l xml:id="poem_29_1_line_7" n="5">Я говорилъ: «Тебѣ я братъ,</l>
+            <l xml:id="poem_29_1_line_8" n="6">«И ты—сестра моя».</l>
+          </lg>
+          <lg type="stanza" n="2" xml:id="poem_29_1_stanza_2">
+            <l xml:id="poem_29_1_line_10" n="1">День тотъ былъ праздникомъ у всѣхъ:</l>
+            <l xml:id="poem_29_1_line_11" n="2">И травы, и цвѣты</l>
+            <l xml:id="poem_29_1_line_12" n="3">Околдовалъ твой свѣтлый смѣхъ;</l>
+            <l xml:id="poem_29_1_line_13" n="4">И хвои, и листы</l>
+            <l xml:id="poem_29_1_line_14" n="5">Съ игрою солнечныхъ утѣхъ</l>
+            <l xml:id="poem_29_1_line_15" n="6">Заворожила ты.</l>
+          </lg>
+          <lg type="stanza" n="3" xml:id="poem_29_1_stanza_3">
+            <l xml:id="poem_29_1_line_17" n="1">Любовно сонъ земной храня,</l>
+            <l xml:id="poem_29_1_line_18" n="2">Мы не стремились ввысь.</l>
+            <l xml:id="poem_29_1_line_19" n="3">Къ землѣ таинственно маня,</l>
+            <l xml:id="poem_29_1_line_20" n="4">Сосна съ сосной сплелись.</l>
+            <l xml:id="poem_29_1_line_21" n="5">И—что же? Все же въ блеснѣ дня</l>
+            <l xml:id="poem_29_1_line_22" n="6">Мы съ неземнымъ слились.</l>
+          </lg>
+        </div>
+        <pb n="30" facs="#page_30"/>
+        <div type="part">
+          <head corresp="#poem_29_1_line_1">I.</head>
+          <lg type="stanza" n="4" xml:id="poem_29_1_stanza_4">
+            <l xml:id="poem_29_1_line_3" n="1">Раздвинувъ пологъ голубой,</l>
+            <l xml:id="poem_29_1_line_4" n="2">Не рвали мы каймы;</l>
+            <l xml:id="poem_29_1_line_5" n="3">Съ царевной князь, и рабъ—съ рабой,</l>
+            <l xml:id="poem_29_1_line_6" n="4">Мы вышли изъ тюрьмы;</l>
+            <l xml:id="poem_29_1_line_7" n="5">Со стражей былъ недологъ бой—</l>
+            <l xml:id="poem_29_1_line_8" n="6">И вотъ свободны мы.</l>
+          </lg>
+          <lg type="stanza" n="5" xml:id="poem_29_1_stanza_5">
+            <l xml:id="poem_29_1_line_10" n="1">Когда прозрачныхъ капель звонъ</l>
+            <l xml:id="poem_29_1_line_11" n="2">Намъ палъ, струясь, въ лицо,—</l>
+            <l xml:id="poem_29_1_line_12" n="3">Насъ не заставилъ, помнишь, онъ</l>
+            <l xml:id="poem_29_1_line_13" n="4">Спасаться подъ крыльцо.</l>
+            <l xml:id="poem_29_1_line_14" n="5">Былъ міръ—нашъ храмъ; земля—амвонъ</l>
+            <l xml:id="poem_29_1_line_15" n="6">И радуга—кольцо.</l>
+          </lg>
+          <lg type="stanza" n="6" xml:id="poem_29_1_stanza_6">
+            <l xml:id="poem_29_1_line_17" n="1">Весной по рощѣ, взглядъ во взглядъ,</l>
+            <l xml:id="poem_29_1_line_18" n="2">Бродилъ съ тобою я;</l>
+            <l xml:id="poem_29_1_line_19" n="3">Надѣла свадебный нарядъ</l>
+            <l xml:id="poem_29_1_line_20" n="4">Природа, рай тая;</l>
+            <l xml:id="poem_29_1_line_21" n="5">И выси пѣли: «Онъ—твой братъ</l>
+            <l xml:id="poem_29_1_line_22" n="6">Тебѣ, сестра моя».</l>
+          </lg>
+        </div>
+        <div type="part">
+          <head corresp="#poem_29_1_line_23">II.</head>
+          <lg type="stanza" n="7" xml:id="poem_29_1_stanza_7">
+            <l xml:id="poem_29_1_line_25" n="1">Когда, изъ города гонимы,</l>
+            <l xml:id="poem_29_1_line_26" n="2">Свой путь направили одни мы</l>
+            <l xml:id="poem_29_1_line_27" n="3">Въ обѣтованные края,—</l>
+          </lg>
+        </div>
+        <pb n="31" facs="#page_31"/>
+        <div type="part">
+          <head corresp="#poem_29_1_line_1">II.</head>
+          <lg type="stanza" n="8" xml:id="poem_29_1_stanza_8">
+            <l xml:id="poem_29_1_line_3" n="1">Въ насъ были такъ неуловимы</l>
+            <l xml:id="poem_29_1_line_4" n="2">И зовъ и пламя бытія;</l>
+            <l xml:id="poem_29_1_line_5" n="3">Мы были точно херувимы</l>
+            <l xml:id="poem_29_1_line_6" n="4">Въ раю безгрѣшномъ—ты и я.</l>
+          </lg>
+          <lg type="stanza" n="9" xml:id="poem_29_1_stanza_9">
+            <l xml:id="poem_29_1_line_8" n="1">Но передъ тѣмъ, по бездорожью,</l>
+            <l xml:id="poem_29_1_line_9" n="2">Цвѣточной выхоленной ложью</l>
+            <l xml:id="poem_29_1_line_10" n="3">Съ тобой упились мы полно:</l>
+            <l xml:id="poem_29_1_line_11" n="4">То не былъ лугъ съ волнистой дрожью,</l>
+            <l xml:id="poem_29_1_line_12" n="5">То не былъ мигъ, гдѣ все—одно,</l>
+            <l xml:id="poem_29_1_line_13" n="6">И въ тѣ часы намъ волю Божью</l>
+            <l xml:id="poem_29_1_line_14" n="7">Исполнить не было дано.</l>
+          </lg>
+          <lg type="stanza" n="10" xml:id="poem_29_1_stanza_10">
+            <l xml:id="poem_29_1_line_16" n="1">Тогда, роднясь съ семьею лилій,</l>
+            <l xml:id="poem_29_1_line_17" n="2">Мы не безъ тягостныхъ усилій</l>
+            <l xml:id="poem_29_1_line_18" n="3">Вдыхали пьяный ароматъ;</l>
+            <l xml:id="poem_29_1_line_19" n="4">Тогда предчувствія томили,</l>
+            <l xml:id="poem_29_1_line_20" n="5">И въ боѣ сердца былъ набатъ,</l>
+            <l xml:id="poem_29_1_line_21" n="6">И звуки чуждые рябили</l>
+            <l xml:id="poem_29_1_line_22" n="7">Сквозь музыкальный водопадъ.</l>
+          </lg>
+          <lg type="stanza" n="11" xml:id="poem_29_1_stanza_11">
+            <l xml:id="poem_29_1_line_24" n="1">Въ цвѣтахъ заслышали мы вмѣстѣ</l>
+            <l xml:id="poem_29_1_line_25" n="2">Змѣиный шипъ ползучей мести</l>
+            <l xml:id="poem_29_1_line_26" n="3">За оскорбленныя мечты,</l>
+            <l xml:id="poem_29_1_line_27" n="4">За то что ими крылъ невѣстѣ</l>
+            <l xml:id="poem_29_1_line_28" n="5">Женихъ провалы пустоты;</l>
+          </lg>
+        </div>
+        <pb n="32" facs="#page_32"/>
+        <div type="part">
+          <head corresp="#poem_29_1_line_1">II.</head>
+          <lg type="stanza" n="12" xml:id="poem_29_1_stanza_12">
+            <l xml:id="poem_29_1_line_3" n="1">За то что воздухъ несъ имъ вѣсти,</l>
+            <l xml:id="poem_29_1_line_4" n="2">Что въ немъ отрава жгучей лести,</l>
+            <l xml:id="poem_29_1_line_5" n="3">И въ ней мы никнемъ—я и ты.</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="33" facs="#page_33"/>
+      <div type="poem" xml:id="poem_33_1" facs="#page_33">
+        <head corresp="#poem_33_1_line_1">ЯМБЫ.</head>
+        <lg type="stanza" n="1" xml:id="poem_33_1_stanza_1">
+          <l xml:id="poem_33_1_line_2" n="1">Я ПОСѢТИЛЪ страну святую.—</l>
+          <l xml:id="poem_33_1_line_3" n="2">Какъ дорогъ здѣсь мнѣ каждый</l>
+          <l xml:id="poem_33_1_line_4" n="3">кустъ!</l>
+          <l xml:id="poem_33_1_line_5" n="4">На всемъ ловлю, любя, ревнуя,</l>
+          <l xml:id="poem_33_1_line_6" n="5">Слѣдъ поцѣлуя</l>
+          <l xml:id="poem_33_1_line_7" n="6">Ея кристально чистыхъ устъ.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_33_1_stanza_2">
+          <l xml:id="poem_33_1_line_9" n="1">И весь я твой, земля родная.</l>
+          <l xml:id="poem_33_1_line_10" n="2">Тебѣ одной мои мечты.</l>
+          <l xml:id="poem_33_1_line_11" n="3">И мнѣ чужда краса иная:—</l>
+          <l xml:id="poem_33_1_line_12" n="4">Селенья рая</l>
+          <l xml:id="poem_33_1_line_13" n="5">Прекрасны не были какъ ты.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_33_1_stanza_3">
+          <l xml:id="poem_33_1_line_15" n="1">И вижу я, восторженъ, свѣтелъ,</l>
+          <l xml:id="poem_33_1_line_16" n="2">Что онъ—Властитель, онъ—Господь,</l>
+          <l xml:id="poem_33_1_line_17" n="3">Изъ всѣхъ земель—тебя привѣтилъ,</l>
+          <l xml:id="poem_33_1_line_18" n="4">Своими знаками отмѣтилъ,</l>
+          <l xml:id="poem_33_1_line_19" n="5">Тобой свою содѣлалъ Плоть.</l>
+        </lg>
+      </div>
+      <pb n="34" facs="#page_34"/>
+      <div type="poem" xml:id="poem_34_1" facs="#page_34">
+        <lg type="stanza" n="1" xml:id="poem_34_1_stanza_1">
+          <l xml:id="poem_34_1_line_1" n="1">И знаю: въ творческомъ подъемѣ</l>
+          <l xml:id="poem_34_1_line_2" n="2">Предсозерцая бытіе,</l>
+          <l xml:id="poem_34_1_line_3" n="3">Онъ восхотѣлъ въ воздушномъ домѣ</l>
+          <l xml:id="poem_34_1_line_4" n="4">Троихъ насъ слить въ единой дремѣ:</l>
+          <l xml:id="poem_34_1_line_5" n="5">Тебя, земля; меня; ее.</l>
+        </lg>
+        <dateline>
+          <date corresp="#poem_34_1_line_6" when="1904">Май 1904</date>
+        </dateline>
+      </div>
+      <pb n="35" facs="#page_35"/>
+      <div type="poem" xml:id="poem_35_1" facs="#page_35">
+        <lg type="stanza" n="1" xml:id="poem_35_1_stanza_1">
+          <l xml:id="poem_35_1_line_1" n="1">ОНА моя душа. Лучистыя мечтанья,</l>
+          <l xml:id="poem_35_1_line_2" n="2">Которыя во мнѣ, слѣпомъ, искажены,—</l>
+          <l xml:id="poem_35_1_line_3" n="3">Въ ней, просвѣтленныя, мѣняютъ очертанья,</l>
+          <l xml:id="poem_35_1_line_4" n="4">Какъ въ небѣ облака безплотны въ часъ</l>
+          <l xml:id="poem_35_1_line_5" n="5">луны.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_35_1_stanza_2">
+          <l xml:id="poem_35_1_line_7" n="1">Я съ нею въ общемъ снѣ. Тѣ призраки и</l>
+          <l xml:id="poem_35_1_line_8" n="2">грезы,</l>
+          <l xml:id="poem_35_1_line_9" n="3">Которыя во мнѣ проносятся, спѣша,—</l>
+          <l xml:id="poem_35_1_line_10" n="4">Въ ней вызвали восторгъ и трепетныя слезы,</l>
+          <l xml:id="poem_35_1_line_11" n="5">Я—тѣнь ея любви. Она—моя душа.</l>
+        </lg>
+      </div>
+      <pb n="36" facs="#page_36"/>
+      <div type="poem" xml:id="poem_36_1" facs="#page_36 #page_37 #page_38">
+        <head corresp="#poem_36_1_line_1">КОШМАРЪ.</head>
+        <lg type="stanza" n="1" xml:id="poem_36_1_stanza_1">
+          <l xml:id="poem_36_1_line_2" n="1">И ТОЛЬКО онъ стоялъ передъ тобою,</l>
+          <l xml:id="poem_36_1_line_3" n="2">Когда ты мнѣ въ тотъ вечеръ</l>
+          <l xml:id="poem_36_1_line_4" n="3">открывалась;</l>
+          <l xml:id="poem_36_1_line_5" n="4">Конечно, я вполнѣ владѣлъ собою,</l>
+          <l xml:id="poem_36_1_line_6" n="5">Хотя на части сердце разрывалось.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_36_1_stanza_2">
+          <l xml:id="poem_36_1_line_8" n="1">Я говорилъ: «О, да! Онъ магъ и властный,</l>
+          <l xml:id="poem_36_1_line_9" n="2">«И ты напрасно мыслишь, что изгнала</l>
+          <l xml:id="poem_36_1_line_10" n="3">«Его изъ сердца»... Рѣчь, мольбою страстной</l>
+          <l xml:id="poem_36_1_line_11" n="4">Звуча, меня всего изобличала.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_36_1_stanza_3">
+          <l xml:id="poem_36_1_line_13" n="1">Мы разошлись. Былъ черенъ ночи пологъ.</l>
+          <l xml:id="poem_36_1_line_14" n="2">Я проскользнулъ къ себѣ неслышной тѣнью.</l>
+          <l xml:id="poem_36_1_line_15" n="3">И легъ. И спалъ. И былъ мой сонъ такъ</l>
+          <l xml:id="poem_36_1_line_16" n="4">дологъ.</l>
+          <l xml:id="poem_36_1_line_17" n="5">И все одно, давящее видѣнье.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_36_1_stanza_4">
+          <l xml:id="poem_36_1_line_19" n="1">Въ моихъ ушахъ твои стояли рѣчи,</l>
+          <l xml:id="poem_36_1_line_20" n="2">И видѣлъ я тебя одну сначала.</l>
+        </lg>
+        <pb n="37" facs="#page_37"/>
+        <lg type="stanza" n="5" xml:id="poem_36_1_stanza_5">
+          <l xml:id="poem_36_1_line_2" n="1">Но близость новой, неизбѣжной встрѣчи</l>
+          <l xml:id="poem_36_1_line_3" n="2">Внутри меня смущенье предвѣщало.</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_36_1_stanza_6">
+          <l xml:id="poem_36_1_line_5" n="1">Да, вотъ и онъ. Ни ужаса, ни мысли.</l>
+          <l xml:id="poem_36_1_line_6" n="2">Вдвоемъ въ глухомъ томительномъ</l>
+          <l xml:id="poem_36_1_line_7" n="3">безлюдьи.</l>
+          <l xml:id="poem_36_1_line_8" n="4">Мы другъ предъ другомъ грудами нависли,</l>
+          <l xml:id="poem_36_1_line_9" n="5">Одинъ съ другимъ сцѣпилися грудь съ</l>
+          <l xml:id="poem_36_1_line_10" n="6">грудью.</l>
+        </lg>
+        <lg type="stanza" n="7" xml:id="poem_36_1_stanza_7">
+          <l xml:id="poem_36_1_line_12" n="1">И былъ твой ликъ подернутъ черной мглою.</l>
+          <l xml:id="poem_36_1_line_13" n="2">Намъ міръ предсталъ безформеннымъ</l>
+          <l xml:id="poem_36_1_line_14" n="3">хаосомъ.</l>
+          <l xml:id="poem_36_1_line_15" n="4">И онъ стоялъ извѣчною скалою.</l>
+          <l xml:id="poem_36_1_line_16" n="5">И я стоялъ несозданнымъ утесомъ.</l>
+        </lg>
+        <lg type="stanza" n="8" xml:id="poem_36_1_stanza_8">
+          <l xml:id="poem_36_1_line_18" n="1">Упругихъ мышцъ безмѣрное усилье.</l>
+          <l xml:id="poem_36_1_line_19" n="2">Сверканье глазъ. Дрожанье губъ</l>
+          <l xml:id="poem_36_1_line_20" n="3">безкровныхъ.</l>
+          <l xml:id="poem_36_1_line_21" n="4">Изъ нѣдръ души несметное обилье</l>
+          <l xml:id="poem_36_1_line_22" n="5">Мы извлекли сокрытыхъ силъ духовныхъ.</l>
+        </lg>
+        <lg type="stanza" n="9" xml:id="poem_36_1_stanza_9">
+          <l xml:id="poem_36_1_line_24" n="1">И лишь одно въ сознаніи не тухнетъ,</l>
+          <l xml:id="poem_36_1_line_25" n="2">Все существо сковавши въ напряженьѣ:</l>
+          <l xml:id="poem_36_1_line_26" n="3">Прорвется ль шагъ, родится ли движенье —</l>
+          <l xml:id="poem_36_1_line_27" n="4">И я погибъ, иль онъ громадой рухнетъ.</l>
+        </lg>
+        <pb n="38" facs="#page_38"/>
+        <lg type="stanza" n="10" xml:id="poem_36_1_stanza_10">
+          <l xml:id="poem_36_1_line_2" n="1">И длился, длился бой нашъ напряженный,</l>
+          <l xml:id="poem_36_1_line_3" n="2">Бой существа, безъ мысли, безъ отчета.</l>
+          <l xml:id="poem_36_1_line_4" n="3">...Я пробудился—весь изнеможенный,</l>
+          <l xml:id="poem_36_1_line_5" n="4">Весь трепеща отъ холода и пота.</l>
+        </lg>
+        <lg type="stanza" n="11" xml:id="poem_36_1_stanza_11">
+          <l xml:id="poem_36_1_line_7" n="1">Когда жъ потомъ, твоимъ отдавшись чарамъ,</l>
+          <l xml:id="poem_36_1_line_8" n="2">Съ тобой бродилъ я въ утренникѣ парка,—</l>
+          <l xml:id="poem_36_1_line_9" n="3">Ты помнишь какъ мучительно, какъ ярко</l>
+          <l xml:id="poem_36_1_line_10" n="4">Я самъ тебѣ почудился кошмаромъ?</l>
+        </lg>
+      </div>
+      <pb n="39" facs="#page_39"/>
+      <div type="poem" xml:id="poem_39_1" facs="#page_39">
+        <head corresp="#poem_39_1_line_1">АНАНКЕ</head>
+        <epigraph>
+          <quote>
+            <l>Ah, Seigneur! Donnez moi la force</l>
+            <l>et le courage</l>
+            <l>De contempler mon coeur et</l>
+            <l>mon corps sans degout.</l>
+            <l>Ch. Baudelaire.</l>
+          </quote>
+        </epigraph>
+      </div>
+      <pb n="40" facs="#page_40"/>
+      <pb n="41" facs="#page_41"/>
+      <div type="poem" xml:id="poem_41_1" facs="#page_41">
+        <head corresp="#poem_41_1_line_1">СОНЕТЪ.</head>
+        <lg type="stanza" n="1" xml:id="poem_41_1_stanza_1">
+          <l xml:id="poem_41_1_line_2" n="1">МОЙ Боже! я стою у вѣчнаго предѣла</l>
+          <l xml:id="poem_41_1_line_3" n="2">И смѣло произнесъ мое моленье вслухъ:</l>
+          <l xml:id="poem_41_1_line_4" n="3">Дай силъ мнѣ вынести и мой ничтожный духъ,</l>
+          <l xml:id="poem_41_1_line_5" n="4">Не меньше сдавленный и мерзостный, чѣмъ тѣло.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_41_1_stanza_2">
+          <l xml:id="poem_41_1_line_7" n="1">Пергаменомъ лица безжизненныхъ старухъ</l>
+          <l xml:id="poem_41_1_line_8" n="2">Въ его зеркальности правдивой отблестѣло</l>
+          <l xml:id="poem_41_1_line_9" n="3">Все то, что на челѣ надменномъ тяготѣло,</l>
+          <l xml:id="poem_41_1_line_10" n="4">И отъ чего мой плодъ довременный былъ сухъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_41_1_stanza_3">
+          <l xml:id="poem_41_1_line_12" n="1">Когда вокругъ Тебя столпившіеся люди</l>
+          <l xml:id="poem_41_1_line_13" n="2">Насытились вполнѣ, и семь козлицъ у кружъ</l>
+          <l xml:id="poem_41_1_line_14" n="3">Осталися нѣмымъ вѣщаніемъ о чудѣ,—</l>
+          <l xml:id="poem_41_1_line_15" n="4">Я, стоявъ въ сторонѣ, Тебя еще алкалъ,</l>
+          <l xml:id="poem_41_1_line_16" n="5">И, приковавъ свой взоръ къ незыблемости скалъ,</l>
+          <l xml:id="poem_41_1_line_17" n="6">Твердилъ съ отчаяньемъ упорнымъ: «Буди,</l>
+          <l xml:id="poem_41_1_line_18" n="7">буди!»</l>
+        </lg>
+      </div>
+      <pb n="42" facs="#page_42"/>
+      <div type="poem" xml:id="poem_42_1" facs="#page_42 #page_54">
+        <head corresp="#poem_42_1_line_1">ОСТРОВЪ ПОЛИПОВЪ.</head>
+        <lg type="stanza" n="1" xml:id="poem_42_1_stanza_1">
+          <l xml:id="poem_42_1_line_2" n="1">ПЕРВЫЙ сознательный отпрыскъ</l>
+          <l xml:id="poem_42_1_line_3" n="2">нѣмыхъ поколѣній,</l>
+          <l xml:id="poem_42_1_line_4" n="3">Первый побѣгъ, еле зримый, растительной</l>
+          <l xml:id="poem_42_1_line_5" n="4">жизни,</l>
+          <l xml:id="poem_42_1_line_6" n="5">Вялый, тупой, и безвольно предавшійся</l>
+          <l xml:id="poem_42_1_line_7" n="6">лѣни,</l>
+          <l xml:id="poem_42_1_line_8" n="7">О, не приняться тебѣ на томительной тризнѣ</l>
+          <l xml:id="poem_42_1_line_9" n="8">Предковъ — полиповъ, оставившихъ трупы и</l>
+          <l xml:id="poem_42_1_line_10" n="9">тѣни</l>
+          <l xml:id="poem_42_1_line_11" n="10">Въ островѣ мертвомъ, твоей изначальной</l>
+          <l xml:id="poem_42_1_line_12" n="11">отчизнѣ.</l>
+          <l xml:id="poem_42_1_line_13" n="12">Выйдешь изъ этого міра застывшихъ</l>
+          <l xml:id="poem_42_1_line_14" n="13">явленій</l>
+          <l xml:id="poem_42_1_line_15" n="14">Всюду съ тобой его ликъ и глядитъ на тебя</l>
+          <l xml:id="poem_42_1_line_16" n="15">въ укоризнѣ.</l>
+          <l xml:id="poem_42_1_line_1" n="1">ТЕБЯ пугаетъ мысль, мой братъ, что ты</l>
+          <l xml:id="poem_42_1_line_2" n="2">одинъ,</l>
+          <l xml:id="poem_42_1_line_3" n="3">Что красный макъ возросъ во тьмѣ глухихъ</l>
+          <l xml:id="poem_42_1_line_4" n="4">лощинъ,</l>
+          <l xml:id="poem_42_1_line_5" n="5">И внѣ тебя одна богиня—Сладострастье.</l>
+          <l xml:id="poem_42_1_line_6" n="6">Я вѣровалъ какъ ты. Потомъ—какое счастье</l>
+          <l xml:id="poem_42_1_line_7" n="7">Нашелъ во мракѣ я, творецъ и властелинъ.</l>
+          <l xml:id="poem_42_1_line_8" n="8">Я плавалъ, какъ и ты, въ безсильное ненастье</l>
+          <l xml:id="poem_42_1_line_9" n="9">И къ дьяволу взывалъ изъ сумрака пучинъ,</l>
+          <l xml:id="poem_42_1_line_10" n="10">Но я околдовалъ его иною властью.</l>
+        </lg>
+        <pb n="54" facs="#page_54"/>
+        <lg type="stanza" n="2" xml:id="poem_42_1_stanza_2">
+          <l xml:id="poem_42_1_line_12" n="1">Ты, не найдя въ себѣ истока мощныхъ силъ</l>
+          <l xml:id="poem_42_1_line_13" n="2">И пронизавши муть усталымъ, тусклымъ</l>
+          <l xml:id="poem_42_1_line_14" n="3">взоромъ,</l>
+          <l xml:id="poem_42_1_line_15" n="4">Себя навѣкъ замкнулъ и холодъ ощутилъ.</l>
+          <l xml:id="poem_42_1_line_16" n="5">Я отомкнулъ себя и все обрѣлъ въ себѣ.</l>
+          <l xml:id="poem_42_1_line_17" n="6">Я взглядомъ пробѣжалъ по выжженнымъ</l>
+          <l xml:id="poem_42_1_line_18" n="7">узорамъ</l>
+          <l xml:id="poem_42_1_line_19" n="8">И приложилъ весь міръ молитвенно къ губѣ.</l>
+        </lg>
+      </div>
+      <pb n="43" facs="#page_43"/>
+      <div type="poem" xml:id="poem_43_1" facs="#page_43 #page_55">
+        <head corresp="#poem_43_1_line_1">DIABOLI MANUSGRIPTUM.</head>
+        <head type="sub" corresp="#poem_43_1_line_1">НА МОТИВЫ ИВ. КОНЕВСКОГО.</head>
+        <lg type="stanza" n="1" xml:id="poem_43_1_stanza_1">
+          <l xml:id="poem_43_1_line_2" n="1">ЧѢМЪ виноватъ я, что доля такая</l>
+          <l xml:id="poem_43_1_line_3" n="2">досталась</l>
+          <l xml:id="poem_43_1_line_4" n="3">Мнѣ, не иному, отчаяннымъ, страшнымъ</l>
+          <l xml:id="poem_43_1_line_5" n="4">удѣломъ?</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_43_1_stanza_2">
+          <l xml:id="poem_43_1_line_7" n="1">О, за свои же долги, ты, Ананке, со мной</l>
+          <l xml:id="poem_43_1_line_8" n="2">расквиталась,</l>
+          <l xml:id="poem_43_1_line_9" n="3">Злостный банкротъ, этимъ дряблымъ и</l>
+          <l xml:id="poem_43_1_line_10" n="4">немощнымъ тѣломъ!</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_43_1_stanza_3">
+          <l xml:id="poem_43_1_line_12" n="1">Знаешь, тебѣ и самой настоящее мѣсто въ</l>
+          <l xml:id="poem_43_1_line_13" n="2">темницѣ, —</l>
+          <l xml:id="poem_43_1_line_14" n="3">Если бы правила свѣтомъ одна</l>
+          <l xml:id="poem_43_1_line_15" n="4">справедливость.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_43_1_stanza_4">
+          <l xml:id="poem_43_1_line_17" n="1">Ты возбуждаешь во мнѣ не любовь —</l>
+          <l xml:id="poem_43_1_line_18" n="2">похотливость,</l>
+          <l xml:id="poem_43_1_line_19" n="3">Мимо окна моего проходя въ дорогой</l>
+          <l xml:id="poem_43_1_line_20" n="4">багряницѣ.</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_43_1_stanza_5">
+          <l xml:id="poem_43_1_line_22" n="1">Слышишь! Я о стѣну бьюсь головой,</l>
+          <l xml:id="poem_43_1_line_23" n="2">громыхая цѣпями.</l>
+          <l xml:id="poem_43_1_line_24" n="3">Мигъ — и твои распадутся стальныя,</l>
+          <l xml:id="poem_43_1_line_25" n="4">заклятыя цѣпи.</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_43_1_stanza_6">
+          <l xml:id="poem_43_1_line_27" n="1">Чую, не вѣчно сидѣть мнѣ въ зловонной,</l>
+          <l xml:id="poem_43_1_line_28" n="2">подпочвенной ямѣ,—</l>
+          <l xml:id="poem_43_1_line_29" n="3">Знаю, не клиномъ сошелся весь міръ на</l>
+          <l xml:id="poem_43_1_line_30" n="4">поганомъ вертепѣ!</l>
+        </lg>
+        <pb n="55" facs="#page_55"/>
+        <lg type="stanza" n="7" xml:id="poem_43_1_stanza_7">
+          <l xml:id="poem_43_1_line_2" n="1">ТЕМНОЙ страсти отшедшихъ отдавшись,</l>
+          <l xml:id="poem_43_1_line_3" n="2">Самородной, исконной наукѣ,</l>
+          <l xml:id="poem_43_1_line_4" n="3">И за личность свою изстрадавшись,</l>
+          <l xml:id="poem_43_1_line_5" n="4">Заломилъ я въ отчаяньи руки.</l>
+        </lg>
+        <lg type="stanza" n="8" xml:id="poem_43_1_stanza_8">
+          <l xml:id="poem_43_1_line_7" n="1">Не хочу я глубинъ своеволья,—</l>
+          <l xml:id="poem_43_1_line_8" n="2">Мнѣ лишь Воли мила безграничность;</l>
+          <l xml:id="poem_43_1_line_9" n="3">Пусть глубинно,—но смрадно подполье:</l>
+          <l xml:id="poem_43_1_line_10" n="4">Въ немъ задохнется сильная личность.</l>
+        </lg>
+        <lg type="stanza" n="9" xml:id="poem_43_1_stanza_9">
+          <l xml:id="poem_43_1_line_12" n="1">Расточая несмѣтныя силы</l>
+          <l xml:id="poem_43_1_line_13" n="2">На боренье праотчаго зуда,</l>
+          <l xml:id="poem_43_1_line_14" n="3">Обрѣтешь ты ихъ вновь у могилы,</l>
+          <l xml:id="poem_43_1_line_15" n="4">Тамъ гдѣ узришь воочію чудо.</l>
+        </lg>
+        <lg type="stanza" n="10" xml:id="poem_43_1_stanza_10">
+          <l xml:id="poem_43_1_line_17" n="1">Собери жъ своей Воли зачатки</l>
+          <l xml:id="poem_43_1_line_18" n="2">Для достойнаго плоти боренья.—</l>
+          <l xml:id="poem_43_1_line_19" n="3">Будутъ вновь непорочны, и сладки,</l>
+          <l xml:id="poem_43_1_line_20" n="4">И безмѣрны тебѣ откровенья.</l>
+        </lg>
+      </div>
+      <pb n="44" facs="#page_44"/>
+      <div type="poem" xml:id="poem_44_1" facs="#page_44">
+        <head corresp="#poem_44_1_line_1">МЫ ДУШИ.</head>
+        <lg type="stanza" n="1" xml:id="poem_44_1_stanza_1">
+          <l xml:id="poem_44_1_line_2" n="1">НИЧТОЖНЫЕ люди, ничтожныя мысли...</l>
+          <l xml:id="poem_44_1_line_3" n="2">Да какъ это, какъ можетъ быть?</l>
+          <l xml:id="poem_44_1_line_4" n="3">О, люди, сознаемъ: надъ бездной мы виснемъ,</l>
+          <l xml:id="poem_44_1_line_5" n="4">И бездны вовѣкъ не избыть.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_44_1_stanza_2">
+          <l xml:id="poem_44_1_line_7" n="1">Да гдѣ же спасенье! — повсюду удушье.</l>
+          <l xml:id="poem_44_1_line_8" n="2">Задавленъ оторванный крикъ:</l>
+          <l xml:id="poem_44_1_line_9" n="3">«Мы люди, мы живы, мы сущи, мы души;</l>
+          <l xml:id="poem_44_1_line_10" n="4">«Полетъ нашъ высокъ и великъ».</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_44_1_stanza_3">
+          <l xml:id="poem_44_1_line_12" n="1">Да гдѣ же спасенье! — нѣтъ силы, мы гибнемъ...</l>
+          <l xml:id="poem_44_1_line_13" n="2">Мы цѣпи разрушить д о л ж н ы.</l>
+          <l xml:id="poem_44_1_line_14" n="3">И—нѣтъ бытія безъ цѣпей. И подвинемъ</l>
+          <l xml:id="poem_44_1_line_15" n="4">Себя въ пустоту—сражены.</l>
+        </lg>
+      </div>
+      <pb n="45" facs="#page_45"/>
+      <div type="poem" xml:id="poem_45_1" facs="#page_45">
+        <lg type="stanza" n="1" xml:id="poem_45_1_stanza_1">
+          <l xml:id="poem_45_1_line_1" n="1">КОГДА я, гордый рабъ въ безвыходномъ</l>
+          <l xml:id="poem_45_1_line_2" n="2">двуличьѣ,</l>
+          <l xml:id="poem_45_1_line_3" n="3">Благодарю Тебя, и падаю во прахъ</l>
+          <l xml:id="poem_45_1_line_4" n="4">Передъ лицомъ Твоимъ, —слѣпитъ безкрылый</l>
+          <l xml:id="poem_45_1_line_5" n="5">страхъ</l>
+          <l xml:id="poem_45_1_line_6" n="6">Прозрѣвшіе глаза величіемъ Величья.</l>
+        </lg>
+      </div>
+      <pb n="46" facs="#page_46"/>
+      <div type="poem" xml:id="poem_46_1" facs="#page_46">
+        <head corresp="#poem_46_1_line_1">СТОЙ! НИ ШАГУ!</head>
+        <lg type="stanza" n="1" xml:id="poem_46_1_stanza_1">
+          <l xml:id="poem_46_1_line_2" n="1">СТОЙ! Ни шагу! Останься, пронизанный</l>
+          <l xml:id="poem_46_1_line_3" n="2">свѣтомъ,</l>
+          <l xml:id="poem_46_1_line_4" n="3">цѣпенѣющій.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_46_1_stanza_2">
+          <l xml:id="poem_46_1_line_6" n="1">Знай, зажегся тебѣ твой дозоръ пламенѣющій</l>
+          <l xml:id="poem_46_1_line_7" n="2">только въ этомъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_46_1_stanza_3">
+          <l xml:id="poem_46_1_line_9" n="1">Будь безвольнымъ Молчи. Затаись. Только</l>
+          <l xml:id="poem_46_1_line_10" n="2">чувствуй</l>
+          <l xml:id="poem_46_1_line_11" n="3">несказанное.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_46_1_stanza_4">
+          <l xml:id="poem_46_1_line_13" n="1">Принимай и сноси въ откровеньи нежданное</l>
+          <l xml:id="poem_46_1_line_14" n="2">и искусь твой.</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_46_1_stanza_5">
+          <l xml:id="poem_46_1_line_16" n="1">Берегись одного. Обводить себя кругомъ</l>
+          <l xml:id="poem_46_1_line_17" n="2">заколдованнымъ.</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_46_1_stanza_6">
+          <l xml:id="poem_46_1_line_19" n="1">Въ свой чередъ есть исходъ и другимъ</l>
+          <l xml:id="poem_46_1_line_20" n="2">замурованнымъ.</l>
+        </lg>
+        <lg type="stanza" n="7" xml:id="poem_46_1_stanza_7">
+          <l xml:id="poem_46_1_line_22" n="1">—Другъ за другомъ!</l>
+        </lg>
+      </div>
+      <pb n="47" facs="#page_47"/>
+      <div type="poem" xml:id="poem_47_1" facs="#page_47">
+        <head corresp="#poem_47_1_line_1">РАСПУТЬЕ</head>
+        <epigraph>
+          <quote>
+            <l>Мы—окрай неизвѣстныхъ</l>
+            <l>дорогъ.</l>
+            <l>А. Блокъ.</l>
+          </quote>
+        </epigraph>
+      </div>
+      <pb n="48" facs="#page_48"/>
+      <pb n="49" facs="#page_49"/>
+      <div type="poem" xml:id="poem_49_1" facs="#page_49">
+        <head corresp="#poem_49_1_line_1">3. ЗАГАДКА</head>
+        <lg type="stanza" n="1" xml:id="poem_49_1_stanza_1">
+          <l xml:id="poem_49_1_line_2" n="1">стоитъ, неотступно маня,</l>
+          <l xml:id="poem_49_1_line_3" n="2">Глубиной недоступной чаруя;</l>
+          <l xml:id="poem_49_1_line_4" n="3">Увлечетъ ли къ себѣ Міровое меня,</l>
+          <l xml:id="poem_49_1_line_5" n="4">Или пропасть мою изберу я?</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_49_1_stanza_2">
+          <l xml:id="poem_49_1_line_7" n="1">Покажу ли я людямъ свой собственный</l>
+          <l xml:id="poem_49_1_line_8" n="2">шагъ,</l>
+          <l xml:id="poem_49_1_line_9" n="3">Перейму ли чужую походку,</l>
+          <l xml:id="poem_49_1_line_10" n="4">Иль—безъ области царь и безъ магіи магъ—</l>
+          <l xml:id="poem_49_1_line_11" n="5">Я пройду одиноко и кротко?</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_49_1_stanza_3">
+          <l xml:id="poem_49_1_line_13" n="1">Но въ молитвѣ одной я, мнѣ кажется,—весь</l>
+          <l xml:id="poem_49_1_line_14" n="2">До послѣдняго въ темень провала:</l>
+          <l xml:id="poem_49_1_line_15" n="3">«Боже, дай чтобы тамъ, разъ мой выходъ</l>
+          <l xml:id="poem_49_1_line_16" n="4">не здѣсь,</l>
+          <l xml:id="poem_49_1_line_17" n="5">«Эта чаша меня миновала».</l>
+        </lg>
+      </div>
+      <pb n="50" facs="#page_50"/>
+      <div type="poem" xml:id="poem_50_1" facs="#page_50">
+        <lg type="stanza" n="1" xml:id="poem_50_1_stanza_1">
+          <l xml:id="poem_50_1_line_1" n="1">ПОМНЮ я муку утонченную,</l>
+          <l xml:id="poem_50_1_line_2" n="2">Помню я слезы притворныя;</l>
+          <l xml:id="poem_50_1_line_3" n="3">Вижу тебя я законченную,</l>
+          <l xml:id="poem_50_1_line_4" n="4">Ризы твои вижу черныя.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_50_1_stanza_2">
+          <l xml:id="poem_50_1_line_6" n="1">Ты поднесла запрокинутая,</l>
+          <l xml:id="poem_50_1_line_7" n="2">Блюдо зловѣще горящее, —</l>
+          <l xml:id="poem_50_1_line_8" n="3">Сердце лежало тамъ вынутое.</l>
+          <l xml:id="poem_50_1_line_9" n="4">Сердце мое, настоящее.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_50_1_stanza_3">
+          <l xml:id="poem_50_1_line_11" n="1">Черная, съ грезами сбывшимися</l>
+          <l xml:id="poem_50_1_line_12" n="2">Съ бѣлыми грезами слитая.</l>
+          <l xml:id="poem_50_1_line_13" n="3">Хлопьями снѣга крутившимися</l>
+          <l xml:id="poem_50_1_line_14" n="4">Въ воздухѣ темномъ укрытая.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_50_1_stanza_4">
+          <l xml:id="poem_50_1_line_16" n="1">Рано, такъ рано забытая.</l>
+        </lg>
+      </div>
+      <pb n="51" facs="#page_51"/>
+      <div type="poem" xml:id="poem_51_1" facs="#page_51 #page_52 #page_53">
+        <lg type="stanza" n="1" xml:id="poem_51_1_stanza_1">
+          <l xml:id="poem_51_1_line_1" n="1">ТРЕХЪ бѣлыхъ ангеловъ когда-то</l>
+          <l xml:id="poem_51_1_line_2" n="2">зрѣла ты,</l>
+          <l xml:id="poem_51_1_line_3" n="3">Они неслись въ безмолвіи глубокомъ</l>
+          <l xml:id="poem_51_1_line_4" n="4">Среди безкрасочной, бездонной высоты.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_51_1_stanza_2">
+          <l xml:id="poem_51_1_line_6" n="1">Мнѣ было суждено неотвратимымъ рокомъ</l>
+          <l xml:id="poem_51_1_line_7" n="2">Съ тобою встрѣтиться, когда въ краю</l>
+          <l xml:id="poem_51_1_line_8" n="3">глухомъ</l>
+          <l xml:id="poem_51_1_line_9" n="4">Я жаждой изнемогъ, рожденный быть</l>
+          <l xml:id="poem_51_1_line_10" n="5">пророкомъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_51_1_stanza_3">
+          <l xml:id="poem_51_1_line_12" n="1">Подъ кровлею одной многоэтажный домъ</l>
+          <l xml:id="poem_51_1_line_13" n="2">Обоихъ насъ сокрылъ въ одно и то же время,</l>
+          <l xml:id="poem_51_1_line_14" n="3">И долго оба мы не вѣдали о томъ.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_51_1_stanza_4">
+          <l xml:id="poem_51_1_line_16" n="1">Я долго несъ свое завѣщанное бремя,—</l>
+          <l xml:id="poem_51_1_line_17" n="2">Подавленный, душой по Вышнему томясь,—</l>
+          <l xml:id="poem_51_1_line_18" n="3">И тлѣло въ сонахъ жилъ Имъ брошенное</l>
+          <l xml:id="poem_51_1_line_19" n="4">сѣмя.</l>
+        </lg>
+        <pb n="52" facs="#page_52"/>
+        <lg type="stanza" n="5" xml:id="poem_51_1_stanza_5">
+          <l xml:id="poem_51_1_line_2" n="1">Хотя и раньше мнѣ диковинная связь</l>
+          <l xml:id="poem_51_1_line_3" n="2">Моей судьбы съ мечтой была уже извѣстна:</l>
+          <l xml:id="poem_51_1_line_4" n="3">Тогда, когда Она—вся въ розовомъ—</l>
+          <l xml:id="poem_51_1_line_5" n="4">зажглась,</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_51_1_stanza_6">
+          <l xml:id="poem_51_1_line_7" n="1">Къ обличью близкая Невѣсты Неневѣстной;</l>
+          <l xml:id="poem_51_1_line_8" n="2">Тогда, когда забилъ во мнѣ внѣмірныЙ</l>
+          <l xml:id="poem_51_1_line_9" n="3">ключъ</l>
+          <l xml:id="poem_51_1_line_10" n="4">Открытій радостныхъ струею перекрестной;</l>
+        </lg>
+        <lg type="stanza" n="7" xml:id="poem_51_1_stanza_7">
+          <l xml:id="poem_51_1_line_12" n="1">Когда и мой языкъ сталъ необычно жгучъ,</l>
+          <l xml:id="poem_51_1_line_13" n="2">Искрясь обиліемъ, что прежде въ нѣдрахъ</l>
+          <l xml:id="poem_51_1_line_14" n="3">пряталъ.—</l>
+        </lg>
+        <lg type="stanza" n="8" xml:id="poem_51_1_stanza_8">
+          <l xml:id="poem_51_1_line_16" n="1">Но время двигалось, и, капая, сургучъ</l>
+        </lg>
+        <lg type="stanza" n="9" xml:id="poem_51_1_stanza_9">
+          <l xml:id="poem_51_1_line_18" n="1">БлагоуханныЯ страницы</l>
+          <l xml:id="poem_51_1_line_19" n="2">припечаталъ.</l>
+        </lg>
+        <lg type="stanza" n="10" xml:id="poem_51_1_stanza_10">
+          <l xml:id="poem_51_1_line_21" n="1">Тогда мы встрѣтились и въ яви, и въ мечтѣ,</l>
+          <l xml:id="poem_51_1_line_22" n="2">Которою давно Создавшій насъ посваталъ.</l>
+        </lg>
+        <lg type="stanza" n="11" xml:id="poem_51_1_stanza_11">
+          <l xml:id="poem_51_1_line_24" n="1">Ты показала мнѣ въ нетлѣнной чистотѣ,</l>
+          <l xml:id="poem_51_1_line_25" n="2">Въ безмѣрной высотѣ святого поднебесья,</l>
+          <l xml:id="poem_51_1_line_26" n="3">Тѣ откровенія, слова о Тайнѣ тѣ,</l>
+        </lg>
+        <lg type="stanza" n="12" xml:id="poem_51_1_stanza_12">
+          <l xml:id="poem_51_1_line_28" n="1">—Которыми дрожалъ, дышалъ, молился</l>
+          <l xml:id="poem_51_1_line_29" n="2">весь я.</l>
+        </lg>
+        <pb n="53" facs="#page_53"/>
+        <lg type="stanza" n="13" xml:id="poem_51_1_stanza_13">
+          <l xml:id="poem_51_1_line_2" n="1">КОГДА твоя, простая какъ черта,</l>
+          <l xml:id="poem_51_1_line_3" n="2">Святая мысль мой разумъ завоюетъ,</l>
+          <l xml:id="poem_51_1_line_4" n="3">Тогда моя отсвѣтная мечта,</l>
+          <l xml:id="poem_51_1_line_5" n="4">Познавъ себя—бѣлѣя заликуетъ.</l>
+        </lg>
+        <lg type="stanza" n="14" xml:id="poem_51_1_stanza_14">
+          <l xml:id="poem_51_1_line_7" n="1">Тогда моя ночная пустота</l>
+          <l xml:id="poem_51_1_line_8" n="2">Лишится чаръ и въ Свѣтѣ растворится;</l>
+          <l xml:id="poem_51_1_line_9" n="3">Единая познается царица,</l>
+          <l xml:id="poem_51_1_line_10" n="4">И будетъ Ночь, какъ Первая, свята.</l>
+        </lg>
+      </div>
+      <pb n="56" facs="#page_56"/>
+      <div type="poem" xml:id="poem_56_1" facs="#page_56">
+        <head corresp="#poem_56_1_line_1">ТРИЖДЫ-ЕДИНОЕ.</head>
+        <lg type="stanza" n="1" xml:id="poem_56_1_stanza_1">
+          <l xml:id="poem_56_1_line_2" n="1">РОБКОЕ, нѣжное, свѣтлое, смотритъ</l>
+          <l xml:id="poem_56_1_line_3" n="2">раскрытыми глазками,</l>
+          <l xml:id="poem_56_1_line_4" n="3">Новью рожденное, тайной спаленное,</l>
+          <l xml:id="poem_56_1_line_5" n="4">Женское.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_56_1_stanza_2">
+          <l xml:id="poem_56_1_line_7" n="1">Въ немъ отражается, въ немъ зарождается,</l>
+          <l xml:id="poem_56_1_line_8" n="2">съ пѣснями, съ ласками</l>
+          <l xml:id="poem_56_1_line_9" n="3">Все необычное, все гармоничное, все</l>
+          <l xml:id="poem_56_1_line_10" n="4">безгранично вселенское.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_56_1_stanza_3">
+          <l xml:id="poem_56_1_line_12" n="1">Ропотно-дерзное, властное, сдвинуло брови</l>
+          <l xml:id="poem_56_1_line_13" n="2">сурово,</l>
+          <l xml:id="poem_56_1_line_14" n="3">Давностью взрощено, былью упрощено, въ</l>
+          <l xml:id="poem_56_1_line_15" n="4">гнетѣ покоя</l>
+          <l xml:id="poem_56_1_line_16" n="5">Тягостно спящее, злобно шипящее: «Рвутся</l>
+          <l xml:id="poem_56_1_line_17" n="6">покровы, —</l>
+          <l xml:id="poem_56_1_line_18" n="7">«Я—неизмѣнное, старше вселенной я»,—это—</l>
+          <l xml:id="poem_56_1_line_19" n="8">надменно мужское.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_56_1_stanza_4">
+          <l xml:id="poem_56_1_line_21" n="1">Здѣсь, на прямомъ и единомъ пути,</l>
+          <l xml:id="poem_56_1_line_22" n="2">Въ вѣчность вонзившемъ свои острія,</l>
+          <l xml:id="poem_56_1_line_23" n="3">Вѣримъ: дано, суждено намъ найти</l>
+          <l xml:id="poem_56_1_line_24" n="4">Цѣльное, личное, трижды-единое «я».</l>
+        </lg>
+      </div>
+      <pb n="57" facs="#page_57"/>
+      <div type="poem" xml:id="poem_57_1" facs="#page_57 #page_58">
+        <head corresp="#poem_57_1_line_1">ОНЪ.</head>
+        <epigraph>
+          <quote>
+            <p corresp="#poem_57_1_line_2">ПРЕДНАЗНАЧЕННАГО людямъ</p>
+          </quote>
+        </epigraph>
+        <lg type="stanza" n="1" xml:id="poem_57_1_stanza_1">
+          <l xml:id="poem_57_1_line_3" n="1">Онъ ни въ чемъ не измѣнилъ;</l>
+          <l xml:id="poem_57_1_line_4" n="2">То чѣмъ были, то чѣмъ будемъ,</l>
+          <l xml:id="poem_57_1_line_5" n="3">Онъ собой объединилъ.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_57_1_stanza_2">
+          <l xml:id="poem_57_1_line_7" n="1">И пока все гуще, гуще</l>
+          <l xml:id="poem_57_1_line_8" n="2">Заросталъ безтропный лѣсъ,—</l>
+          <l xml:id="poem_57_1_line_9" n="3">Онъ, единый, присносущій,</l>
+          <l xml:id="poem_57_1_line_10" n="4">Межъ сплетенья не исчезъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_57_1_stanza_3">
+          <l xml:id="poem_57_1_line_12" n="1">Къ трепетанью на болотѣ</l>
+          <l xml:id="poem_57_1_line_13" n="2">Вызвалъ жуткіе огни,</l>
+          <l xml:id="poem_57_1_line_14" n="3">И въ закатной позолотѣ</l>
+          <l xml:id="poem_57_1_line_15" n="4">Легъ на сумрачные пни.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_57_1_stanza_4">
+          <l xml:id="poem_57_1_line_17" n="1">Межъ побѣговъ и наростовъ</l>
+          <l xml:id="poem_57_1_line_18" n="2">Жизни тучной, молодой</l>
+          <l xml:id="poem_57_1_line_19" n="3">Онъ нашелъ огромный остовъ,</l>
+          <l xml:id="poem_57_1_line_20" n="4">Ветхій, страшный, и худой.</l>
+        </lg>
+        <pb n="58" facs="#page_58"/>
+        <lg type="stanza" n="5" xml:id="poem_57_1_stanza_5">
+          <l xml:id="poem_57_1_line_2" n="1">Въ часъ, когда вонзали совы</l>
+          <l xml:id="poem_57_1_line_3" n="2">Въ гулкій воздухъ зычный крикъ,—</l>
+          <l xml:id="poem_57_1_line_4" n="3">Куталъ въ плотные покровы</l>
+          <l xml:id="poem_57_1_line_5" n="4">Заповѣданный свой ликъ.</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_57_1_stanza_6">
+          <l xml:id="poem_57_1_line_7" n="1">И когда къ глухой опушкѣ</l>
+          <l xml:id="poem_57_1_line_8" n="2">Смертный путь привелъ косца,—</l>
+          <l xml:id="poem_57_1_line_9" n="3">Подалъ окликомъ кукушки</l>
+          <l xml:id="poem_57_1_line_10" n="4">Вѣсть о близости конца.</l>
+        </lg>
+        <lg type="stanza" n="7" xml:id="poem_57_1_stanza_7">
+          <l xml:id="poem_57_1_line_12" n="1">Пиръ торжественный онъ справилъ</l>
+          <l xml:id="poem_57_1_line_13" n="2">Въ трескѣ лопнувшихъ суковъ,</l>
+          <l xml:id="poem_57_1_line_14" n="3">Въ день, какъ небо окровавилъ</l>
+          <l xml:id="poem_57_1_line_15" n="4">Бой огнистыхъ языковъ,</l>
+        </lg>
+        <lg type="stanza" n="8" xml:id="poem_57_1_stanza_8">
+          <l xml:id="poem_57_1_line_17" n="1">И расплавившись шипѣла</l>
+          <l xml:id="poem_57_1_line_18" n="2">Дымножелтая смола,</l>
+          <l xml:id="poem_57_1_line_19" n="3">И отъ пламеннаго тѣла</l>
+          <l xml:id="poem_57_1_line_20" n="4">Тѣнь безмѣрная легла.</l>
+        </lg>
+        <lg type="stanza" n="9" xml:id="poem_57_1_stanza_9">
+          <l xml:id="poem_57_1_line_22" n="1">А когда земля окрѣпла,</l>
+          <l xml:id="poem_57_1_line_23" n="2">Знойный выдержавъ пожаръ,—</l>
+          <l xml:id="poem_57_1_line_24" n="3">Онъ остался въ слоѣ пепла,</l>
+          <l xml:id="poem_57_1_line_25" n="4">Неизбѣжный перегаръ.</l>
+        </lg>
+      </div>
+      <pb n="59" facs="#page_59"/>
+      <div type="poem" xml:id="poem_59_1" facs="#page_59 #page_60">
+        <head corresp="#poem_59_1_line_1">ДОМА.</head>
+        <lg type="stanza" n="1" xml:id="poem_59_1_stanza_1">
+          <l xml:id="poem_59_1_line_2" n="1">ДОМОВЪ обтесанный гранитъ</l>
+          <l xml:id="poem_59_1_line_3" n="2">Людскихъ преданій не хранитъ.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_59_1_stanza_2">
+          <l xml:id="poem_59_1_line_5" n="1">На немъ иныя существа</l>
+          <l xml:id="poem_59_1_line_6" n="2">Свои оставили слова.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_59_1_stanza_3">
+          <l xml:id="poem_59_1_line_8" n="1">Въ часы, когда снуетъ толпа,</l>
+          <l xml:id="poem_59_1_line_9" n="2">Ихъ рѣчь невнятная слѣпа,</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_59_1_stanza_4">
+          <l xml:id="poem_59_1_line_11" n="1">И въ повѣсть ветхихъ кирпичей</l>
+          <l xml:id="poem_59_1_line_12" n="2">Не проникаетъ взоръ ничей.</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_59_1_stanza_5">
+          <l xml:id="poem_59_1_line_14" n="1">Но въ суткахъ есть ужасный часъ,</l>
+          <l xml:id="poem_59_1_line_15" n="2">Когда иное видитъ глазъ.</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_59_1_stanza_6">
+          <l xml:id="poem_59_1_line_17" n="1">Тогда на улицѣ мертво.</l>
+          <l xml:id="poem_59_1_line_18" n="2">Вотъ домъ. Ты смотришь на него—</l>
+        </lg>
+        <lg type="stanza" n="7" xml:id="poem_59_1_stanza_7">
+          <l xml:id="poem_59_1_line_20" n="1">И вдругъ онъ вспыхнетъ, озаренъ,</l>
+          <l xml:id="poem_59_1_line_21" n="2">И ты проникнешь: это—онъ!</l>
+        </lg>
+        <lg type="stanza" n="8" xml:id="poem_59_1_stanza_8">
+          <l xml:id="poem_59_1_line_23" n="1">Застынетъ шагъ, займется духъ.</l>
+          <l xml:id="poem_59_1_line_24" n="2">Но мигъ еще—и онъ потухъ.</l>
+        </lg>
+        <pb n="60" facs="#page_60"/>
+        <lg type="stanza" n="9" xml:id="poem_59_1_stanza_9">
+          <l xml:id="poem_59_1_line_2" n="1">Передъ тобою прежній домъ,</l>
+          <l xml:id="poem_59_1_line_3" n="2">И было ль — вѣрится съ трудомъ.</l>
+          <l xml:id="poem_59_1_line_4" n="3">Но если тамъ же, въ тотъ же часъ,</l>
+          <l xml:id="poem_59_1_line_5" n="4">Твой ляжетъ путь еще хоть разъ,—</l>
+          <l xml:id="poem_59_1_line_6" n="5">Ты въ лихораднѣ. Снова ждешь</l>
+          <l xml:id="poem_59_1_line_7" n="6">Тобой испытанную дрожь.</l>
+        </lg>
+      </div>
+      <pb n="61" facs="#page_61"/>
+      <div type="poem" xml:id="poem_61_1" facs="#page_61 #page_62">
+        <head corresp="#poem_61_1_line_1">двойникъ.</head>
+        <lg type="stanza" n="1" xml:id="poem_61_1_stanza_1">
+          <l xml:id="poem_61_1_line_2" n="1">ОПЯТЬ на улицѣ на мигъ</l>
+          <l xml:id="poem_61_1_line_3" n="2">Я этимъ былъ охваченъ;</l>
+          <l xml:id="poem_61_1_line_4" n="3">Я къ тайнѣ вновь душой приникъ,</l>
+          <l xml:id="poem_61_1_line_5" n="4">Я тайну вновь душой проникъ—</l>
+          <l xml:id="poem_61_1_line_6" n="5">И вновь былъ озадаченъ,</l>
+          <l xml:id="poem_61_1_line_7" n="6">Что совершаетъ мой двойникъ</l>
+          <l xml:id="poem_61_1_line_8" n="7">Тотъ путь, что мнѣ назначенъ.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_61_1_stanza_2">
+          <l xml:id="poem_61_1_line_10" n="1">Вначалѣ я оцѣпенѣлъ,</l>
+          <l xml:id="poem_61_1_line_11" n="2">Въ безуміе поверженъ;</l>
+          <l xml:id="poem_61_1_line_12" n="3">И я внѣвременнымъ пьянѣлъ,</l>
+          <l xml:id="poem_61_1_line_13" n="4">Далеко выйдя за предѣлъ,</l>
+          <l xml:id="poem_61_1_line_14" n="5">Ничѣмъ земнымъ не сдержанъ,—</l>
+          <l xml:id="poem_61_1_line_15" n="6">Но тупо мой двойникъ глядѣлъ</l>
+          <l xml:id="poem_61_1_line_16" n="7">И даже былъ разсерженъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_61_1_stanza_3">
+          <l xml:id="poem_61_1_line_18" n="1">Онъ продолжалъ итти и пѣть,</l>
+          <l xml:id="poem_61_1_line_19" n="2">Размахивая тростью;</l>
+          <l xml:id="poem_61_1_line_20" n="3">И онъ готовилъ злую плеть,</l>
+        </lg>
+        <pb n="62" facs="#page_62"/>
+        <lg type="stanza" n="4" xml:id="poem_61_1_stanza_4">
+          <l xml:id="poem_61_1_line_2" n="1">Чтобъ съ нею легче одолѣть</l>
+          <l xml:id="poem_61_1_line_3" n="2">Непрошенную гостью;</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_61_1_stanza_5">
+          <l xml:id="poem_61_1_line_5" n="1">— И я, войдя въ земную клѣть,</l>
+          <l xml:id="poem_61_1_line_6" n="2">Сталъ плотью, кровью, костью.</l>
+        </lg>
+      </div>
+      <pb n="63" facs="#page_63"/>
+      <div type="poem" xml:id="poem_63_1" facs="#page_63">
+        <head corresp="#poem_63_1_line_1">СМУЩЕНІЕ</head>
+        <lg type="stanza" n="1" xml:id="poem_63_1_stanza_1">
+          <l xml:id="poem_63_1_line_2" n="1">Опять пришелъ, онъ, надъ</l>
+          <l xml:id="poem_63_1_line_3" n="2">тобой склонился,</l>
+          <l xml:id="poem_63_1_line_4" n="3">Опять...</l>
+        </lg>
+      </div>
+      <pb n="64" facs="#page_64"/>
+      <pb n="65" facs="#page_65"/>
+      <div type="poem" xml:id="poem_65_1" facs="#page_65 #page_66">
+        <lg type="stanza" n="1" xml:id="poem_65_1_stanza_1">
+          <l xml:id="poem_65_1_line_1" n="1">Я ТАКЪ тебя любилъ, что даже ангелъ</l>
+          <l xml:id="poem_65_1_line_2" n="2">строгій,</l>
+          <l xml:id="poem_65_1_line_3" n="3">Надъ скорбною землей поникнувшій челомъ,</l>
+          <l xml:id="poem_65_1_line_4" n="4">Благословилъ меня опущеннымъ крыломъ</l>
+          <l xml:id="poem_65_1_line_5" n="5">Пройти по сумраку сіяющей дорогой.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_65_1_stanza_2">
+          <l xml:id="poem_65_1_line_7" n="1">Я такъ тебя любилъ, что Богъ сказалъ:</l>
+          <l xml:id="poem_65_1_line_8" n="2">«Волшебнымъ</l>
+          <l xml:id="poem_65_1_line_9" n="3">«Пройди, дитя, путемъ въ твореніи моемъ;</l>
+          <l xml:id="poem_65_1_line_10" n="4">«Будь зачарованъ имъ, лобзайся съ бытіемъ,</l>
+          <l xml:id="poem_65_1_line_11" n="5">«И каждый день встрѣчай мой міръ псалмомъ</l>
+          <l xml:id="poem_65_1_line_12" n="6">хвалебнымъ».</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_65_1_stanza_3">
+          <l xml:id="poem_65_1_line_14" n="1">Но—я не знаю кто—въ меня пустилъ</l>
+          <l xml:id="poem_65_1_line_15" n="2">стрѣлой,</l>
+          <l xml:id="poem_65_1_line_16" n="3">Отравленной людскимъ кощунственнымъ</l>
+          <l xml:id="poem_65_1_line_17" n="4">проклятьемъ.</l>
+          <l xml:id="poem_65_1_line_18" n="5">Но—я не знаю кто—сдавилъ меня объятьемъ,</l>
+          <l xml:id="poem_65_1_line_19" n="6">Приблизивши ко мнѣ свой ликъ истомно</l>
+          <l xml:id="poem_65_1_line_20" n="7">злой.</l>
+        </lg>
+        <pb n="66" facs="#page_66"/>
+        <lg type="stanza" n="4" xml:id="poem_65_1_stanza_4">
+          <l xml:id="poem_65_1_line_2" n="1">Но—я не знаю чей—запалъ мнѣ въ душу</l>
+          <l xml:id="poem_65_1_line_3" n="2">сѣвъ</l>
+          <l xml:id="poem_65_1_line_4" n="3">Желанья Жгучаго порока и паденья.</l>
+          <l xml:id="poem_65_1_line_5" n="4">Но—я не знаю чье—открылось мнѣ видѣнье,</l>
+          <l xml:id="poem_65_1_line_6" n="5">Слѣпительнымъ огнемъ обманчиво зардѣвъ.</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_65_1_stanza_5">
+          <l xml:id="poem_65_1_line_8" n="1">Я такъ тебя любилъ, что думалъ пронести</l>
+          <l xml:id="poem_65_1_line_9" n="2">Сосудъ моей любви, столь хрупкій,</l>
+          <l xml:id="poem_65_1_line_10" n="3">невредимымъ</l>
+          <l xml:id="poem_65_1_line_11" n="4">Среди кромѣшной тьмы, затканной алымъ</l>
+          <l xml:id="poem_65_1_line_12" n="5">дымомъ.</l>
+          <l xml:id="poem_65_1_line_13" n="6">Я не сумѣлъ, не смогъ. Прости меня, прости!</l>
+        </lg>
+      </div>
+      <pb n="67" facs="#page_67"/>
+      <div type="poem" xml:id="poem_67_1" facs="#page_67">
+        <lg type="stanza" n="1" xml:id="poem_67_1_stanza_1">
+          <l xml:id="poem_67_1_line_1" n="1">СЛУШАЙ! Въ скорби оправданье бытія.</l>
+          <l xml:id="poem_67_1_line_2" n="2">Онъ сказалъ: Вездъ страданье, тамъ</l>
+          <l xml:id="poem_67_1_line_3" n="3">гдѣ я.</l>
+          <l xml:id="poem_67_1_line_4" n="4">Припадемъ къ нему, не бойся; Богъ съ тобой</l>
+          <l xml:id="poem_67_1_line_5" n="5">Съ нимъ неслыханное счастье и покой.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_67_1_stanza_2">
+          <l xml:id="poem_67_1_line_7" n="1">Черною ризою укройся, и въ глухую ночь</l>
+          <l xml:id="poem_67_1_line_8" n="2">Ты приди, приди въ ненастье на мое крыльцо;</l>
+          <l xml:id="poem_67_1_line_9" n="3">Постучи рукою зыбной, попроси помочь;</l>
+          <l xml:id="poem_67_1_line_10" n="4">Если выйду—глянь улыбкой въ скорбное</l>
+          <l xml:id="poem_67_1_line_11" n="5">лицо.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_67_1_stanza_3">
+          <l xml:id="poem_67_1_line_13" n="1">Ты отъ вѣка и до вѣка мнѣ родна;</l>
+          <l xml:id="poem_67_1_line_14" n="2">Ты со мною, но иною мнѣ дана.</l>
+          <l xml:id="poem_67_1_line_15" n="3">Надъ иной, съ тобою схожей, я поникъ,</l>
+          <l xml:id="poem_67_1_line_16" n="4">Да прозрю въ ней твой и Божій свѣтлый</l>
+          <l xml:id="poem_67_1_line_17" n="5">ликъ.</l>
+        </lg>
+      </div>
+      <pb n="68" facs="#page_68"/>
+      <div type="poem" xml:id="poem_68_1" facs="#page_68 #page_69">
+        <lg type="stanza" n="1" xml:id="poem_68_1_stanza_1">
+          <l xml:id="poem_68_1_line_1" n="1">МИЛАЯ, лента скамейки</l>
+          <l xml:id="poem_68_1_line_2" n="2">Пару деревьевъ связала;</l>
+          <l xml:id="poem_68_1_line_3" n="3">Въ тѣнь самороднаго зала</l>
+          <l xml:id="poem_68_1_line_4" n="4">Мы подымались отъ рѣчки...</l>
+          <l xml:id="poem_68_1_line_5" n="5">Были тамъ блѣдны и клейки</l>
+          <l xml:id="poem_68_1_line_6" n="6">Листики робкой березы;</l>
+          <l xml:id="poem_68_1_line_7" n="7">Тамъ щеголяли стрекозы</l>
+          <l xml:id="poem_68_1_line_8" n="8">Нѣжнымъ узоромъ насѣчки,</l>
+          <l xml:id="poem_68_1_line_9" n="9">Легшимъ на легкія крыльца,</l>
+          <l xml:id="poem_68_1_line_10" n="10">Будто случайная пыльца.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_68_1_stanza_2">
+          <l xml:id="poem_68_1_line_12" n="1">Милая, въ міръ мы вступали,</l>
+          <l xml:id="poem_68_1_line_13" n="2">Трудной дорогой направясь;</l>
+          <l xml:id="poem_68_1_line_14" n="3">Свѣтлая, чистая завязь</l>
+          <l xml:id="poem_68_1_line_15" n="4">Насъ сочетала такъ рано;</l>
+          <l xml:id="poem_68_1_line_16" n="5">Въ мірѣ несмытной печали,</l>
+          <l xml:id="poem_68_1_line_17" n="6">Въ мірѣ потерь непреложныхъ—</l>
+          <l xml:id="poem_68_1_line_18" n="7">Ждемъ мы свершеній неложныхъ,</l>
+          <l xml:id="poem_68_1_line_19" n="8">Ждемъ мы разрыва тумана;</l>
+        </lg>
+        <pb n="69" facs="#page_69"/>
+        <lg type="stanza" n="3" xml:id="poem_68_1_stanza_3">
+          <l xml:id="poem_68_1_line_2" n="1">Онъ не случайною пылью</l>
+          <l xml:id="poem_68_1_line_3" n="2">Легъ на обмокшія крылья.</l>
+        </lg>
+        <dateline>
+          <date corresp="#poem_68_1_line_4" when="1905">Сентябрь 1905 г.</date>
+        </dateline>
+      </div>
+      <pb n="70" facs="#page_70"/>
+      <div type="poem" xml:id="poem_70_1" facs="#page_70">
+        <head corresp="#poem_70_1_line_1">ЭЛЕГІЯ</head>
+        <lg type="stanza" n="1" xml:id="poem_70_1_stanza_1">
+          <l xml:id="poem_70_1_line_2" n="1">БЫЛЪ звонъ веселый и пасхальный.</l>
+          <l xml:id="poem_70_1_line_3" n="2">Стоялъ безпомощный апрѣль.</l>
+          <l xml:id="poem_70_1_line_4" n="3">Къ тебѣ, по своему печальной,</l>
+          <l xml:id="poem_70_1_line_5" n="4">Я внесъ моихъ печалей хмѣль.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_70_1_stanza_2">
+          <l xml:id="poem_70_1_line_7" n="1">И два цвѣтка ты приколола</l>
+          <l xml:id="poem_70_1_line_8" n="2">На блузку сбоку на груди,</l>
+          <l xml:id="poem_70_1_line_9" n="3">И вновь надежду поборола,</l>
+          <l xml:id="poem_70_1_line_10" n="4">И вновь шепнула: уходи!</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_70_1_stanza_3">
+          <l xml:id="poem_70_1_line_12" n="1">Ушелъ, опять надеждой свѣтелъ,</l>
+          <l xml:id="poem_70_1_line_13" n="2">Въ лицѣ попрежнему угрюмъ.</l>
+          <l xml:id="poem_70_1_line_14" n="3">Я вновь на зовъ твой не отвѣтилъ,</l>
+          <l xml:id="poem_70_1_line_15" n="4">Какъ ты—на голосъ тайныхъ думъ.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_70_1_stanza_4">
+          <l xml:id="poem_70_1_line_17" n="1">Прошла къ себѣ ты. Прячешь въ спальной</l>
+          <l xml:id="poem_70_1_line_18" n="2">Лицо въ холодную постель.</l>
+          <l xml:id="poem_70_1_line_19" n="3">Подъ звонъ веселый и пасхальный</l>
+          <l xml:id="poem_70_1_line_20" n="4">Идетъ безпомощный апрѣль.</l>
+        </lg>
+      </div>
+      <pb n="71" facs="#page_71"/>
+      <div type="poem" xml:id="poem_71_1" facs="#page_71">
+        <lg type="stanza" n="1" xml:id="poem_71_1_stanza_1">
+          <l xml:id="poem_71_1_line_1" n="1">Ты хотѣла бъ отъ свѣта завѣситься,</l>
+          <l xml:id="poem_71_1_line_2" n="2">Сердце бьется твое и боится.</l>
+          <l xml:id="poem_71_1_line_3" n="3">Правда! Въ мѣдномъ дрожаніи мѣсяца</l>
+          <l xml:id="poem_71_1_line_4" n="4">Что-то новое нынче змѣится.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_71_1_stanza_2">
+          <l xml:id="poem_71_1_line_6" n="1">Дай мнѣ руку, незримыхъ отгадчица.</l>
+          <l xml:id="poem_71_1_line_7" n="2">—Пусть расширены будутъ зрачки. —</l>
+          <l xml:id="poem_71_1_line_8" n="3">Видишь, самъ онъ пугается, прячется</l>
+          <l xml:id="poem_71_1_line_9" n="4">За разорванныхъ тучъ клочки.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_71_1_stanza_3">
+          <l xml:id="poem_71_1_line_11" n="1">Посмотри! Вотъ онъ вышелъ. Серебрянымъ</l>
+          <l xml:id="poem_71_1_line_12" n="2">Онъ качнулся на листѣ березы.</l>
+          <l xml:id="poem_71_1_line_13" n="3">Будемъ тише! Открылися дебрямъ</l>
+          <l xml:id="poem_71_1_line_14" n="4">Новыхъ тайнъ и невѣдомой грезы.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_71_1_stanza_4">
+          <l xml:id="poem_71_1_line_16" n="1">Нынче сбудется то, что пророчится.</l>
+          <l xml:id="poem_71_1_line_17" n="2">Намъ обоимъ давно и всегда. —</l>
+          <l xml:id="poem_71_1_line_18" n="3">Пусть же мѣсяца мѣдью упрочится</l>
+          <l xml:id="poem_71_1_line_19" n="4">Золотая грезы руда.</l>
+        </lg>
+        <dateline>
+          <date corresp="#poem_71_1_line_20" when="1905">Іюнь 1905 г.</date>
+        </dateline>
+      </div>
+      <pb n="72" facs="#page_72"/>
+      <div type="poem" xml:id="poem_72_1" facs="#page_72 #page_73">
+        <head corresp="#poem_72_1_line_1">СМЯТЕНІЕ.</head>
+        <lg type="stanza" n="1" xml:id="poem_72_1_stanza_1">
+          <l xml:id="poem_72_1_line_2" n="1">О, прильни ко мнѣ тихо и мнѣ разскажи</l>
+          <l xml:id="poem_72_1_line_3" n="2">Про твое затаенное горе;</l>
+          <l xml:id="poem_72_1_line_4" n="3">Станемъ мы посреди этой влажной межи;</l>
+          <l xml:id="poem_72_1_line_5" n="4">Заволнуется вкругъ — всколосившейся ржи</l>
+          <l xml:id="poem_72_1_line_6" n="5">Безпокойное свѣтлое море.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_72_1_stanza_2">
+          <l xml:id="poem_72_1_line_8" n="1">О, прильни! Не дрожи!</l>
+          <l xml:id="poem_72_1_line_9" n="2">Потони въ моемъ пристальномъ взорѣ.—</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_72_1_stanza_3">
+          <l xml:id="poem_72_1_line_11" n="1">— Дорогой! Я устала. И сердце стучитъ</l>
+          <l xml:id="poem_72_1_line_12" n="2">У меня тяжело и отрывисто,</l>
+          <l xml:id="poem_72_1_line_13" n="3">Ты не слышишь, какъ птица предъ ночью кричитъ,</l>
+          <l xml:id="poem_72_1_line_14" n="4">И собака завыла заливисто?</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_72_1_stanza_4">
+          <l xml:id="poem_72_1_line_16" n="1">Ты не видишь на небѣ зловѣщихъ клоковъ</l>
+          <l xml:id="poem_72_1_line_17" n="2">Цвѣта крови, у раны запекшейся?</l>
+          <l xml:id="poem_72_1_line_18" n="3">Ты не чуешь сырыхъ ядовитыхъ паровъ</l>
+          <l xml:id="poem_72_1_line_19" n="4">Изъ туманности, низомъ разлегшейся?</l>
+        </lg>
+        <pb n="73" facs="#page_73"/>
+        <lg type="stanza" n="5" xml:id="poem_72_1_stanza_5">
+          <l xml:id="poem_72_1_line_2" n="1">Я устала. Я слушать тебя не могу,</l>
+          <l xml:id="poem_72_1_line_3" n="2">И гляжу—но тебя все не вижу я.</l>
+          <l xml:id="poem_72_1_line_4" n="3">Я недоброго жду. Я бѣду стерегу.</l>
+          <l xml:id="poem_72_1_line_5" n="4">И себя въ этотъ мигъ ненавижу я.</l>
+          <l xml:id="poem_72_1_line_6" n="5">Нѣтъ, отсюда уйдемъ. Нѣтъ, мнѣ дорогъ</l>
+          <l xml:id="poem_72_1_line_7" n="6">покой.</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_72_1_stanza_6">
+          <l xml:id="poem_72_1_line_9" n="1">Не скажу ничего. Какъ мнѣ страшенъ</l>
+          <l xml:id="poem_72_1_line_10" n="2">сегодня ты.</l>
+          <l xml:id="poem_72_1_line_11" n="3">Ты сегодня другой. Какъ ты движешь</l>
+          <l xml:id="poem_72_1_line_12" n="4">рукой!</l>
+          <l xml:id="poem_72_1_line_13" n="5">Какъ морщины твои вверхъ съ угрозою</l>
+          <l xml:id="poem_72_1_line_14" n="6">подняты!</l>
+        </lg>
+        <lg type="stanza" n="7" xml:id="poem_72_1_stanza_7">
+          <l xml:id="poem_72_1_line_16" n="1">Какъ чужому я горе свое разскажу?</l>
+          <l xml:id="poem_72_1_line_17" n="2">Гдѣ залогъ, что не буду осмѣяна?</l>
+          <l xml:id="poem_72_1_line_18" n="3">То, что въ тайнѣ у самаго сердца держу,</l>
+          <l xml:id="poem_72_1_line_19" n="4">Что моими слезами взлелѣяно,</l>
+          <l xml:id="poem_72_1_line_20" n="5">Онъ согласенъ послушать разсѣянно!</l>
+        </lg>
+        <lg type="stanza" n="8" xml:id="poem_72_1_stanza_8">
+          <l xml:id="poem_72_1_line_22" n="1">Нѣтъ, ни шагу за мной.</l>
+          <l xml:id="poem_72_1_line_23" n="2">Ухожу!—</l>
+        </lg>
+        <lg type="stanza" n="9" xml:id="poem_72_1_stanza_9">
+          <l xml:id="poem_72_1_line_25" n="1">Дымно алой луной на сѣдую межу</l>
+          <l xml:id="poem_72_1_line_26" n="2">Много тающихъ призраковъ свѣяно.</l>
+          <l xml:id="poem_72_1_line_27" n="3">Я межъ нихъ. Разстилаюсь. Въ предутреннемъ</l>
+          <l xml:id="poem_72_1_line_28" n="4">вѣтрѣ дрожу.</l>
+        </lg>
+      </div>
+      <pb n="74" facs="#page_74"/>
+      <pb n="75" facs="#page_75"/>
+      <div type="poem" xml:id="poem_75_1" facs="#page_75">
+        <head corresp="#poem_75_1_line_1">Лунные эльфы</head>
+        <lg type="stanza" n="1" xml:id="poem_75_1_stanza_1">
+          <l xml:id="poem_75_1_line_2" n="1">Такъ сидимъ мы,</l>
+          <l xml:id="poem_75_1_line_3" n="2">дурачки,</l>
+          <l xml:id="poem_75_1_line_4" n="3">Нежить, немочь водъ;</l>
+          <l xml:id="poem_75_1_line_5" n="4">Зеленѣютъ колпачки</l>
+          <l xml:id="poem_75_1_line_6" n="5">Задомъ напередъ.</l>
+        </lg>
+      </div>
+      <pb n="76" facs="#page_76"/>
+      <pb n="77" facs="#page_77"/>
+      <div type="poem" xml:id="poem_77_1" facs="#page_77">
+        <head corresp="#poem_77_1_line_1">ЭЛЬФЫ.</head>
+        <lg type="stanza" n="1" xml:id="poem_77_1_stanza_1">
+          <l xml:id="poem_77_1_line_2" n="1">ВЕЧЕРУ, по поносу заброшенному,</l>
+          <l xml:id="poem_77_1_line_3" n="2">По зеленому лугу нескошенному,</l>
+          <l xml:id="poem_77_1_line_4" n="3">Бродятъ лунные эльфы, злокозненные,</l>
+          <l xml:id="poem_77_1_line_5" n="4">Съ міромъ солнечнымъ вѣчно разрозненные.</l>
+          <l xml:id="poem_77_1_line_6" n="5">Бродятъ, ходятъ, смѣются, подпрыгиваютъ,</l>
+          <l xml:id="poem_77_1_line_7" n="6">И другъ другу лукаво подмигиваютъ.</l>
+          <l xml:id="poem_77_1_line_8" n="7">И беззвучно ногами притопываютъ;</l>
+          <l xml:id="poem_77_1_line_9" n="8">Нѣжной ручкой туманы похлопываютъ,</l>
+          <l xml:id="poem_77_1_line_10" n="9">Огоньки язычками высовываютъ,</l>
+          <l xml:id="poem_77_1_line_11" n="10">И, усталые, сладко позѣвываютъ.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_77_1_stanza_2">
+          <l xml:id="poem_77_1_line_13" n="1">Вдругъ, отъ холода радостно-утренняго,</l>
+          <l xml:id="poem_77_1_line_14" n="2">— Точно люди отъ голоса внутренняго —</l>
+          <l xml:id="poem_77_1_line_15" n="3">Неожиданно корчатся, вздрагивая,</l>
+          <l xml:id="poem_77_1_line_16" n="4">И—безпомощно руки протягивая —</l>
+          <l xml:id="poem_77_1_line_17" n="5">Исчезаютъ, тѣла свои вкрадчивыя</l>
+          <l xml:id="poem_77_1_line_18" n="6">Въ стебельки повиликъ заворачивая.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_77_1_stanza_3">
+          <l xml:id="poem_77_1_line_20" n="1">Легокъ лезвію, утромъ наточенному,</l>
+          <l xml:id="poem_77_1_line_21" n="2">Путь по лугу, слезами ихъ смоченному.</l>
+        </lg>
+      </div>
+      <pb n="78" facs="#page_78"/>
+      <div type="poem" xml:id="poem_78_1" facs="#page_78">
+        <head corresp="#poem_78_1_line_1">МОЙ ДУХЪ.</head>
+        <lg type="stanza" n="1" xml:id="poem_78_1_stanza_1">
+          <l xml:id="poem_78_1_line_2" n="1">ГОДЪ за годомъ, день за днемъ</l>
+          <l xml:id="poem_78_1_line_3" n="2">Убѣгали въ просторъ безысходнаго,</l>
+          <l xml:id="poem_78_1_line_4" n="3">И ложились на сердцѣ моемъ,</l>
+          <l xml:id="poem_78_1_line_5" n="4">Какъ колосья вдоль жнивья безплоднаго</l>
+          <l xml:id="poem_78_1_line_6" n="5">Подъ обильнымъ дождемъ.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_78_1_stanza_2">
+          <l xml:id="poem_78_1_line_8" n="1">Бушевала толпа,</l>
+          <l xml:id="poem_78_1_line_9" n="2">И ловила чужое, далекое.</l>
+          <l xml:id="poem_78_1_line_10" n="3">Но бродилъ одиноко я.</l>
+          <l xml:id="poem_78_1_line_11" n="4">За стопою стопа</l>
+          <l xml:id="poem_78_1_line_12" n="5">Оставляла наслѣдье глубокое.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_78_1_stanza_3">
+          <l xml:id="poem_78_1_line_14" n="1">Но дошли до меня.</l>
+          <l xml:id="poem_78_1_line_15" n="2">Подхватили въ цѣпи угнетающей.</l>
+          <l xml:id="poem_78_1_line_16" n="3">И, въ согласіи звеньевъ звеня,</l>
+          <l xml:id="poem_78_1_line_17" n="4">Я почуялъ: мой духъ угасающій,</l>
+          <l xml:id="poem_78_1_line_18" n="5">Вспыхнувъ тающей струйкой огня,</l>
+          <l xml:id="poem_78_1_line_19" n="6">Тихо кинулъ меня.</l>
+        </lg>
+      </div>
+      <pb n="79" facs="#page_79"/>
+      <div type="poem" xml:id="poem_79_1" facs="#page_79">
+        <lg type="stanza" n="1" xml:id="poem_79_1_stanza_1">
+          <l xml:id="poem_79_1_line_1" n="1">ВНОВЬ святая пьянитъ безмятежность.</l>
+          <l xml:id="poem_79_1_line_2" n="2">Отошла безпокойная совѣсть.</l>
+          <l xml:id="poem_79_1_line_3" n="3">Вкругъ— недвижнаго снѣга безбрежность.</l>
+          <l xml:id="poem_79_1_line_4" n="4">На душѣ—непостижность и нѣжность.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_79_1_stanza_2">
+          <l xml:id="poem_79_1_line_6" n="1">И все ту же безсмертную повѣсть</l>
+          <l xml:id="poem_79_1_line_7" n="2">Я прочелъ въ сѣромъ кружевѣ вѣтокъ,</l>
+          <l xml:id="poem_79_1_line_8" n="3">Точно вскрылась нетлѣнная книга</l>
+          <l xml:id="poem_79_1_line_9" n="4">Въ тонкой вязи лелѣйныхъ помѣтокъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_79_1_stanza_3">
+          <l xml:id="poem_79_1_line_11" n="1">О, молитвенность цѣльнаго мига!</l>
+        </lg>
+      </div>
+      <pb n="80" facs="#page_80"/>
+      <div type="poem" xml:id="poem_80_1" facs="#page_80">
+        <lg type="stanza" n="1" xml:id="poem_80_1_stanza_1">
+          <l xml:id="poem_80_1_line_1" n="1">ТИХО шелъ тѣнистой тропкой</l>
+          <l xml:id="poem_80_1_line_2" n="2">Я, задумчивый и робкій;</l>
+          <l xml:id="poem_80_1_line_3" n="3">Вкругъ меня—сѣдой и топкій.</l>
+          <l xml:id="poem_80_1_line_4" n="4">Таялъ, таялъ снѣгъ.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_80_1_stanza_2">
+          <l xml:id="poem_80_1_line_6" n="1">Въ тонкой сѣти палыхъ иголъ</l>
+          <l xml:id="poem_80_1_line_7" n="2">Таялъ, таялъ снѣгъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_80_1_stanza_3">
+          <l xml:id="poem_80_1_line_9" n="1">Вѣтеръ вѣтви елокъ двигалъ</l>
+          <l xml:id="poem_80_1_line_10" n="2">Вѣтеръ лѣсомъ бѣгалъ, прыгалъ,</l>
+          <l xml:id="poem_80_1_line_11" n="3">Въ спину хвоей сѣкъ.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_80_1_stanza_4">
+          <l xml:id="poem_80_1_line_13" n="1">Тамъ вверху, гдѣ въ гибкой ели</l>
+          <l xml:id="poem_80_1_line_14" n="2">Перемѣнчивыя щели</l>
+          <l xml:id="poem_80_1_line_15" n="3">Пробивалъ онъ, внизъ глядѣли</l>
+          <l xml:id="poem_80_1_line_16" n="4">Сонные лучи.</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_80_1_stanza_5">
+          <l xml:id="poem_80_1_line_18" n="1">А вокругъ, отъ вѣтра зыбкій,</l>
+          <l xml:id="poem_80_1_line_19" n="2">Таялъ снѣгъ, сѣдой и липкій.</l>
+          <l xml:id="poem_80_1_line_20" n="3">И отрывисто и хрипко</l>
+          <l xml:id="poem_80_1_line_21" n="4">Каркали грачи.</l>
+        </lg>
+      </div>
+      <pb n="81" facs="#page_81"/>
+      <div type="poem" xml:id="poem_81_1" facs="#page_81">
+        <head corresp="#poem_81_1_line_1">ВЪ ГОРОДѢ.</head>
+        <div type="part">
+          <head corresp="#poem_81_1_line_2">I</head>
+          <lg type="stanza" n="1" xml:id="poem_81_1_stanza_1">
+            <l xml:id="poem_81_1_line_3" n="1">ОПУШЕННЫЕ инеемъ</l>
+            <l xml:id="poem_81_1_line_4" n="2">Наклонились деревья низко,</l>
+            <l xml:id="poem_81_1_line_5" n="3">И по матовымъ линіямъ</l>
+            <l xml:id="poem_81_1_line_6" n="4">Отгадаешь: оттепель близко.</l>
+          </lg>
+          <lg type="stanza" n="2" xml:id="poem_81_1_stanza_2">
+            <l xml:id="poem_81_1_line_8" n="1">Городъ съ горемъ и важностью,</l>
+            <l xml:id="poem_81_1_line_9" n="2">Позабывшій зовы природы,</l>
+            <l xml:id="poem_81_1_line_10" n="3">Весь окутанный влажностью,</l>
+            <l xml:id="poem_81_1_line_11" n="4">Раскидалъ гранитные всходы.</l>
+          </lg>
+          <lg type="stanza" n="3" xml:id="poem_81_1_stanza_3">
+            <l xml:id="poem_81_1_line_13" n="1">Точно городъ, нахмурены,</l>
+            <l xml:id="poem_81_1_line_14" n="2">Неподвижны маски людскія;</l>
+            <l xml:id="poem_81_1_line_15" n="3">Точно солнце, прищурены</l>
+            <l xml:id="poem_81_1_line_16" n="4">Ихъ глаза безстрастно сухіе.</l>
+          </lg>
+          <lg type="stanza" n="4" xml:id="poem_81_1_stanza_4">
+            <l xml:id="poem_81_1_line_18" n="1">Только инеемъ склеило</l>
+            <l xml:id="poem_81_1_line_19" n="2">У иныхъ рѣсничныя сѣти;</l>
+            <l xml:id="poem_81_1_line_20" n="3">Да откуда-то вѣяло</l>
+            <l xml:id="poem_81_1_line_21" n="4">Благодатной мечтой о лѣтѣ.</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="82" facs="#page_82"/>
+      <div type="poem" xml:id="poem_82_1" facs="#page_82">
+        <head corresp="#poem_82_1_line_1">У ЛѢТНЯГО САДА.</head>
+        <div type="part">
+          <head corresp="#poem_82_1_line_2">II</head>
+          <lg type="stanza" n="1" xml:id="poem_82_1_stanza_1">
+            <l xml:id="poem_82_1_line_3" n="1">НЕБО, нѣжно голубое</l>
+            <l xml:id="poem_82_1_line_4" n="2">Прячутъ въ мягкія подушки</l>
+            <l xml:id="poem_82_1_line_5" n="3">Груды сѣрыхъ облаковъ.</l>
+            <l xml:id="poem_82_1_line_6" n="4">Въ блѣдно-матовомъ покоѣ</l>
+            <l xml:id="poem_82_1_line_7" n="5">Незапятнанныхъ снѣговъ</l>
+            <l xml:id="poem_82_1_line_8" n="6">Ровный пологъ. Вдоль опушки</l>
+            <l xml:id="poem_82_1_line_9" n="7">Я иду. Мелькаютъ прутья</l>
+            <l xml:id="poem_82_1_line_10" n="8">Строго вычурной рѣшетки</l>
+            <l xml:id="poem_82_1_line_11" n="9">Межъ законченныхъ колоннъ.</l>
+            <l xml:id="poem_82_1_line_12" n="10">Здѣсь оставленъ оттискъ четкій</l>
+            <l xml:id="poem_82_1_line_13" n="11">Отошедшихъ въ даль временъ.</l>
+            <l xml:id="poem_82_1_line_14" n="12">Съ нимъ себя могу сомкнуть я.</l>
+            <l xml:id="poem_82_1_line_15" n="13">Вдоль воздѣланной аллейки</l>
+            <l xml:id="poem_82_1_line_16" n="14">Статуй домики сѣдые</l>
+            <l xml:id="poem_82_1_line_17" n="15">Протянулись полосой,</l>
+            <l xml:id="poem_82_1_line_18" n="16">И недвижна на скамейкѣ</l>
+            <l xml:id="poem_82_1_line_19" n="17">Дѣва съ русою косой.</l>
+            <l xml:id="poem_82_1_line_20" n="18">Все какъ въ дни давно былые.</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="83" facs="#page_83"/>
+      <div type="poem" xml:id="poem_83_1" facs="#page_83 #page_84">
+        <head corresp="#poem_83_1_line_1">ЭЛЕГIЯ.</head>
+        <div type="part">
+          <head corresp="#poem_83_1_line_2">III</head>
+          <lg type="stanza" n="1" xml:id="poem_83_1_stanza_1">
+            <l xml:id="poem_83_1_line_3" n="1">СЛЫШИШЬ ты стонъ замирающій, —</l>
+            <l xml:id="poem_83_1_line_4" n="2">Чей это стонъ?</l>
+            <l xml:id="poem_83_1_line_5" n="3">Міръ, безысходно страдающій,</l>
+            <l xml:id="poem_83_1_line_6" n="4">Мой — и ко мнѣ припадающій—</l>
+            <l xml:id="poem_83_1_line_7" n="5">Сѣрый, туманный,</l>
+            <l xml:id="poem_83_1_line_8" n="6">Странный</l>
+            <l xml:id="poem_83_1_line_9" n="7">Небосклонъ.</l>
+          </lg>
+          <lg type="stanza" n="2" xml:id="poem_83_1_stanza_2">
+            <l xml:id="poem_83_1_line_11" n="1">Тянется мерзлая ручка:</l>
+            <l xml:id="poem_83_1_line_12" n="2">«Баринъ, подайте копѣечку!»</l>
+            <l xml:id="poem_83_1_line_13" n="3">Дѣвочка глянетъ въ глаза.</l>
+            <l xml:id="poem_83_1_line_14" n="4">На цацавеечку,</l>
+            <l xml:id="poem_83_1_line_15" n="5">Рванымъ платкомъ перетянутую,</l>
+            <l xml:id="poem_83_1_line_16" n="6">Капнетъ слеза.</l>
+          </lg>
+          <lg type="stanza" n="3" xml:id="poem_83_1_stanza_3">
+            <l xml:id="poem_83_1_line_18" n="1">Талая тучка,</l>
+            <l xml:id="poem_83_1_line_19" n="2">Робкая, будто обманутая,</l>
+            <l xml:id="poem_83_1_line_20" n="3">Врѣзалась въ странно-туманныя,</l>
+            <l xml:id="poem_83_1_line_21" n="4">—Нѣтъ, не обманныя!—</l>
+            <l xml:id="poem_83_1_line_22" n="5">Небеса.</l>
+          </lg>
+          <lg type="stanza" n="4" xml:id="poem_83_1_stanza_4">
+            <l xml:id="poem_83_1_line_2" n="1">Гдѣ же вы, прежнiе,</l>
+            <l xml:id="poem_83_1_line_3" n="2">Несказанные,</l>
+            <l xml:id="poem_83_1_line_4" n="3">Голоса?</l>
+            <l xml:id="poem_83_1_line_5" n="4">Отчего день за днемъ безнадежнѣе?</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="85" facs="#page_85"/>
+      <div type="poem" xml:id="poem_85_1" facs="#page_85 #page_97">
+        <head corresp="#poem_85_1_line_1">IM ENGLISCHEN GARTEN.</head>
+        <div type="part">
+          <lg type="stanza" n="1" xml:id="poem_85_1_stanza_1">
+            <l xml:id="poem_85_1_line_1" n="1">Въ эти ночи стояли березы</l>
+            <l xml:id="poem_85_1_line_2" n="2">Всѣ сквозныя и чуть опушенныя.</l>
+            <l xml:id="poem_85_1_line_3" n="3">Въ эти ночи, Безмѣрнымъ сожженныя,</l>
+            <l xml:id="poem_85_1_line_4" n="4">Пролилъ мѣсяцъ тяжелыя слезы.</l>
+          </lg>
+          <lg type="stanza" n="2" xml:id="poem_85_1_stanza_2">
+            <l xml:id="poem_85_1_line_6" n="1">Въ эти ночи, томясь въ неизслѣдности,</l>
+            <l xml:id="poem_85_1_line_7" n="2">Я впивался въ просторы глазами.</l>
+            <l xml:id="poem_85_1_line_8" n="3">Тучи медленно шли небесами,</l>
+            <l xml:id="poem_85_1_line_9" n="4">Замирая въ опаловой блѣдности,</l>
+          </lg>
+          <lg type="stanza" n="3" xml:id="poem_85_1_stanza_3">
+            <l xml:id="poem_85_1_line_11" n="1">Солнца дискъ, западая,—усталый—</l>
+            <l xml:id="poem_85_1_line_12" n="2">Въ эти ночи терялся безвѣстнѣе.</l>
+            <l xml:id="poem_85_1_line_13" n="3">И слагалася пѣсня за пѣснею,</l>
+            <l xml:id="poem_85_1_line_14" n="4">Порываясь къ зарѣ блѣдно-алой.</l>
+          </lg>
+        </div>
+        <pb n="97" facs="#page_97"/>
+        <div type="part">
+          <head corresp="#poem_85_1_line_2">I.</head>
+          <lg type="stanza" n="4" xml:id="poem_85_1_stanza_4">
+            <l xml:id="poem_85_1_line_3" n="1">СКВОЗЬ пыльную, еще стыдливую листву,</l>
+            <l xml:id="poem_85_1_line_4" n="2">Чудное облако вырѣзывалось ярко,</l>
+            <l xml:id="poem_85_1_line_5" n="3">Играя красками, вонзаясь въ синеву,</l>
+            <l xml:id="poem_85_1_line_6" n="4">Разнообразя фонъ для вышитаго парка.</l>
+          </lg>
+          <lg type="stanza" n="5" xml:id="poem_85_1_stanza_5">
+            <l xml:id="poem_85_1_line_8" n="1">Китайскій замокъ, прудъ и лебеди, и арка,</l>
+            <l xml:id="poem_85_1_line_9" n="2">И гротъ—передо мной предстали наяву;</l>
+            <l xml:id="poem_85_1_line_10" n="3">Хоть были люди здѣсь,—все жъ дѣвственнаго парка</l>
+            <l xml:id="poem_85_1_line_11" n="4">Я первый попиралъ упругую траву.</l>
+          </lg>
+          <lg type="stanza" n="6" xml:id="poem_85_1_stanza_6">
+            <l xml:id="poem_85_1_line_13" n="1">Какъ талисманъ, въ рукѣ я несъ твое письмо;</l>
+            <l xml:id="poem_85_1_line_14" n="2">Ты въ немъ жила, дышала и дрожала, —</l>
+            <l xml:id="poem_85_1_line_15" n="3">И все, что видѣлось, оно преображало.</l>
+          </lg>
+          <lg type="stanza" n="7" xml:id="poem_85_1_stanza_7">
+            <l xml:id="poem_85_1_line_17" n="1">О, я достоинъ былъ волшебнаго подарка!</l>
+            <l xml:id="poem_85_1_line_18" n="2">На мозгъ мой наложилъ священное клеймо</l>
+            <l xml:id="poem_85_1_line_19" n="3">Твой сонъ, пережитой въ тѣни иного парка.</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="86" facs="#page_86"/>
+      <div type="poem" xml:id="poem_86_1" facs="#page_86">
+        <head corresp="#poem_86_1_line_1">НЕИЗВѢСТНОМУ.</head>
+        <lg type="stanza" n="1" xml:id="poem_86_1_stanza_1">
+          <l xml:id="poem_86_1_line_2" n="1">ОТЧЕГО ЖЕ, скажи, до сихъ поръ еще</l>
+          <l xml:id="poem_86_1_line_3" n="2">мнѣ</l>
+          <l xml:id="poem_86_1_line_4" n="3">Не пришлось тебя видѣть во снѣ?</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_86_1_stanza_2">
+          <l xml:id="poem_86_1_line_6" n="1">Наилучшая часть существа моего</l>
+          <l xml:id="poem_86_1_line_7" n="2">Не являлась мнѣ въ снахъ отчего?</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_86_1_stanza_3">
+          <l xml:id="poem_86_1_line_9" n="1">Ты, который восхитилъ меня и вознесъ,</l>
+          <l xml:id="poem_86_1_line_10" n="2">Не навѣялъ мнѣ утреннихъ грезъ?</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_86_1_stanza_4">
+          <l xml:id="poem_86_1_line_12" n="1">Нынѣ жду: облеченный одеждой твоей</l>
+          <l xml:id="poem_86_1_line_13" n="2">Я покину темницу неволи моей.</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_86_1_stanza_5">
+          <l xml:id="poem_86_1_line_15" n="1">Омраченное тьмой существо</l>
+          <l xml:id="poem_86_1_line_16" n="2">У порога останется сна моего.</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_86_1_stanza_6">
+          <l xml:id="poem_86_1_line_18" n="1">Въ позабытый, знакомый чертогъ</l>
+          <l xml:id="poem_86_1_line_19" n="2">Увлечетъ прихотливый и быстрый потокъ.</l>
+        </lg>
+        <lg type="stanza" n="7" xml:id="poem_86_1_stanza_7">
+          <l xml:id="poem_86_1_line_21" n="1">Несказанному трепетно радъ,</l>
+          <l xml:id="poem_86_1_line_22" n="2">Буду утромъ я твой, мой отецъ и мой братъ.</l>
+        </lg>
+      </div>
+      <pb n="87" facs="#page_87"/>
+      <div type="poem" xml:id="poem_87_1" facs="#page_87">
+        <head corresp="#poem_87_1_line_1">ВОСХОДЪ.</head>
+        <div type="part">
+          <head corresp="#poem_87_1_line_2">V</head>
+          <lg type="stanza" n="1" xml:id="poem_87_1_stanza_1">
+            <l xml:id="poem_87_1_line_3" n="1">ВЪ этой тѣни полусвѣтлой вѣтеръ не</l>
+            <l xml:id="poem_87_1_line_4" n="2">можетъ родиться.</l>
+          </lg>
+          <lg type="stanza" n="2" xml:id="poem_87_1_stanza_2">
+            <l xml:id="poem_87_1_line_6" n="1">Разноголосыя птицы небо въ созвучье</l>
+            <l xml:id="poem_87_1_line_7" n="2">сложили.</l>
+          </lg>
+          <lg type="stanza" n="3" xml:id="poem_87_1_stanza_3">
+            <l xml:id="poem_87_1_line_9" n="1">Лай. Пѣтушиные крики. Около нивы лосица.</l>
+            <l xml:id="poem_87_1_line_10" n="2">Спѣлая рожь колосится. Зелень какъ въ</l>
+            <l xml:id="poem_87_1_line_11" n="3">саванѣ пыли.</l>
+          </lg>
+          <lg type="stanza" n="4" xml:id="poem_87_1_stanza_4">
+            <l xml:id="poem_87_1_line_13" n="1">Смутнымъ, далекимъ дыханьемъ звуки и</l>
+            <l xml:id="poem_87_1_line_14" n="2">запахи чуешь.</l>
+          </lg>
+          <lg type="stanza" n="5" xml:id="poem_87_1_stanza_5">
+            <l xml:id="poem_87_1_line_16" n="1">На небѣ взоромъ кочуешь, — тамъ гдѣ лучей</l>
+            <l xml:id="poem_87_1_line_17" n="2">полыханьемъ</l>
+          </lg>
+          <lg type="stanza" n="6" xml:id="poem_87_1_stanza_6">
+            <l xml:id="poem_87_1_line_19" n="1">Порвана ночи завѣса,—тамъ гдѣ несчетныя</l>
+            <l xml:id="poem_87_1_line_20" n="2">краски</l>
+          </lg>
+          <lg type="stanza" n="7" xml:id="poem_87_1_stanza_7">
+            <l xml:id="poem_87_1_line_22" n="1">Сыплютъ свободныя ласки солнечныхъ</l>
+            <l xml:id="poem_87_1_line_23" n="2">брызгъ изъ-за лѣса.</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="88" facs="#page_88"/>
+      <div type="poem" xml:id="poem_88_1" facs="#page_88">
+        <head corresp="#poem_88_1_line_1">ПОСВЯЩЕНІЕ.</head>
+        <epigraph>
+          <quote>
+            <l>Because I feel that in the Heaven above</l>
+            <l>The angels whispering to one another</l>
+            <l>Can find among their burning terms of</l>
+            <l>love</l>
+            <l>Nor so devotional as that of mother.</l>
+            <l>E. Poe.</l>
+            <l>Мнѣ жаль не друга, не жены,</l>
+            <l>Мнѣ жаль не самого героя.</l>
+            <l>Н. Некрасовъ.</l>
+          </quote>
+        </epigraph>
+        <lg type="stanza" n="1" xml:id="poem_88_1_stanza_1">
+          <l xml:id="poem_88_1_line_11" n="1">ОТЪ начала Вселенной донынѣ</l>
+          <l xml:id="poem_88_1_line_12" n="2">Въ этомъ мірѣ страстей и суетъ</l>
+          <l xml:id="poem_88_1_line_13" n="3">Не слыхали о большей святынѣ,</l>
+          <l xml:id="poem_88_1_line_14" n="4">Чѣмъ родимой младенцу привѣтъ.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_88_1_stanza_2">
+          <l xml:id="poem_88_1_line_16" n="1">Заведетъ ли клейменая нежить</l>
+          <l xml:id="poem_88_1_line_17" n="2">Въ топкій омутъ, откуда не встать, —</l>
+          <l xml:id="poem_88_1_line_18" n="3">Зачурать, и поднять, и утѣшить,</l>
+          <l xml:id="poem_88_1_line_19" n="4">И ободрить — способна лишь мать.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_88_1_stanza_3">
+          <l xml:id="poem_88_1_line_21" n="1">И вотъ эту послѣднюю сладость,</l>
+          <l xml:id="poem_88_1_line_22" n="2">И предѣльную душу мою —</l>
+          <l xml:id="poem_88_1_line_23" n="3">Я тебѣ, безпредѣльная радость,</l>
+          <l xml:id="poem_88_1_line_24" n="4">Міровая Душа, отдаю.</l>
+        </lg>
+      </div>
+      <pb n="89" facs="#page_89"/>
+      <div type="poem" xml:id="poem_89_1" facs="#page_89 #page_101">
+        <head corresp="#poem_89_1_line_1">Живой съ живымъ</head>
+        <div type="part">
+          <lg type="stanza" n="1" xml:id="poem_89_1_stanza_1">
+            <l xml:id="poem_89_1_line_2" n="1">И все душа забыла,</l>
+            <l xml:id="poem_89_1_line_3" n="2">Чтобъ встать живой съ живымъ.</l>
+          </lg>
+        </div>
+        <pb n="101" facs="#page_101"/>
+        <div type="part">
+          <head corresp="#poem_89_1_line_1">II.</head>
+          <lg type="stanza" n="2" xml:id="poem_89_1_stanza_2">
+            <l xml:id="poem_89_1_line_2" n="1">П РИСЯДЕМЪ на деренъ, что зеленъ</l>
+            <l xml:id="poem_89_1_line_3" n="2">И свѣжъ былъ прошедшей весною,</l>
+            <l xml:id="poem_89_1_line_4" n="3">И, рады послѣднему зною,</l>
+            <l xml:id="poem_89_1_line_5" n="4">Осеннее счастье раздѣлимъ.</l>
+          </lg>
+          <lg type="stanza" n="3" xml:id="poem_89_1_stanza_3">
+            <l xml:id="poem_89_1_line_7" n="1">Поймемъ, что ненуженъ и страненъ</l>
+            <l xml:id="poem_89_1_line_8" n="2">Былъ обликъ вчерашней тревоги,</l>
+            <l xml:id="poem_89_1_line_9" n="3">Что мы не бывали какъ боги,</l>
+            <l xml:id="poem_89_1_line_10" n="4">Но Бога найдемъ и достанемъ.</l>
+          </lg>
+          <lg type="stanza" n="4" xml:id="poem_89_1_stanza_4">
+            <l xml:id="poem_89_1_line_12" n="1">Увидимъ, что простъ и законенъ</l>
+            <l xml:id="poem_89_1_line_13" n="2">Чередъ омраченья и свѣта,</l>
+            <l xml:id="poem_89_1_line_14" n="3">И съ листьевъ такого же цвѣта</l>
+            <l xml:id="poem_89_1_line_15" n="4">Притворщицу бабочку сгонимъ...</l>
+          </lg>
+        </div>
+        <dateline>
+          <date corresp="#poem_89_1_line_16" when="1907">Окт. 1907.</date>
+        </dateline>
+      </div>
+      <pb n="90" facs="#page_90"/>
+      <pb n="91" facs="#page_91"/>
+      <div type="poem" xml:id="poem_91_1" facs="#page_91">
+        <head corresp="#poem_91_1_line_1">ПРИЗЫВЪ.</head>
+        <lg type="stanza" n="1" xml:id="poem_91_1_stanza_1">
+          <l xml:id="poem_91_1_line_2" n="1">НЕРАЗЛУЧНАЯ, чистая,</l>
+          <l xml:id="poem_91_1_line_3" n="2">Святая!</l>
+          <l xml:id="poem_91_1_line_4" n="3">Посмотри какъ проносятся, тая,</l>
+          <l xml:id="poem_91_1_line_5" n="4">Облака серебристыя,</l>
+          <l xml:id="poem_91_1_line_6" n="5">И воздушно-лучистыя,</l>
+          <l xml:id="poem_91_1_line_7" n="6">По закатному небу, окрашенному.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_91_1_stanza_2">
+          <l xml:id="poem_91_1_line_9" n="1">Тамъ къ дворцу семибашенному</l>
+          <l xml:id="poem_91_1_line_10" n="2">На коняхъ огневыхъ и крылатыхъ</l>
+          <l xml:id="poem_91_1_line_11" n="3">Летятъ наклоненные воины.</l>
+          <l xml:id="poem_91_1_line_12" n="4">На забралахъ и вычурныхъ латахъ</l>
+          <l xml:id="poem_91_1_line_13" n="5">Зѣютъ пробоины.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_91_1_stanza_3">
+          <l xml:id="poem_91_1_line_15" n="1">Пронесется, разгонится</l>
+          <l xml:id="poem_91_1_line_16" n="2">Окрыленная конница —</l>
+          <l xml:id="poem_91_1_line_17" n="3">И, безслѣдная, канетъ, —</l>
+          <l xml:id="poem_91_1_line_18" n="4">Обманётъ!</l>
+        </lg>
+      </div>
+      <pb n="92" facs="#page_92"/>
+      <div type="poem" xml:id="poem_92_1" facs="#page_92">
+        <lg type="stanza" n="1" xml:id="poem_92_1_stanza_1">
+          <l xml:id="poem_92_1_line_1" n="1">О святая! летимъ какъ они, куда—</l>
+          <l xml:id="poem_92_1_line_2" n="2">Другъ у друга не спрашивая,</l>
+          <l xml:id="poem_92_1_line_3" n="3">Дни закатнымъ похмѣльемъ окрашивая, —</l>
+          <l xml:id="poem_92_1_line_4" n="4">И потомъ—пропадешь безъ слѣда.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_92_1_stanza_2">
+          <l xml:id="poem_92_1_line_6" n="1">Канемъ, тая,</l>
+          <l xml:id="poem_92_1_line_7" n="2">Съ неба вихремъ порывистымъ согнанные</l>
+          <l xml:id="poem_92_1_line_8" n="3">За предѣлы, за огненные.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_92_1_stanza_3">
+          <l xml:id="poem_92_1_line_10" n="1">Ночью выйдетъ, забрезжетъ, заблещетъ</l>
+          <l xml:id="poem_92_1_line_11" n="2">двойная</l>
+          <l xml:id="poem_92_1_line_12" n="3">Звѣзда.</l>
+        </lg>
+      </div>
+      <pb n="93" facs="#page_93"/>
+      <div type="poem" xml:id="poem_93_1" facs="#page_93">
+        <lg type="stanza" n="1" xml:id="poem_93_1_stanza_1">
+          <l xml:id="poem_93_1_line_1" n="1">Мы замерли въ торжественномъ</l>
+          <l xml:id="poem_93_1_line_2" n="2">обѣтѣ.</l>
+          <l xml:id="poem_93_1_line_3" n="3">Мы поняли, что мы—Господни дѣти.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_93_1_stanza_2">
+          <l xml:id="poem_93_1_line_5" n="1">Да, въ этомъ мірѣ мы отдѣльно—я и ты,</l>
+          <l xml:id="poem_93_1_line_6" n="2">Но будемъ тамъ въ Одно таинственно</l>
+          <l xml:id="poem_93_1_line_7" n="3">слиты.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_93_1_stanza_3">
+          <l xml:id="poem_93_1_line_9" n="1">Ты храмъ Ему въ моей душѣ воздвигла;</l>
+          <l xml:id="poem_93_1_line_10" n="2">Возможность невозможнаго постигла.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_93_1_stanza_4">
+          <l xml:id="poem_93_1_line_12" n="1">Возможность полноты, единства бытія</l>
+          <l xml:id="poem_93_1_line_13" n="2">И мнѣ позволила постичь любовь твоя.</l>
+        </lg>
+        <lg type="stanza" n="5" xml:id="poem_93_1_stanza_5">
+          <l xml:id="poem_93_1_line_15" n="1">Какъ далеки опалыя минуты.</l>
+          <l xml:id="poem_93_1_line_16" n="2">Какъ намъ легки земли суровой путы.</l>
+        </lg>
+        <lg type="stanza" n="6" xml:id="poem_93_1_stanza_6">
+          <l xml:id="poem_93_1_line_18" n="1">И все однимъ лучомъ—нездѣшнимъ—залито.</l>
+          <l xml:id="poem_93_1_line_19" n="2">И лишь одна мольба: «О Господи, за что!</l>
+        </lg>
+        <lg type="stanza" n="7" xml:id="poem_93_1_stanza_7">
+          <l xml:id="poem_93_1_line_21" n="1">«За что Ты полюбилъ насъ на разсвѣтѣ?</l>
+          <l xml:id="poem_93_1_line_22" n="2">«Что сотворили мы, слѣпыя дѣти?»</l>
+        </lg>
+      </div>
+      <pb n="94" facs="#page_94"/>
+      <div type="poem" xml:id="poem_94_1" facs="#page_94 #page_95">
+        <head corresp="#poem_94_1_line_1">НА ПУТИ.</head>
+        <div type="part">
+          <head corresp="#poem_94_1_line_2">I.</head>
+          <lg type="stanza" n="1" xml:id="poem_94_1_stanza_1">
+            <l xml:id="poem_94_1_line_3" n="1">Въ портретныхъ уловивъ чертахъ</l>
+            <l xml:id="poem_94_1_line_4" n="2">Тебя Живую, Мона,</l>
+            <l xml:id="poem_94_1_line_5" n="3">Заснулъ я въ нѣжащихъ толчкахъ</l>
+            <l xml:id="poem_94_1_line_6" n="4">Уютнаго вагона.</l>
+          </lg>
+          <lg type="stanza" n="2" xml:id="poem_94_1_stanza_2">
+            <l xml:id="poem_94_1_line_8" n="1">И я проснулся въ тотъ же часъ,</l>
+            <l xml:id="poem_94_1_line_9" n="2">Въ который встало солнце;</l>
+            <l xml:id="poem_94_1_line_10" n="3">Направо — лунный серпъ угасъ,</l>
+            <l xml:id="poem_94_1_line_11" n="4">Налѣво — такъ манило глазъ,</l>
+            <l xml:id="poem_94_1_line_12" n="5">Все въ отблескахъ, оконце.</l>
+          </lg>
+          <lg type="stanza" n="3" xml:id="poem_94_1_stanza_3">
+            <l xml:id="poem_94_1_line_14" n="1">Я подошелъ къ нему. Смотрѣлъ,</l>
+            <l xml:id="poem_94_1_line_15" n="2">Какъ тамъ, за полемъ чистымъ,</l>
+            <l xml:id="poem_94_1_line_16" n="3">Огромный шаръ вставалъ, горѣлъ;</l>
+            <l xml:id="poem_94_1_line_17" n="4">Былъ алымъ и лучистымъ.</l>
+          </lg>
+          <lg type="stanza" n="4" xml:id="poem_94_1_stanza_4">
+            <l xml:id="poem_94_1_line_19" n="1">И даль волнистая слилась</l>
+            <l xml:id="poem_94_1_line_20" n="2">Съ инымъ, далекимъ полемъ;</l>
+            <l xml:id="poem_94_1_line_21" n="3">Ты, вся разсвѣтная, зажглась,</l>
+          </lg>
+          <lg type="stanza" n="5" xml:id="poem_94_1_stanza_5">
+            <l xml:id="poem_94_1_line_2" n="1">Съ земли росистой поднялась,</l>
+            <l xml:id="poem_94_1_line_3" n="2">Вся созерцанью отдалась,</l>
+            <l xml:id="poem_94_1_line_4" n="3">Восторгу, тайнымъ болямъ.</l>
+          </lg>
+          <lg type="stanza" n="6" xml:id="poem_94_1_stanza_6">
+            <l xml:id="poem_94_1_line_6" n="1">Давно встрѣчала ты восходъ</l>
+            <l xml:id="poem_94_1_line_7" n="2">— И съ нимъ была одно ты;</l>
+            <l xml:id="poem_94_1_line_8" n="3">Теперь со мною ты,— и вотъ</l>
+            <l xml:id="poem_94_1_line_9" n="4">Тотъ самый, первый твой восходъ</l>
+            <l xml:id="poem_94_1_line_10" n="5">Съ тобою встрѣтилъ кто-то.</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="96" facs="#page_96"/>
+      <div type="poem" xml:id="poem_96_1" facs="#page_96">
+        <head corresp="#poem_96_1_line_1">ОСТАНОВКА.</head>
+        <div type="part">
+          <head corresp="#poem_96_1_line_2">II.</head>
+          <lg type="stanza" n="1" xml:id="poem_96_1_stanza_1">
+            <l xml:id="poem_96_1_line_3" n="1">...КАКЪ съ фонтана искрящихся струекъ</l>
+            <l xml:id="poem_96_1_line_4" n="2">Ниспадаетъ небрежная вязь,—</l>
+            <l xml:id="poem_96_1_line_5" n="3">Такъ узоры цвѣточковъ-чешуекъ</l>
+            <l xml:id="poem_96_1_line_6" n="4">Мнѣ кидаетъ береза, склонясь.</l>
+          </lg>
+          <lg type="stanza" n="2" xml:id="poem_96_1_stanza_2">
+            <l xml:id="poem_96_1_line_8" n="1">Протянулъ къ ней увѣренно кисть я—</l>
+            <l xml:id="poem_96_1_line_9" n="2">И въ рукѣ эти змѣйки дрожатъ;</l>
+            <l xml:id="poem_96_1_line_10" n="3">А стыдливые, клейкіе листья</l>
+            <l xml:id="poem_96_1_line_11" n="4">Ужъ меня ароматомъ дарятъ...</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="98" facs="#page_98"/>
+      <div type="poem" xml:id="poem_98_1" facs="#page_98 #page_99">
+        <div type="part">
+          <head corresp="#poem_98_1_line_1">II.</head>
+          <lg type="stanza" n="1" xml:id="poem_98_1_stanza_1">
+            <l xml:id="poem_98_1_line_2" n="1">ЛЕПЕСТКИ розоватой камеліи</l>
+            <l xml:id="poem_98_1_line_3" n="2">Облетаютъ, какъ ангелы чистые</l>
+            <l xml:id="poem_98_1_line_4" n="3">На картинѣ Художника Вѣчнаго.</l>
+            <l xml:id="poem_98_1_line_5" n="4">Какъ цвѣты разметавшейся яблони,</l>
+            <l xml:id="poem_98_1_line_6" n="5">Въ дни, когда въ безпорочномъ веселіи,</l>
+            <l xml:id="poem_98_1_line_7" n="6">Мы скрывались подъ своды вѣтвистые</l>
+            <l xml:id="poem_98_1_line_8" n="7">Въ жаждѣ пламени мѣсяца млечнаго.</l>
+          </lg>
+          <lg type="stanza" n="2" xml:id="poem_98_1_stanza_2">
+            <l xml:id="poem_98_1_line_2" n="1">ТЫ, неясныхъ предчувствій разгадчица,</l>
+            <l xml:id="poem_98_1_line_3" n="2">Услышь мои дальнiе зовы.</l>
+            <l xml:id="poem_98_1_line_4" n="3">Разверни, обнажи то что прячется</l>
+            <l xml:id="poem_98_1_line_5" n="4">Въ предвидѣнiй тайныхъ покровы.</l>
+          </lg>
+          <lg type="stanza" n="3" xml:id="poem_98_1_stanza_3">
+            <l xml:id="poem_98_1_line_7" n="1">До меня точно облако ладана</l>
+            <l xml:id="poem_98_1_line_8" n="2">Домчится и на сердце ляжетъ;</l>
+            <l xml:id="poem_98_1_line_9" n="3">И тогда буду знать я: угадано,</l>
+            <l xml:id="poem_98_1_line_10" n="4">Что словами никто не разскажетъ.</l>
+          </lg>
+        </div>
+      </div>
+      <pb n="100" facs="#page_100"/>
+      <div type="poem" xml:id="poem_100_1" facs="#page_100">
+        <div type="part">
+          <head corresp="#poem_100_1_line_1">I.</head>
+          <lg type="stanza" n="1" xml:id="poem_100_1_stanza_1">
+            <l xml:id="poem_100_1_line_2" n="1">ОНЪ не смѣетъ вступить въ заколдованный</l>
+            <l xml:id="poem_100_1_line_3" n="2">кругъ;</l>
+            <l xml:id="poem_100_1_line_4" n="3">Онъ своей ворожбой не достанетъ меня;</l>
+            <l xml:id="poem_100_1_line_5" n="4">Буду пѣть и плясать я межъ вѣрныхъ</l>
+            <l xml:id="poem_100_1_line_6" n="5">подругъ;</l>
+            <l xml:id="poem_100_1_line_7" n="6">Побѣдила я злой и коварный недугъ;</l>
+            <l xml:id="poem_100_1_line_8" n="7">Я прошла въ мой родной, мнѣ назначенный,</l>
+            <l xml:id="poem_100_1_line_9" n="8">кругъ,</l>
+            <l xml:id="poem_100_1_line_10" n="9">Чистоту, и мечту, и отраду храня.</l>
+          </lg>
+          <lg type="stanza" n="2" xml:id="poem_100_1_stanza_2">
+            <l xml:id="poem_100_1_line_12" n="1">Поцѣлую березу родную мою;</l>
+            <l xml:id="poem_100_1_line_13" n="2">Облетѣвшими листьями станъ обовью;</l>
+            <l xml:id="poem_100_1_line_14" n="3">Отряхну и вдохну съ кипариса хвою;</l>
+            <l xml:id="poem_100_1_line_15" n="4">Запою!..</l>
+          </lg>
+        </div>
+        <dateline>
+          <date corresp="#poem_100_1_line_16" when="1907">Окт. 1907.</date>
+        </dateline>
+      </div>
+      <pb n="102" facs="#page_102"/>
+      <div type="poem" xml:id="poem_102_1" facs="#page_102">
+        <head corresp="#poem_102_1_line_1">ВНОВЬ.</head>
+        <lg type="stanza" n="1" xml:id="poem_102_1_stanza_1">
+          <l xml:id="poem_102_1_line_2" n="1">ВНОВЬ вдыхаю запахъ сладкій</l>
+          <l xml:id="poem_102_1_line_3" n="2">Свѣже-павшаго листа,</l>
+          <l xml:id="poem_102_1_line_4" n="3">И въ родимыя мѣста</l>
+          <l xml:id="poem_102_1_line_5" n="4">Вновь спѣшу, таясь, украдкой.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_102_1_stanza_2">
+          <l xml:id="poem_102_1_line_7" n="1">Тѣ же замкнутыя дали</l>
+          <l xml:id="poem_102_1_line_8" n="2">Сѣрыхъ тучъ пролили дождь.</l>
+          <l xml:id="poem_102_1_line_9" n="3">Очертанья тѣхъ же рощъ</l>
+          <l xml:id="poem_102_1_line_10" n="4">Предо мной привѣтно встали.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_102_1_stanza_3">
+          <l xml:id="poem_102_1_line_12" n="1">И по прежнему тоска</l>
+          <l xml:id="poem_102_1_line_13" n="2">Улеглась — и безмятежно.</l>
+          <l xml:id="poem_102_1_line_14" n="3">Точно чья-то — нѣжно, нѣжно—</l>
+          <l xml:id="poem_102_1_line_15" n="4">Руку тронула рука.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_102_1_stanza_4">
+          <l xml:id="poem_102_1_line_17" n="1">И опять вступаю я</l>
+          <l xml:id="poem_102_1_line_18" n="2">Въ эту сумрачную осень</l>
+          <l xml:id="poem_102_1_line_19" n="3">Все живымъ, какъ этихъ сосенъ</l>
+          <l xml:id="poem_102_1_line_20" n="4">Все зеленая семья.</l>
+        </lg>
+      </div>
+      <pb n="103" facs="#page_103"/>
+      <div type="poem" xml:id="poem_103_1" facs="#page_103">
+        <lg type="stanza" n="1" xml:id="poem_103_1_stanza_1">
+          <l xml:id="poem_103_1_line_1" n="1">О СЕРЕБРЕННЫХЪ травъ густые завитки</l>
+          <l xml:id="poem_103_1_line_2" n="2">Стезю мою каймятъ парчею пышной.</l>
+          <l xml:id="poem_103_1_line_3" n="3">Иду по ней скользя. Шаги мои легки.</l>
+          <l xml:id="poem_103_1_line_4" n="4">Отторгнуть ими хрустъ и шелестъ еле</l>
+          <l xml:id="poem_103_1_line_5" n="5">слышный.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_103_1_stanza_2">
+          <l xml:id="poem_103_1_line_7" n="1">По серебру пестритъ кой-гдѣ опалый листъ,</l>
+          <l xml:id="poem_103_1_line_8" n="2">Во влажной бахромѣ, какъ сдѣланный изъ</l>
+          <l xml:id="poem_103_1_line_9" n="3">воска,</l>
+          <l xml:id="poem_103_1_line_10" n="4">То свернутый трубой, то сломанный, то</l>
+          <l xml:id="poem_103_1_line_11" n="5">плоскій.</l>
+          <l xml:id="poem_103_1_line_12" n="6">А воздухъ солнечный—морозенъ и иглистъ.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_103_1_stanza_3">
+          <l xml:id="poem_103_1_line_14" n="1">Вобрало озеро все золото лучей,</l>
+          <l xml:id="poem_103_1_line_15" n="2">И кинуло въ глаза слѣпящими снопами.</l>
+          <l xml:id="poem_103_1_line_16" n="3">Я пробовала ледъ дрожащими стопами,</l>
+          <l xml:id="poem_103_1_line_17" n="4">И отраженный звукъ былъ чище и звончѣй.</l>
+        </lg>
+      </div>
+      <pb n="104" facs="#page_104"/>
+      <div type="poem" xml:id="poem_104_1" facs="#page_104 #page_105">
+        <head corresp="#poem_104_1_line_1">ДО СИХЪ ПОРЪ.</head>
+        <lg type="stanza" n="1" xml:id="poem_104_1_stanza_1">
+          <l xml:id="poem_104_1_line_2" n="1">НОЧЬ блѣднѣетъ знакомой кудесницею</l>
+          <l xml:id="poem_104_1_line_3" n="2">Дѣтскихъ сновъ.</l>
+          <l xml:id="poem_104_1_line_4" n="3">Я прошла развалившейся лѣстницею</l>
+          <l xml:id="poem_104_1_line_5" n="4">Пять шаговъ.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_104_1_stanza_2">
+          <l xml:id="poem_104_1_line_7" n="1">Коростель—безъ движенія, всхлипывая</l>
+          <l xml:id="poem_104_1_line_8" n="2">Въ полѣ льна.</l>
+          <l xml:id="poem_104_1_line_9" n="3">Ровный отблескъ на сѣтчатость липовую</l>
+          <l xml:id="poem_104_1_line_10" n="4">Льетъ луна.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_104_1_stanza_3">
+          <l xml:id="poem_104_1_line_12" n="1">Я въ аллеѣ. Ботинкой измоченною</l>
+          <l xml:id="poem_104_1_line_13" n="2">Пыль слѣжу.</l>
+          <l xml:id="poem_104_1_line_14" n="3">Передъ каждою купою всклоченною</l>
+          <l xml:id="poem_104_1_line_15" n="4">Вся дрожу.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_104_1_stanza_4">
+          <l xml:id="poem_104_1_line_17" n="1">Старой жутью, тревожно волнующею,</l>
+          <l xml:id="poem_104_1_line_18" n="2">Вдругъ пахнетъ.</l>
+          <l xml:id="poem_104_1_line_19" n="3">И къ лицу кто-то влажно цѣлующую</l>
+          <l xml:id="poem_104_1_line_20" n="4">Вѣтку гнетъ.</l>
+        </lg>
+        <pb n="105" facs="#page_105"/>
+        <lg type="stanza" n="5" xml:id="poem_104_1_stanza_5">
+          <l xml:id="poem_104_1_line_2" n="1">Путь не дологъ. Вотъ тѣнь эта матовая—</l>
+          <l xml:id="poem_104_1_line_3" n="2">Тамъ заборъ.</l>
+          <l xml:id="poem_104_1_line_4" n="3">О, все такъ же дыханье захватываетъ</l>
+          <l xml:id="poem_104_1_line_5" n="4">—До сихъ поръ!</l>
+        </lg>
+        <dateline>
+          <date corresp="#poem_104_1_line_6" when="1905">23 Іюня 1905.</date>
+        </dateline>
+      </div>
+      <pb n="106" facs="#page_106"/>
+      <div type="poem" xml:id="poem_106_1" facs="#page_106">
+        <head corresp="#poem_106_1_line_1">ЭТО ТЫ.</head>
+        <lg type="stanza" n="1" xml:id="poem_106_1_stanza_1">
+          <l xml:id="poem_106_1_line_2" n="1">ВОЗДУХЪ влажной полонъ истомой,</l>
+          <l xml:id="poem_106_1_line_3" n="2">Пѣсня жницъ стоитъ вдалекѣ.</l>
+          <l xml:id="poem_106_1_line_4" n="3">Я прошелся вдоль по рѣкѣ,</l>
+          <l xml:id="poem_106_1_line_5" n="4">И на холмъ взбираюсь знакомый.</l>
+        </lg>
+        <lg type="stanza" n="2" xml:id="poem_106_1_stanza_2">
+          <l xml:id="poem_106_1_line_7" n="1">Здѣсь, на этомъ мшистомъ холму,</l>
+          <l xml:id="poem_106_1_line_8" n="2">Я въ блаженствѣ чистомъ прилягу, —</l>
+          <l xml:id="poem_106_1_line_9" n="3">Буду слушать тихую влагу,</l>
+          <l xml:id="poem_106_1_line_10" n="4">И травы шептанье пойму.</l>
+        </lg>
+        <lg type="stanza" n="3" xml:id="poem_106_1_stanza_3">
+          <l xml:id="poem_106_1_line_12" n="1">Все вокругъ сверкнетъ, заблеститъ;</l>
+          <l xml:id="poem_106_1_line_13" n="2">Защекочетъ мягкое ложе;</l>
+          <l xml:id="poem_106_1_line_14" n="3">Ароматы Августа множа,</l>
+          <l xml:id="poem_106_1_line_15" n="4">Желтый листъ спадать зачаститъ.</l>
+        </lg>
+        <lg type="stanza" n="4" xml:id="poem_106_1_stanza_4">
+          <l xml:id="poem_106_1_line_17" n="1">И пока меня не прогонитъ,</l>
+          <l xml:id="poem_106_1_line_18" n="2">Вдругъ родись изъ нѣги, гроза, —</l>
+          <l xml:id="poem_106_1_line_19" n="3">Я раскрою жадно глаза,</l>
+          <l xml:id="poem_106_1_line_20" n="4">Въ нихъ полудня чара затонетъ.</l>
+        </lg>
+      </div>
+      <pb n="107" facs="#page_107"/>
+      <div type="poem" xml:id="poem_95_1" facs="#page_107">
+        <lg type="stanza" n="1" xml:id="poem_95_1_stanza_1">
+          <l xml:id="poem_95_1_line_1" n="1">Я изъ сновъ и словъ красоты</l>
+          <l xml:id="poem_95_1_line_2" n="2">Возсоздамъ лицо херувима,</l>
+          <l xml:id="poem_95_1_line_3" n="3">И, поймавъ что въ немъ уловимо,</l>
+          <l xml:id="poem_95_1_line_4" n="4">Улыбнусь, шепча: это—ты.</l>
+        </lg>
+      </div>
+      <pb n="108" facs="#page_108"/>
+      <pb n="112" facs="#page_112"/>
+      <pb n="113" facs="#page_113"/>
+      <pb n="114" facs="#page_114"/>
+    </body>
+  </text>
+  <facsimile>
+    <surface xml:id="page_1" n="1">
+      <graphic url="processing/doc_0460a91a1013/images/page_0001.png"/>
+    </surface>
+    <surface xml:id="page_2" n="2">
+      <graphic url="page_002.png"/>
+    </surface>
+    <surface xml:id="page_3" n="3">
+      <graphic url="processing/doc_0460a91a1013/images/page_0003.png"/>
+    </surface>
+    <surface xml:id="page_4" n="4">
+      <graphic url="page_004.png"/>
+    </surface>
+    <surface xml:id="page_5" n="5">
+      <graphic url="page_005.png"/>
+    </surface>
+    <surface xml:id="page_6" n="6">
+      <graphic url="page_006.png"/>
+    </surface>
+    <surface xml:id="page_7" n="7">
+      <graphic url="processing/doc_0460a91a1013/images/page_0007.png"/>
+    </surface>
+    <surface xml:id="page_8" n="8">
+      <graphic url="processing/doc_0460a91a1013/images/page_0008.png"/>
+    </surface>
+    <surface xml:id="page_9" n="9">
+      <graphic url="processing/doc_0460a91a1013/images/page_0009.png"/>
+    </surface>
+    <surface xml:id="page_10" n="10">
+      <graphic url="page_010.png"/>
+    </surface>
+    <surface xml:id="page_11" n="11">
+      <graphic url="page_011.png"/>
+    </surface>
+    <surface xml:id="page_12" n="12">
+      <graphic url="page_012.png"/>
+    </surface>
+    <surface xml:id="page_13" n="13">
+      <graphic url="processing/doc_0460a91a1013/images/page_0013.png"/>
+    </surface>
+    <surface xml:id="page_14" n="14">
+      <graphic url="page_014.png"/>
+    </surface>
+    <surface xml:id="page_15" n="15">
+      <graphic url="page_015.png"/>
+    </surface>
+    <surface xml:id="page_16" n="16">
+      <graphic url="page_016.png"/>
+    </surface>
+    <surface xml:id="page_17" n="17">
+      <graphic url="processing/doc_0460a91a1013/images/page_0017.png"/>
+    </surface>
+    <surface xml:id="page_18" n="18">
+      <graphic url="processing/doc_0460a91a1013/images/page_0018.png"/>
+    </surface>
+    <surface xml:id="page_19" n="19">
+      <graphic url="processing/doc_0460a91a1013/images/page_0019.png"/>
+    </surface>
+    <surface xml:id="page_20" n="20">
+      <graphic url="processing/doc_0460a91a1013/images/page_0020.png"/>
+    </surface>
+    <surface xml:id="page_21" n="21">
+      <graphic url="processing/doc_0460a91a1013/images/page_0021.png"/>
+    </surface>
+    <surface xml:id="page_22" n="22">
+      <graphic url="processing/doc_0460a91a1013/images/page_0022.png"/>
+    </surface>
+    <surface xml:id="page_23" n="23">
+      <graphic url="processing/doc_0460a91a1013/images/page_0023.png"/>
+    </surface>
+    <surface xml:id="page_24" n="24">
+      <graphic url="processing/doc_0460a91a1013/images/page_0024.png"/>
+    </surface>
+    <surface xml:id="page_25" n="25">
+      <graphic url="processing/doc_0460a91a1013/images/page_0025.png"/>
+    </surface>
+    <surface xml:id="page_26" n="26">
+      <graphic url="processing/doc_0460a91a1013/images/page_0026.png"/>
+    </surface>
+    <surface xml:id="page_27" n="27">
+      <graphic url="processing/doc_0460a91a1013/images/page_0027.png"/>
+    </surface>
+    <surface xml:id="page_28" n="28">
+      <graphic url="processing/doc_0460a91a1013/images/page_0028.png"/>
+    </surface>
+    <surface xml:id="page_29" n="29">
+      <graphic url="processing/doc_0460a91a1013/images/page_0029.png"/>
+    </surface>
+    <surface xml:id="page_30" n="30">
+      <graphic url="processing/doc_0460a91a1013/images/page_0030.png"/>
+    </surface>
+    <surface xml:id="page_31" n="31">
+      <graphic url="processing/doc_0460a91a1013/images/page_0031.png"/>
+    </surface>
+    <surface xml:id="page_32" n="32">
+      <graphic url="processing/doc_0460a91a1013/images/page_0032.png"/>
+    </surface>
+    <surface xml:id="page_33" n="33">
+      <graphic url="processing/doc_0460a91a1013/images/page_0033.png"/>
+    </surface>
+    <surface xml:id="page_34" n="34">
+      <graphic url="processing/doc_0460a91a1013/images/page_0034.png"/>
+    </surface>
+    <surface xml:id="page_35" n="35">
+      <graphic url="processing/doc_0460a91a1013/images/page_0035.png"/>
+    </surface>
+    <surface xml:id="page_36" n="36">
+      <graphic url="processing/doc_0460a91a1013/images/page_0036.png"/>
+    </surface>
+    <surface xml:id="page_37" n="37">
+      <graphic url="processing/doc_0460a91a1013/images/page_0037.png"/>
+    </surface>
+    <surface xml:id="page_38" n="38">
+      <graphic url="processing/doc_0460a91a1013/images/page_0038.png"/>
+    </surface>
+    <surface xml:id="page_39" n="39">
+      <graphic url="processing/doc_0460a91a1013/images/page_0039.png"/>
+    </surface>
+    <surface xml:id="page_40" n="40">
+      <graphic url="page_040.png"/>
+    </surface>
+    <surface xml:id="page_41" n="41">
+      <graphic url="processing/doc_0460a91a1013/images/page_0041.png"/>
+    </surface>
+    <surface xml:id="page_42" n="42">
+      <graphic url="processing/doc_0460a91a1013/images/page_0042.png"/>
+    </surface>
+    <surface xml:id="page_43" n="43">
+      <graphic url="processing/doc_0460a91a1013/images/page_0043.png"/>
+    </surface>
+    <surface xml:id="page_44" n="44">
+      <graphic url="processing/doc_0460a91a1013/images/page_0044.png"/>
+    </surface>
+    <surface xml:id="page_45" n="45">
+      <graphic url="processing/doc_0460a91a1013/images/page_0045.png"/>
+    </surface>
+    <surface xml:id="page_46" n="46">
+      <graphic url="processing/doc_0460a91a1013/images/page_0046.png"/>
+    </surface>
+    <surface xml:id="page_47" n="47">
+      <graphic url="processing/doc_0460a91a1013/images/page_0047.png"/>
+    </surface>
+    <surface xml:id="page_48" n="48">
+      <graphic url="page_048.png"/>
+    </surface>
+    <surface xml:id="page_49" n="49">
+      <graphic url="processing/doc_0460a91a1013/images/page_0049.png"/>
+    </surface>
+    <surface xml:id="page_50" n="50">
+      <graphic url="processing/doc_0460a91a1013/images/page_0050.png"/>
+    </surface>
+    <surface xml:id="page_51" n="51">
+      <graphic url="processing/doc_0460a91a1013/images/page_0051.png"/>
+    </surface>
+    <surface xml:id="page_52" n="52">
+      <graphic url="processing/doc_0460a91a1013/images/page_0052.png"/>
+    </surface>
+    <surface xml:id="page_53" n="53">
+      <graphic url="processing/doc_0460a91a1013/images/page_0053.png"/>
+    </surface>
+    <surface xml:id="page_54" n="54">
+      <graphic url="processing/doc_0460a91a1013/images/page_0054.png"/>
+    </surface>
+    <surface xml:id="page_55" n="55">
+      <graphic url="processing/doc_0460a91a1013/images/page_0055.png"/>
+    </surface>
+    <surface xml:id="page_56" n="56">
+      <graphic url="processing/doc_0460a91a1013/images/page_0056.png"/>
+    </surface>
+    <surface xml:id="page_57" n="57">
+      <graphic url="processing/doc_0460a91a1013/images/page_0057.png"/>
+    </surface>
+    <surface xml:id="page_58" n="58">
+      <graphic url="processing/doc_0460a91a1013/images/page_0058.png"/>
+    </surface>
+    <surface xml:id="page_59" n="59">
+      <graphic url="processing/doc_0460a91a1013/images/page_0059.png"/>
+    </surface>
+    <surface xml:id="page_60" n="60">
+      <graphic url="processing/doc_0460a91a1013/images/page_0060.png"/>
+    </surface>
+    <surface xml:id="page_61" n="61">
+      <graphic url="processing/doc_0460a91a1013/images/page_0061.png"/>
+    </surface>
+    <surface xml:id="page_62" n="62">
+      <graphic url="processing/doc_0460a91a1013/images/page_0062.png"/>
+    </surface>
+    <surface xml:id="page_63" n="63">
+      <graphic url="processing/doc_0460a91a1013/images/page_0063.png"/>
+    </surface>
+    <surface xml:id="page_64" n="64">
+      <graphic url="page_064.png"/>
+    </surface>
+    <surface xml:id="page_65" n="65">
+      <graphic url="processing/doc_0460a91a1013/images/page_0065.png"/>
+    </surface>
+    <surface xml:id="page_66" n="66">
+      <graphic url="processing/doc_0460a91a1013/images/page_0066.png"/>
+    </surface>
+    <surface xml:id="page_67" n="67">
+      <graphic url="processing/doc_0460a91a1013/images/page_0067.png"/>
+    </surface>
+    <surface xml:id="page_68" n="68">
+      <graphic url="processing/doc_0460a91a1013/images/page_0068.png"/>
+    </surface>
+    <surface xml:id="page_69" n="69">
+      <graphic url="processing/doc_0460a91a1013/images/page_0069.png"/>
+    </surface>
+    <surface xml:id="page_70" n="70">
+      <graphic url="processing/doc_0460a91a1013/images/page_0070.png"/>
+    </surface>
+    <surface xml:id="page_71" n="71">
+      <graphic url="processing/doc_0460a91a1013/images/page_0071.png"/>
+    </surface>
+    <surface xml:id="page_72" n="72">
+      <graphic url="processing/doc_0460a91a1013/images/page_0072.png"/>
+    </surface>
+    <surface xml:id="page_73" n="73">
+      <graphic url="processing/doc_0460a91a1013/images/page_0073.png"/>
+    </surface>
+    <surface xml:id="page_74" n="74">
+      <graphic url="page_074.png"/>
+    </surface>
+    <surface xml:id="page_75" n="75">
+      <graphic url="processing/doc_0460a91a1013/images/page_0075.png"/>
+    </surface>
+    <surface xml:id="page_76" n="76">
+      <graphic url="page_076.png"/>
+    </surface>
+    <surface xml:id="page_77" n="77">
+      <graphic url="processing/doc_0460a91a1013/images/page_0077.png"/>
+    </surface>
+    <surface xml:id="page_78" n="78">
+      <graphic url="processing/doc_0460a91a1013/images/page_0078.png"/>
+    </surface>
+    <surface xml:id="page_79" n="79">
+      <graphic url="processing/doc_0460a91a1013/images/page_0079.png"/>
+    </surface>
+    <surface xml:id="page_80" n="80">
+      <graphic url="processing/doc_0460a91a1013/images/page_0080.png"/>
+    </surface>
+    <surface xml:id="page_81" n="81">
+      <graphic url="processing/doc_0460a91a1013/images/page_0081.png"/>
+    </surface>
+    <surface xml:id="page_82" n="82">
+      <graphic url="processing/doc_0460a91a1013/images/page_0082.png"/>
+    </surface>
+    <surface xml:id="page_83" n="83">
+      <graphic url="processing/doc_0460a91a1013/images/page_0083.png"/>
+    </surface>
+    <surface xml:id="page_84" n="84">
+      <graphic url="processing/doc_0460a91a1013/images/page_0084.png"/>
+    </surface>
+    <surface xml:id="page_85" n="85">
+      <graphic url="processing/doc_0460a91a1013/images/page_0085.png"/>
+    </surface>
+    <surface xml:id="page_86" n="86">
+      <graphic url="processing/doc_0460a91a1013/images/page_0086.png"/>
+    </surface>
+    <surface xml:id="page_87" n="87">
+      <graphic url="processing/doc_0460a91a1013/images/page_0087.png"/>
+    </surface>
+    <surface xml:id="page_88" n="88">
+      <graphic url="processing/doc_0460a91a1013/images/page_0088.png"/>
+    </surface>
+    <surface xml:id="page_89" n="89">
+      <graphic url="processing/doc_0460a91a1013/images/page_0089.png"/>
+    </surface>
+    <surface xml:id="page_90" n="90">
+      <graphic url="page_090.png"/>
+    </surface>
+    <surface xml:id="page_91" n="91">
+      <graphic url="processing/doc_0460a91a1013/images/page_0091.png"/>
+    </surface>
+    <surface xml:id="page_92" n="92">
+      <graphic url="processing/doc_0460a91a1013/images/page_0092.png"/>
+    </surface>
+    <surface xml:id="page_93" n="93">
+      <graphic url="processing/doc_0460a91a1013/images/page_0093.png"/>
+    </surface>
+    <surface xml:id="page_94" n="94">
+      <graphic url="processing/doc_0460a91a1013/images/page_0094.png"/>
+    </surface>
+    <surface xml:id="page_95" n="95">
+      <graphic url="processing/doc_0460a91a1013/images/page_0095.png"/>
+    </surface>
+    <surface xml:id="page_96" n="96">
+      <graphic url="processing/doc_0460a91a1013/images/page_0096.png"/>
+    </surface>
+    <surface xml:id="page_97" n="97">
+      <graphic url="processing/doc_0460a91a1013/images/page_0097.png"/>
+    </surface>
+    <surface xml:id="page_98" n="98">
+      <graphic url="processing/doc_0460a91a1013/images/page_0098.png"/>
+    </surface>
+    <surface xml:id="page_99" n="99">
+      <graphic url="processing/doc_0460a91a1013/images/page_0099.png"/>
+    </surface>
+    <surface xml:id="page_100" n="100">
+      <graphic url="processing/doc_0460a91a1013/images/page_0100.png"/>
+    </surface>
+    <surface xml:id="page_101" n="101">
+      <graphic url="processing/doc_0460a91a1013/images/page_0101.png"/>
+    </surface>
+    <surface xml:id="page_102" n="102">
+      <graphic url="processing/doc_0460a91a1013/images/page_0102.png"/>
+    </surface>
+    <surface xml:id="page_103" n="103">
+      <graphic url="processing/doc_0460a91a1013/images/page_0103.png"/>
+    </surface>
+    <surface xml:id="page_104" n="104">
+      <graphic url="processing/doc_0460a91a1013/images/page_0104.png"/>
+    </surface>
+    <surface xml:id="page_105" n="105">
+      <graphic url="processing/doc_0460a91a1013/images/page_0105.png"/>
+    </surface>
+    <surface xml:id="page_106" n="106">
+      <graphic url="processing/doc_0460a91a1013/images/page_0106.png"/>
+    </surface>
+    <surface xml:id="page_107" n="107">
+      <graphic url="processing/doc_0460a91a1013/images/page_0107.png"/>
+    </surface>
+    <surface xml:id="page_108" n="108">
+      <graphic url="page_108.png"/>
+    </surface>
+    <surface xml:id="page_109" n="109">
+      <graphic url="processing/doc_0460a91a1013/images/page_0109.png"/>
+    </surface>
+    <surface xml:id="page_110" n="110">
+      <graphic url="processing/doc_0460a91a1013/images/page_0110.png"/>
+    </surface>
+    <surface xml:id="page_111" n="111">
+      <graphic url="processing/doc_0460a91a1013/images/page_0111.png"/>
+    </surface>
+    <surface xml:id="page_112" n="112">
+      <graphic url="page_112.png"/>
+    </surface>
+    <surface xml:id="page_113" n="113">
+      <graphic url="page_113.png"/>
+    </surface>
+    <surface xml:id="page_114" n="114">
+      <graphic url="processing/doc_0460a91a1013/images/page_0114.png"/>
+    </surface>
+  </facsimile>
+</TEI>
